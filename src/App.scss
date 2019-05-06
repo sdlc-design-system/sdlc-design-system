@@ -1,0 +1,110 @@
+$brand:#6289A1;
+$lighterbrand:#719BB1;
+$brand-hover: #719BB1;
+$brand-disabled:#ACC5D1;
+$brand-pressed:#44687D;
+$blue-bg: #DCE9F3;
+$greyscale-pale: #E9EBEF;
+$coral: #F58466;
+$bisque: #FEDAB4;
+$blue: #5290C3;
+$turquoise: #A3D9D2;
+$olive:#990;
+$grey:#A8A08D;
+$greyscale-light:#A7A9AC;
+$greyscale-medium:#58595B;
+$greyscale-dark:#231F20;
+$red:#DC0000;
+$red-bg:#F8CCCC;
+$yellow:#F0B400;
+$yellow-bg:#FFF7CC;
+$blue:#5290C3;
+$blue-bg:#DCE9F3;
+$green:#52AD62;
+$green-bg:#DCEFE0;
+$white: #FFF;
+$black: #000;
+
+.btn {
+ padding: 0; 
+ font-family: "Open Sans";
+ font-weight: 700;
+
+}
+.btn:disabled{
+  opacity: 1;
+}
+.btn-lg {
+  height: 48px;
+  width: 160px;
+  border-width: 2px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.btn-sm {
+  height: 40px;
+  width: 120px;
+  border-width: 2px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btn-xs{
+  height: 32px;
+  width: 120px;
+  border-width: 2px;
+  border-radius: 4px;
+  font-size: 14px;
+
+}
+
+.btn-primary {
+  background-color: $brand;
+  color: $white;
+  border-color: $brand !important;
+}
+
+.btn-primary:hover {
+  background-color: $brand-hover;
+  border-color: $brand-hover !important;
+}
+
+.btn-primary:active {
+  background-color: $brand-pressed !important;
+  border-color: $brand-pressed !important;
+}
+.btn-primary:disabled {
+  background-color: $brand-disabled !important;
+  border-color: $brand-disabled !important;
+}
+.btn-secondary:disabled {
+  background-color: $greyscale-pale !important;
+  border-color: $greyscale-pale !important;
+  color: $brand;
+}
+
+.btn:focus,.btn:active:focus,.btn.active:focus,
+.btn.focus,.btn:active.focus,.btn.active.focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.btn-secondary {
+  background-color: $white;
+  color: $brand;
+  border-color: $brand !important;
+}
+
+.btn-secondary:hover {
+  background-color: $blue-bg;
+  color: $brand;
+  border-color: $blue-bg !important;
+}
+
+.btn-secondary:active {
+  background-color: $blue-bg !important;
+  border-color: $brand !important;
+  color: $brand !important;
+
+
+}
+
