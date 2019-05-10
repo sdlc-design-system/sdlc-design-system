@@ -104,7 +104,134 @@ $black: #000;
   background-color: $blue-bg !important;
   border-color: $brand !important;
   color: $brand !important;
+}
+
+input.SDLC-form{
+	border: 1px solid #979797 !important;
+  border-radius: 2px !important;
+  height: 40px !important;
+  width: 296px !important;
+  padding: 0 0 0 5px; 
+  font-family: "Open Sans";
+  font-size: 16px;
+}
+input.SDLC-form::placeholder{
+  font-style: italic;
+  color:#9BA5AE;
+
+}
+
+input.SDLC-form:hover{ 
+	border:1px solid #53606B !important;
+	border-radius: 2px !important;
+	box-shadow: 0 2px 4px 0 rgba(83,96,107,0.5) !important;
+}
+
+input.SDLC-form:disabled{
+	background-color: rgba(233,236,240,.5) !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+input.SDLC-form:focus,input.SDLC-form:active:focus,input.SDLC-form.active:focus,
+input.SDLC-form.focus,input.SDLC-form:active.focus,input.SDLC-form.active.focus {
+  outline : none !important;
+	box-shadow: 0 0 2px 2px	#B2D2D7!important; 
+	border: 1px solid #177E89 !important;
+}
+
+ .inputError{
+	 border: 1px solid #E15554 !important;
+	 background-color: rgba(225,85,84,0.05) !important;
+ }
+
+ .inputSuccess{
+	 border: 1px solid #3BB273 !important;
+	 background-color: rgba(59,178,115,0.05) !important;
+ }
+
+ .custom-radio .custom-control-label::before {
+  background-color: #fff !important;
+  border: 2px solid #44687D !important;
+}
+
+/* This is the checked state */
+.custom-radio .custom-control-input:checked~.custom-control-label::before,
+.custom-radio .custom-control-input:checked~.custom-control-label::after {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2.5' fill='%2344687D'/%3E%3C/svg%3E"); 
+  //to make a radio switch that matches the sheet, so below: 
+ // background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='none' stroke-width='2' stroke='%23dae1e5'/%3E%3Ccircle r='2.5' fill='%2344687D' stroke='%2344687D'/%3E%3C/svg%3E"); 
+}
+
+.custom-radio .custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: none;
+}
 
 
+
+
+html {
+  box-sizing: border-box;
+}
+
+/* Inherit box-sizing to make it easier to change the property
+* for components that leverage other behavior.*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*style wrapper to give some space*/
+.wrapper {
+    position: relative;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+/*style label to give some more space*/
+.wrapper label {
+  display: block;
+  padding: 0px 0 12px 30px;
+}
+
+/*style and hide original checkbox*/
+.wrapper input {
+  height: 15px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+
+/*position new box*/
+.wrapper input + label::before {
+  border: 2px solid #446b7c;
+  content: "";
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+
+/*svg background styles*/
+.wrapper input + label::after {
+  content: "";
+  opacity: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><path d='M0 201L0 400 200 400 400 400 400 201 400 0 200 0 0 0 0 201M366 70C368 71 385 88 386 90 387 93 387 95 386 97 385 99 170 315 155 329 143 340 143 340 132 329 117 316 38 236 36 233 34 230 34 227 35 225 37 221 54 204 57 202 62 200 60 198 102 240 141 279 141 279 144 279 148 279 146 281 253 174 311 116 358 70 358 70 358 70 359 69 359 69 361 68 363 69 366 70' fill='%23446b7c'/><path d='M359 69C359 69 358 70 358 70 358 70 311 116 253 174 146 281 148 279 144 279 141 279 141 279 102 240 60 198 62 200 57 202 54 204 37 221 35 225 34 227 34 230 36 233 38 236 117 316 132 329 143 340 143 340 155 329 170 315 385 99 386 97 388 93 387 91 376 80 365 69 363 68 359 69' fill='%23fff'/></svg>");
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+transition: opacity 0.2s ease-in-out;
+}
+
+/*reveal check for 'on' state*/
+.wrapper input:checked + label::after {
+  opacity: 1;
 }
 
