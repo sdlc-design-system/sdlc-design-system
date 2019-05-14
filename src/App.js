@@ -1,20 +1,11 @@
 import React, { Component } from 'react';
-import Accordion from 'react-bootstrap/Accordion'
-import Card from 'react-bootstrap/Card'
-import Breadcrumb from 'react-bootstrap/Breadcrumb'
-import Nav from "react-bootstrap/Nav"
 import Button from "react-bootstrap/Button"
 import Dropdown from "react-bootstrap/Dropdown"
-import DropdownButton from "react-bootstrap/DropdownButton"
-
 import Form from "react-bootstrap/Form"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Switch from './components/Switch'
 import './App.scss';
-
-
-
 
 class App extends Component {
   constructor(props) {
@@ -47,15 +38,67 @@ class App extends Component {
           <Col>.btn-lg</Col>
           <Col>
             <Button className="btn btn-lg btn-primary">Default</Button>
+            <br/>
+            <br/>
+            <Dropdown>
+              <Dropdown.Toggle className="btn btn-lg btn-primary" id="dropdown-basic">
+                Dropdown
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Col>
           <Col>
             <Button className="btn btn-lg btn-secondary">Default</Button>
+            <br/>
+            <br/>
+            <Dropdown>
+              <Dropdown.Toggle className="btn btn-lg btn-secondary" id="dropdown-basic">
+                Dropdown
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Col>
           <Col>
             <Button className="btn btn-lg btn-primary" disabled>disabled</Button>
+            <br/>
+            <br/>
+            <Dropdown>
+              <Dropdown.Toggle disabled className="btn btn-lg btn-primary" id="dropdown-basic">
+                Dropdown
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Col>
           <Col>
             <Button className="btn btn-lg btn-secondary" disabled>disabled</Button>
+            <br/>
+            <br/>
+            <Dropdown>
+              <Dropdown.Toggle disabled className="btn btn-lg btn-secondary" id="dropdown-basic">
+                Dropdown
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Col>
         </Row>
         <br/>
@@ -63,15 +106,67 @@ class App extends Component {
           <Col>.btn-sm</Col>
           <Col>
             <Button className="btn btn-sm btn-primary">Default</Button>
+            <br />
+            <br />
+            <Dropdown>
+              <Dropdown.Toggle className="btn btn-sm btn-primary" id="dropdown-basic">
+                Dropdown
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Col>
           <Col>
             <Button className="btn btn-sm btn-secondary">Default</Button>
+            <br/>
+            <br/>
+            <Dropdown>
+              <Dropdown.Toggle className="btn btn-sm btn-secondary" id="dropdown-basic">
+                Dropdown
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Col>
           <Col>
             <Button className="btn btn-sm btn-primary" disabled>disabled</Button>
+            <br/>
+            <br/>
+            <Dropdown>
+              <Dropdown.Toggle disabled className="btn btn-sm btn-primary" id="dropdown-basic">
+                Dropdown
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Col>
           <Col>
             <Button className="btn btn-sm btn-secondary" disabled>disabled</Button>
+            <br/>
+            <br/>
+            <Dropdown>
+              <Dropdown.Toggle disabled className="btn btn-lg btn-secondary" id="dropdown-basic">
+                Dropdown
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Col>
         </Row>
         <br/>
@@ -80,31 +175,70 @@ class App extends Component {
           <Col>.btn-xs</Col>
           <Col>
             <Button className="btn btn-xs btn-primary">Default</Button>
+            <br/>
+            <br/>
+            <Dropdown>
+              <Dropdown.Toggle className="btn btn-xs btn-primary" id="dropdown-basic">
+                Dropdown
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Col>
           <Col>
             <Button className="btn btn-xs btn-secondary">Default</Button>
+            <br/>
+            <br/>
+            <Dropdown>
+              <Dropdown.Toggle className="btn btn-xs btn-secondary" id="dropdown-basic">
+                Dropdown
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Col>
           <Col>
             <Button className="btn btn-xs btn-primary" disabled>disabled</Button>
+            <br/>
+            <br/>
+            <Dropdown>
+              <Dropdown.Toggle disabled className="btn btn-xs btn-primary" id="dropdown-basic">
+                Dropdown
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Col>
           <Col>
             <Button className="btn btn-xs btn-secondary" disabled>disabled</Button>
+            <br/>
+            <br/>
+            <Dropdown>
+              <Dropdown.Toggle disabled className="btn btn-xs btn-secondary" id="dropdown-basic">
+                Dropdown
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Col>
         </Row>
-        <br />
-        <br />
-        <Dropdown>
-          <Dropdown.Toggle className="btn btn-lg btn-primary" id="dropdown-basic">
-            Dropdown
-          </Dropdown.Toggle>
-
-          <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-            <Dropdown.Divider />
-            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
+        
         
         <br></br>
         <Form>

@@ -1,3 +1,23 @@
+Notes by John Neill 4.14.2019
+
+This design system uses React and React-Bootstrap.
+To set up:
+
+1. Use create-react-app to set up the bones/structure of the project: 
+    $ npx create-react-app design-system
+2. Install React-Bootstrap and Bootstrap:
+    $ npm install react-bootstrap bootstrap
+3. Replace whatever create-react-app files with the github files, crucially the src folder, the package.json file, and this (README.md) file.
+4. cd into the project, then npm start.
+
+ 
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
