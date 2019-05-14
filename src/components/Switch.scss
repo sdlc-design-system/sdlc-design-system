@@ -1,0 +1,55 @@
+input[type="checkbox"].switch  {
+	 position: absolute;
+	opacity: 0;
+}
+
+input[type="checkbox"].switch + div {
+	border-radius: 999px;
+  background-color: #A7A9AC;
+	-webkit-transition-duration: .4s;
+	transition-duration: .4s;
+	-webkit-transition-property: background-color, box-shadow;
+	transition-property: background-color, box-shadow;
+}
+
+input[type="checkbox"].switch + div {//this is the box
+	width: 2rem;
+  height: .75rem;
+  position: relative;
+  top:.4rem;
+}
+
+input[type="checkbox"].switch:checked + div {
+  background-color: #80A1B6;
+}
+
+input[type="checkbox"].switch + div > div {
+	float: left;
+	width: 1.125rem; height: 1.125rem;//the ball
+	border-radius: inherit;
+  background: white;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+	-webkit-transition-timing-function: cubic-bezier(1,0,0,1);
+	transition-timing-function: cubic-bezier(1,0,0,1);
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	-webkit-transition-property: transform, background-color;
+	transition-property: transform, background-color;
+  pointer-events: none;
+  position: relative;
+  top:-.1825rem;
+}
+
+input[type="checkbox"].switch:checked + div > div {
+	-webkit-transform: translate3d(1.125rem, 0, 0);
+	transform: translate3d(.875rem, 0, 0);
+  background-color: #44687D;
+  //how far right the ball will go
+}
+.switch-container{
+  display:inline;
+  padding:0 .5rem 0 0;
+}
+.switch-container label{
+  margin: 0;
+}
