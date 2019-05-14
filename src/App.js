@@ -4,6 +4,9 @@ import Card from 'react-bootstrap/Card'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Nav from "react-bootstrap/Nav"
 import Button from "react-bootstrap/Button"
+import Dropdown from "react-bootstrap/Dropdown"
+import DropdownButton from "react-bootstrap/DropdownButton"
+
 import Form from "react-bootstrap/Form"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
@@ -90,6 +93,20 @@ class App extends Component {
         </Row>
         <br />
         <br />
+        <Dropdown>
+          <Dropdown.Toggle className="btn btn-lg btn-primary" id="dropdown-basic">
+            Dropdown
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+            <Dropdown.Divider />
+            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+        
+        <br></br>
         <Form>
           <Row>
             <Col>
@@ -136,18 +153,23 @@ class App extends Component {
             <input id="a11y-issue-1" name="a11y-issues" type="checkbox" value="no-issues" /> 
             <label for="a11y-issue-1">First check/toggle</label>
           </div>
-  
           <div className="wrapper">
             <input id="a11y-issue-2" name="a11y-issues" type="checkbox" value="no-focus-styles" />
             <label for="a11y-issue-2">Second check/toggle</label>
           </div>
         </Form>
-
+        
         <div>
           <Switch isChecked={ !this.state.switchState }
                   handleSwitchChange={this.handleSwitchChange} />The switch is {this.state.switchState ? "on":"off"}
         </div>
-        <div></div>
+        Heavy, medium & light dividers:
+        <hr className="heavyDivider"></hr>
+        <hr className="mediumDivider"></hr>
+        <hr className="lightDivider"></hr>
+
+        
+        
       </div>
     );
   }

@@ -26,7 +26,6 @@ $white: #FFF;
 $black: #000;
 
 .btn {
- padding: 0; 
  font-family: "Open Sans";
  font-weight: 700;
 
@@ -34,7 +33,7 @@ $black: #000;
 .btn:disabled{
   opacity: 1;
 }
-.btn-lg {
+.btn-lg, .dropdown-lg {
   height: 48px;
   width: 160px;
   border-width: 2px;
@@ -55,13 +54,19 @@ $black: #000;
   border-width: 2px;
   border-radius: 4px;
   font-size: 14px;
+  padding: 0; 
+
 
 }
 
-.btn-primary {
+.btn-primary, .show>.btn-primary.dropdown-toggle, .dropdown-item:active:focus {
   background-color: $brand;
   color: $white;
   border-color: $brand !important;
+}
+.dropdown-menu{
+  background-color: #FFF;
+  box-shadow: 3px 3px 5px -1px rgba(0,0,0,0.15), -3px -1px 5px -1px rgba(0,0,0,0.15);
 }
 
 .btn-primary:hover {
@@ -94,7 +99,7 @@ $black: #000;
   border-color: $brand !important;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover, .dropdown-item:hover {
   background-color: $blue-bg;
   color: $brand;
   border-color: $blue-bg !important;
@@ -235,6 +240,27 @@ transition: opacity 0.2s ease-in-out;
 /*reveal check for 'on' state*/
 .wrapper input:checked + label::after {
   opacity: 1;
+}
+
+
+hr {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.heavyDivider{
+  height:3px;
+  background-color: $brand-pressed
+}
+.mediumDivider{
+  height: 2px;
+  border: 1px solid #D8D8D8;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  box-sizing: border-box;
+}
+.lightDivider{
+  height:1px;
+  background-color: #D8D8D8;
 }
 
 
