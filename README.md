@@ -10,7 +10,11 @@ To set up:
 3. Replace whatever create-react-app files with the github files, crucially the src folder, the package.json file, and this (README.md) file.
 4. cd into the project, then npm start.
 
- 
+Todo: 
+The buttons' sizes probably should be rems, not px.
+The css files should be organized. They're already confusing and will get 100x worse.
+
+ ____________________________________________________________________________________________________________
 
 
 

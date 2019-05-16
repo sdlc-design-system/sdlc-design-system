@@ -158,7 +158,7 @@ input.SDLC-form.focus,input.SDLC-form:active.focus,input.SDLC-form.active.focus 
 
  .custom-radio .custom-control-label::before {
   background-color: #fff !important;
-  border: 2px solid #44687D !important;
+  border: 2px solid $brand-pressed !important;
 }
 
 /* This is the checked state */
@@ -245,7 +245,7 @@ html {
 
 
 hr {
-  width: 80%;
+  //width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -256,13 +256,14 @@ hr {
 .mediumDivider{
   height: 2px;
   border: 1px solid #D8D8D8;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
   box-sizing: border-box;
 }
 .lightDivider{
   height:1px;
   background-color: #D8D8D8;
 }
+
 
 
 
