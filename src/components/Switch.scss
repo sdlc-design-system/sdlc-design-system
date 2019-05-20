@@ -1,3 +1,5 @@
+@import "../_masterColors.scss";
+
 input[type="checkbox"].switch  {
 	 position: absolute;
 	opacity: 0;
@@ -5,7 +7,7 @@ input[type="checkbox"].switch  {
 
 input[type="checkbox"].switch + div {
 	border-radius: 999px;
-  background-color: #A7A9AC;
+  background-color: $greyscale-light;
 	-webkit-transition-duration: .4s;
 	transition-duration: .4s;
 	-webkit-transition-property: background-color, box-shadow;
@@ -43,7 +45,7 @@ input[type="checkbox"].switch + div > div {
 input[type="checkbox"].switch:checked + div > div {
 	-webkit-transform: translate3d(1.125rem, 0, 0);
 	transform: translate3d(.875rem, 0, 0);
-  background-color: #44687D;
+  background-color: $brand-pressed;
   //how far right the ball will go
 }
 .switch-container{

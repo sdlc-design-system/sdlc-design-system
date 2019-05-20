@@ -1,29 +1,4 @@
-$brand:#6289A1;
-$lighterbrand:#719BB1;
-$brand-hover: #719BB1;
-$brand-disabled:#ACC5D1;
-$brand-pressed:#44687D;
-$blue-bg: #DCE9F3;
-$greyscale-pale: #E9EBEF;
-$coral: #F58466;
-$bisque: #FEDAB4;
-$blue: #5290C3;
-$turquoise: #A3D9D2;
-$olive:#990;
-$grey:#A8A08D;
-$greyscale-light:#A7A9AC;
-$greyscale-medium:#58595B;
-$greyscale-dark:#231F20;
-$red:#DC0000;
-$red-bg:#F8CCCC;
-$yellow:#F0B400;
-$yellow-bg:#FFF7CC;
-$blue:#5290C3;
-$blue-bg:#DCE9F3;
-$green:#52AD62;
-$green-bg:#DCEFE0;
-$white: #FFF;
-$black: #000;
+@import "./_masterColors.scss";
 
 .btn {
  font-family: "Open Sans";
@@ -55,8 +30,6 @@ $black: #000;
   border-radius: 4px;
   font-size: 14px;
   padding: 0; 
-
-
 }
 
 .btn-primary, 
@@ -156,22 +129,22 @@ input.SDLC-form.focus,input.SDLC-form:active.focus,input.SDLC-form.active.focus 
 	 background-color: rgba(59,178,115,0.05) !important;
  }
 
- .custom-radio .custom-control-label::before {
-  background-color: #fff !important;
-  border: 2px solid $brand-pressed !important;
-}
+//  .custom-radio .custom-control-label::before {
+//   background-color: #fff !important;
+//   border: 2px solid $brand-pressed !important;
+// }
 
-/* This is the checked state */
-.custom-radio .custom-control-input:checked~.custom-control-label::before,
-.custom-radio .custom-control-input:checked~.custom-control-label::after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2.5' fill='%2344687D'/%3E%3C/svg%3E"); 
-  //to make a radio switch that matches the sheet, see below: 
- // background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='none' stroke-width='2' stroke='%23dae1e5'/%3E%3Ccircle r='2.5' fill='%2344687D' stroke='%2344687D'/%3E%3C/svg%3E"); 
-}
+// /* This is the checked state */
+// .custom-radio .custom-control-input:checked~.custom-control-label::before,
+// .custom-radio .custom-control-input:checked~.custom-control-label::after {
+//   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2.5' fill='%2344687D'/%3E%3C/svg%3E"); 
+//   //to make a radio switch that matches the sheet, see below: 
+//  // background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='none' stroke-width='2' stroke='%23dae1e5'/%3E%3Ccircle r='2.5' fill='%2344687D' stroke='%2344687D'/%3E%3C/svg%3E"); 
+// }
 
-.custom-radio .custom-control-input:focus ~ .custom-control-label::before {
-  box-shadow: none;
-}
+// .custom-radio .custom-control-input:focus ~ .custom-control-label::before {
+//   box-shadow: none;
+// }
 
 
 
