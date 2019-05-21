@@ -15,6 +15,7 @@ import Radio from './components/Radio'
 
 import './App.scss';
 import Panel from './components/Panel';
+import ModalSDLC from './components/ModalSDLC'
 
 class App extends Component {
   constructor(props) {
@@ -324,7 +325,7 @@ class App extends Component {
         <hr className="mediumDivider"></hr>
         <hr className="lightDivider"></hr>
 
-        
+        <ModalSDLC></ModalSDLC>
         
       </div>
     );
