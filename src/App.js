@@ -22,12 +22,19 @@ class App extends Component {
     super(props);
     this.state = {
       switchState:false,
+      showModal: false,
     }
   }
   handleSwitchChange = ()=> {
-    this.setState({
-      switchState: !this.state.switchState
-    })
+    this.setState({ switchState: !this.state.switchState })
+  }
+
+  handleModalClose=()=> {
+    this.setState({ showModal: false });
+  }
+
+  handleModalShow=()=> {
+    this.setState({ showModal: true });
   }
 
   render(){
@@ -324,13 +331,27 @@ class App extends Component {
         <hr className="heavyDivider"></hr>
         <hr className="mediumDivider"></hr>
         <hr className="lightDivider"></hr>
-
-        <ModalSDLC></ModalSDLC>
+        
+        <Button className="btn btn-sm btn-primary" onClick={this.handleModalShow}>
+          Modal
+        </Button>
+        {this.state.showModal ? 
+          <ModalSDLC
+            showModal = {this.state.showModal}
+            handleModalClose = {this.handleModalClose}
+            handleModalShow = {this.handleModalShow}
+            buttonOnRightTitle = "Confirm"//custom content here
+            buttonOnRightAction = {this.handleModalClose}//custom handle click here
+            title = "Title"
+            content= "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."
+          /> : null
+        }
+        <div></div>
+        <br></br>
         
       </div>
     );
   }
-  
 }
 
 export default App;

@@ -12,7 +12,6 @@ class Accordian extends React.Component {
     }
     this.props.content.forEach(()=>{
       this.setState({openAccordian: [...this.state.openAccordian,false]})
-
     })
   }
   handleAccordianChange =(index)=>{
@@ -26,6 +25,7 @@ class Accordian extends React.Component {
   render() {
     return (
       <div>
+        <br></br>
         {this.props.content.map((item,index)=>
           <div
             key = {index}
