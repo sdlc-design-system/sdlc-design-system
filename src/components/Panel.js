@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../App.scss'
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-import './Panel.scss';
+import './componentStyles/Panel.scss';
 
 // see https://react-bootstrap.github.io/utilities/transitions/#collapse-props
 class Panel extends React.Component {

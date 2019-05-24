@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Collapse from 'react-bootstrap/Collapse'
 import '../App.scss'
-import './Accordian.scss';
+import './componentStyles/Accordian.scss';
 
 // see https://react-bootstrap.github.io/utilities/transitions/#collapse-props
 class Accordian extends React.Component {

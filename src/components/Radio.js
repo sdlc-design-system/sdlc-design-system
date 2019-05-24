@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Form from "react-bootstrap/Form"
 import '../App.scss'
-import './Radio.scss';
+import './componentStyles/Radio.scss';
 
 class Radio extends React.Component {
   constructor(props, context) {

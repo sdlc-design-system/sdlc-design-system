@@ -5,7 +5,7 @@ import Modal from "react-bootstrap/Modal"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import '../App.scss'
-import './ModalSDLC.scss';
+import './componentStyles/ModalSDLC.scss';
 
 class ModalSDLC extends React.Component {
   constructor(props, context) {

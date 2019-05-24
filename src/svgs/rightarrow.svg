@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="20px" viewBox="0 0 24 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M20.450605,10.7692308 L0.769230769,10.7692308 C0.344396346,10.7692308 0,10.4248344 0,10 C0,9.57516558 0.344396346,9.23076923 0.769230769,9.23076923 L20.450605,9.23076923 L12.5329948,1.31315906 C12.2325915,1.01275576 12.2325915,0.525705777 12.5329948,0.225302476 C12.8333981,-0.0751008253 13.3204481,-0.0751008253 13.6208514,0.225302476 L22.8516206,9.45607171 C23.1520239,9.75647501 23.1520239,10.243525 22.8516206,10.5439283 L13.6208514,19.7746975 C13.3204481,20.0751008 12.8333981,20.0751008 12.5329948,19.7746975 C12.2325915,19.4742942 12.2325915,18.9872442 12.5329948,18.6868409 L20.450605,10.7692308 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/Arrows/arrow-right" transform="translate(-12.000000, -14.000000)">
+            <g id="Icon" transform="translate(12.000000, 14.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Path" fill="#384048" fill-rule="nonzero" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
