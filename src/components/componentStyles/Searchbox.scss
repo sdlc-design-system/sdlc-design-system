@@ -1,0 +1,35 @@
+@import "../../_masterColors.scss";
+
+.searchbar{
+  border: 1px solid $greyscale-light;
+}
+.searchbar-inside,
+.searchbar-inside:hover,
+.searchbar-inside:active,
+.searchbar-inside:focus,
+.searchbar-inside .btn-primary,
+.searchbar-inside .btn-primary:active,
+.searchbar-inside .btn-primary:focus
+{
+  display:flex !important;
+  flex-flow:row nowrap !important;
+  align-items:center;
+  justify-content:space-between;
+  border:none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: white !important;
+}
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+:-moz-placeholder {
+  font-style: italic;  
+}
+::-moz-placeholder {
+  font-style: italic;  
+}
+:-ms-input-placeholder {  
+  font-style: italic; 
+}
+

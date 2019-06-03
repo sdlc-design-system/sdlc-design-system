@@ -29,34 +29,29 @@ h5{
 }
 .btn {
  font-family: "Open Sans";
- font-weight: 700;
+ font-weight: 600;
 
 }
 .btn:disabled{
   opacity: 1;
 }
 .btn-lg, .dropdown-lg {
-  height: 48px;
-  width: 160px;
   border-width: 2px;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 18px;
+  padding: .5rem 2rem;
 }
 .btn-sm {
-  height: 40px;
-  width: 120px;
   border-width: 2px;
-  border-radius: 4px;
-  font-size: 14px;
+  border-radius: 3px;
+  font-size: 15px;
+  padding: .5rem 1.5rem;
 }
-
 .btn-xs{
-  height: 32px;
-  width: 120px;
   border-width: 2px;
-  border-radius: 4px;
+  border-radius: 2px;
   font-size: 14px;
-  padding: 0; 
+  padding: .25rem 1rem;
 }
 
 .btn-primary, 
@@ -72,8 +67,8 @@ h5{
 }
 
 .btn-primary:hover {
-  background-color: $brand-hover;
-  border-color: $brand-hover !important;
+  background-color: $lighterbrand;
+  border-color: $lighterbrand !important;
 }
 
 .btn-primary:active {
@@ -250,7 +245,7 @@ hr {
   margin-right: auto;
 }
 .heavyDivider{
-  height:3px;
+  height:2px;
   background-color: $brand-pressed
 }
 .mediumDivider{
@@ -260,11 +255,54 @@ hr {
   box-sizing: border-box;
 }
 .lightDivider{
-  height:1px;
-  background-color: #D8D8D8;
+  height:2px;
+  background-color: $greyscale-pale;
 }
 .spacer{
   padding:25px;
 }
+
+.headerTitle{
+  font-family: "Roboto", sans-serif;
+  font-size:30px;
+  letter-spacing: -1.6px;
+  color: $lighterbrand;
+  font-weight: 300;
+  margin:.75rem 0 -1rem .75rem;
+}
+.disappearingSide{
+  position:fixed;
+  display:block;
+  overflow-x:hidden;
+  overflow-y:auto;
+  border-right:2px solid $greyscale-pale;
+  width: 120px;
+  height:100vh;
+  top:82px;
+}
+.headerNav{
+  position:fixed;
+  background-color:white;
+  width:100vw;
+  display:block;
+  overflow: hidden;
+  z-index:999;
+}
+@media (min-width: 768px){
+  .main{
+    padding-right: 25px;
+    padding-left: 145px;
+  }
+  .hamburgerEtc{
+    display:none;
+  }
+}
+@media (max-width: 767px){
+  .disappearingSide{
+    display:none;
+  }
+}
+
+
 
 
