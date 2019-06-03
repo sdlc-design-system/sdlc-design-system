@@ -61,6 +61,7 @@ import IconPhatCheck from './svgs/IconPhatCheck'
 import IconTick from './svgs/IconTick' 
 import SdlcLogo from './svgs/SdlcLogo' 
 import IconHamburger from './svgs/IconHamburger' 
+import IconCopy from './svgs/IconCopy' 
 
 
 class App extends Component {
@@ -85,11 +86,10 @@ class App extends Component {
 
   render(){
     return (
-      //<div className="container-fluid">
       <div>
         <div className="headerNav">
-          <Container fluid>
-            <Navbar expand="sm">
+          <Container fluid className="headerLarge">
+            <Navbar>
               <Navbar.Brand href="#home">
                 <SdlcLogo
                   width="103"
@@ -105,6 +105,15 @@ class App extends Component {
               </Navbar.Collapse>
             </Navbar>
           </Container>
+          <div className="headerSmall">
+            <div><IconHamburger width="28px" fill="#44687D" /></div>
+            <div><SdlcLogo
+              width="80"
+              alt="SDLC Partners logo"
+            /></div>
+            <div><IconMagnifyingGlass width="20px" fill="#44687D" /></div>
+
+          </div>
           
           <hr className="heavyDivider" style={{margin:0}}></hr>
         </div>
@@ -479,6 +488,7 @@ class App extends Component {
               <Row>
                 <span className="spacer"> <IconLock width="25px" fill="black" /></span>
                 <span className="spacer"> <IconHamburger width="25px" fill="black" /></span>
+                <span className="spacer"> <IconCopy width="25px" fill="black" /></span>
 
               </Row>
               <SdlcLogo width="103px"></SdlcLogo>

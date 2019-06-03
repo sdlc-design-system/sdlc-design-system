@@ -293,15 +293,25 @@ hr {
     padding-right: 25px;
     padding-left: 145px;
   }
-  .hamburgerEtc{
+  .headerSmall{
     display:none;
   }
 }
 @media (max-width: 767px){
-  .disappearingSide{
+  .disappearingSide,
+  .headerLarge{
     display:none;
   }
+  .headerSmall{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content:space-around;
+    align-items: center;
+    padding: 10px 0 10px;
+  }
 }
+
 
 
 
