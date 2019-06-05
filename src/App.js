@@ -20,6 +20,7 @@ import Panel from './components/Panel'
 import ModalSDLC from './components/ModalSDLC'
 import Loading from './components/Loading'
 import Searchbox from './components/Searchbox'
+import Header from './components/Header'
 
 import IconAlert from './svgs/IconAlert'
 import IconAlertStopSign from './svgs/IconAlertStopSign'
@@ -63,7 +64,6 @@ import SdlcLogo from './svgs/SdlcLogo'
 import IconHamburger from './svgs/IconHamburger' 
 import IconCopy from './svgs/IconCopy' 
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -87,46 +87,18 @@ class App extends Component {
   render(){
     return (
       <div>
-        <div className="headerNav">
-          <Container fluid className="headerLarge">
-            <Navbar>
-              <Navbar.Brand href="#home">
-                <SdlcLogo
-                  width="103"
-                  className="d-inline-block align-top"
-                  alt="SDLC Partners logo"
-                />
-                <span className="headerTitle d-inline-block">design system</span>
-              </Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto"></Nav>
-                <Searchbox />
-              </Navbar.Collapse>
-            </Navbar>
-          </Container>
-          <div className="headerSmall">
-            <div><IconHamburger width="28px" fill="#44687D" /></div>
-            <div><SdlcLogo
-              width="80"
-              alt="SDLC Partners logo"
-            /></div>
-            <div><IconMagnifyingGlass width="20px" fill="#44687D" /></div>
-
-          </div>
-          
-          <hr className="heavyDivider" style={{margin:0}}></hr>
-        </div>
+        <Header />
         <Container fluid style={{marginLeft: "10px"}}>
           <Row>
-            <div className="nav nav-sidebar disappearingSide">
-              <div>hello</div>
-              <div>from the other</div>
-              <div>side</div>
+            <div className="sideVerticalLine"></div>
+            <div className="disappearingSideBar">
+              <div className="boxed"><a href="#buttons-section">Buttons</a></div>
+              <div className="boxed"><a href="#icons-section">Icons</a></div>
+              <div></div>
             </div>
             <div className="main">
-            <Col className="main" style={{marginTop:"82px",height:"1500px"}}>
-              <br/>
+            <Col className="main" style={{height:"1500px"}}>
+              <h2 id="buttons-section" className="anchor">Buttons</h2>
               <Row>
                 <Col></Col>
                 <Col>.btn-primary</Col>
@@ -430,7 +402,7 @@ class App extends Component {
                 /> : null
               }
               <div></div>
-              <h2>Icons</h2>
+              <h2 id="icons-section" className="anchor">Icons</h2>
               <div>Messaging</div>
               <Row>
                 <span className="spacer"><IconPhatCheck width="25px" fill="black" /></span>
@@ -460,6 +432,8 @@ class App extends Component {
                 <span className="spacer"><IconDeleteButton width="25px" fill="black" /></span>
                 <span className="spacer"><IconMagnifyingGlass width="25px" fill="black" /></span>
                 <span className="spacer"><IconSpinnerOfDots width="25px" fill="black" /></span>
+                <span className="spacer"> <IconCopy width="25px" fill="black" /></span>
+
               </Row>
               <div>Human</div>
               <Row>
@@ -488,7 +462,6 @@ class App extends Component {
               <Row>
                 <span className="spacer"> <IconLock width="25px" fill="black" /></span>
                 <span className="spacer"> <IconHamburger width="25px" fill="black" /></span>
-                <span className="spacer"> <IconCopy width="25px" fill="black" /></span>
 
               </Row>
               <SdlcLogo width="103px"></SdlcLogo>

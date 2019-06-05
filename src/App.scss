@@ -78,11 +78,14 @@ h5{
 .btn-primary:disabled {
   background-color: $brand-disabled !important;
   border-color: $brand-disabled !important;
+  cursor: not-allowed;
 }
 .btn-secondary:disabled {
   background-color: $greyscale-pale !important;
   border-color: $greyscale-pale !important;
   color: $brand;
+  cursor: not-allowed;
+
 }
 
 .btn:focus,.btn:active:focus,.btn.active:focus, //removes the bootstrap 'glow' from a clicked button
@@ -150,26 +153,6 @@ input.SDLC-form.focus,input.SDLC-form:active.focus,input.SDLC-form.active.focus 
 	 border: 1px solid #3BB273 !important;
 	 background-color: rgba(59,178,115,0.05) !important;
  }
-
-//  .custom-radio .custom-control-label::before {
-//   background-color: #fff !important;
-//   border: 2px solid $brand-pressed !important;
-// }
-
-// /* This is the checked state */
-// .custom-radio .custom-control-input:checked~.custom-control-label::before,
-// .custom-radio .custom-control-input:checked~.custom-control-label::after {
-//   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2.5' fill='%2344687D'/%3E%3C/svg%3E"); 
-//   //to make a radio switch that matches the sheet, see below: 
-//  // background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='none' stroke-width='2' stroke='%23dae1e5'/%3E%3Ccircle r='2.5' fill='%2344687D' stroke='%2344687D'/%3E%3C/svg%3E"); 
-// }
-
-// .custom-radio .custom-control-input:focus ~ .custom-control-label::before {
-//   box-shadow: none;
-// }
-
-
-
 
 html {
   box-sizing: border-box;
@@ -240,7 +223,6 @@ html {
 
 
 hr {
-  //width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -262,6 +244,24 @@ hr {
   padding:25px;
 }
 
+.sideVerticalLine{
+  position:fixed;
+  display:block;
+  overflow-y:auto;
+  border-right:2px solid $greyscale-pale;
+  width: 120px;
+  height:100vh;
+  top:82px;
+}
+.disappearingSideBar{
+  position:fixed;
+  display:block;
+  // overflow-x:hidden;
+  overflow-y:auto;
+  width: 120px;
+  height:100vh;
+  top:82px;
+}
 .headerTitle{
   font-family: "Roboto", sans-serif;
   font-size:30px;
@@ -270,46 +270,13 @@ hr {
   font-weight: 300;
   margin:.75rem 0 -1rem .75rem;
 }
-.disappearingSide{
-  position:fixed;
-  display:block;
-  overflow-x:hidden;
-  overflow-y:auto;
-  border-right:2px solid $greyscale-pale;
-  width: 120px;
-  height:100vh;
-  top:82px;
+.anchor{
+  padding-top: 82px;
 }
-.headerNav{
-  position:fixed;
-  background-color:white;
-  width:100vw;
-  display:block;
-  overflow: hidden;
-  z-index:999;
-}
-@media (min-width: 768px){
-  .main{
-    padding-right: 25px;
-    padding-left: 145px;
-  }
-  .headerSmall{
-    display:none;
-  }
-}
-@media (max-width: 767px){
-  .disappearingSide,
-  .headerLarge{
-    display:none;
-  }
-  .headerSmall{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:nowrap;
-    justify-content:space-around;
-    align-items: center;
-    padding: 10px 0 10px;
-  }
+
+.boxed:active{
+  margin-right: 0;
+  border-right: 2px solid $brand-pressed;
 }
 
 

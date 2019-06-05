@@ -1,5 +1,5 @@
-import React from "react";
-
+import React from 'react';
+import './IconBlur.scss'
 const IconLeft = ({
   fill = "#000",
   width = "100%",
@@ -10,7 +10,7 @@ const IconLeft = ({
     height={width}
     viewBox="0 0 14 26"
     xmlns="http://www.w3.org/2000/svg"
-    className={`svg-icon ${className || ""}`}
+    className="iconBlur"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     transform="rotate(270)"
   >

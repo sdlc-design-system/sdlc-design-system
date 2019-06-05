@@ -1,0 +1,32 @@
+.headerNav{
+  position:fixed;
+  background-color:white;
+  width:100vw;
+  display:block;
+  overflow: hidden;
+  z-index:999;
+}
+@media (min-width: 768px){
+  .main{
+    padding-right: 25px;
+    padding-left: 80px;
+  }
+  .headerSmall{
+    display:none;
+  }
+}
+@media (max-width: 767px){
+  .disappearingSideBar,
+  .sideVerticalLine,
+  .headerLarge{
+    display:none;
+  }
+  .headerSmall{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content:space-around;
+    align-items: center;
+    padding: 10px 0 10px;
+  }
+}
