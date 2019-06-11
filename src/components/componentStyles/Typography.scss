@@ -1,0 +1,29 @@
+.flexRowTypography{
+  display:flex;
+  flex-direction: row;
+  // flex-wrap:nowrap;
+  // padding-bottom:30px;
+  justify-content:space-around;
+}
+
+.flexColumnTypography{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+.col1{
+  display: flex;
+  flex-basis: 25%
+}
+.col2{
+  display: flex;
+  flex-basis: 25%
+}
+.col3{
+  display: flex;
+  flex-basis: 50%
+}
+
+.noMargin{
+  margin:0 0 30px 0;
+}

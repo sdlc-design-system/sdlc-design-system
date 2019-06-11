@@ -6,26 +6,81 @@ body{
 h1{
   font-size:72px;
   line-height:80px;
+  font-weight: 700;
 }
 h2{
   font-size:48px;
   line-height:64px;
+  font-weight: 700;
 
 }
 h3{
   font-size:32px;
   line-height:40px;
+  font-weight: 700;
 
 }
 h4{
   font-size:24px;
   line-height:32px;
-
+  font-weight: 700;
 }
+
 h5{
   font-size:20px;
   line-height:32px;
+  font-weight: 700;
+}
 
+.largeBodyCopy{
+  font-size: 20px;	
+  line-height: 32px;
+}
+
+.bodyCopy{
+  font-size: 16px;	
+  line-height: 24px;
+}
+
+.smallBodyCopy{
+  font-size: 14px;	
+  line-height: 24px;  
+}
+
+.caption{
+  font-size: 12px;	
+  line-height: 16px;
+}
+
+.labels16{
+  font-size: 16px;	
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.labels14{
+  font-size: 14px;	
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.textLink16{
+  font-size: 16px;	
+  line-height: 24px;
+  color: $btn-brand;  
+  font-weight: 700;
+
+}
+
+.textLink14{
+  font-size: 14px;	
+  line-height: 24px; 
+  color: $btn-brand; 
+  font-weight: 700;
+
+}
+.bold{
+  font-weight:900;
 }
 .btn {
  font-family: "Open Sans";
@@ -57,9 +112,9 @@ h5{
 .btn-primary, 
 .show>.btn-primary.dropdown-toggle, //removes bootstrap royal blue from a clicked dropdown
 .dropdown-item:active:focus { //causes a clicked dropdown menu item to turn the final color
-  background-color: $brand;
-  color: $white;
-  border-color: $brand !important;
+  background-color: $btn-brand;
+  color: white;
+  border-color: $btn-brand !important;
 }
 .dropdown-menu{
   background-color: #FFF;
@@ -67,23 +122,23 @@ h5{
 }
 
 .btn-primary:hover {
-  background-color: $lighterbrand;
-  border-color: $lighterbrand !important;
+  background-color: $btn-brand-hover;
+  border-color: $btn-brand-hover !important;
 }
 
 .btn-primary:active {
-  background-color: $brand-pressed !important;
-  border-color: $brand-pressed !important;
+  background-color: $btn-brand-pressed !important;
+  border-color: $btn-brand-pressed !important;
 }
 .btn-primary:disabled {
-  background-color: $brand-disabled !important;
-  border-color: $brand-disabled !important;
+  background-color: $btn-brand-disabled !important;
+  border-color: $btn-brand-disabled !important;
   cursor: not-allowed;
 }
 .btn-secondary:disabled {
   background-color: $greyscale-pale !important;
   border-color: $greyscale-pale !important;
-  color: $brand;
+  color: $btn-brand;
   cursor: not-allowed;
 
 }
@@ -94,21 +149,21 @@ h5{
   box-shadow: none !important;
 }
 .btn-secondary {
-  background-color: $white;
-  color: $brand;
-  border-color: $brand !important;
+  background-color: white;
+  color: $btn-brand;
+  border-color: $btn-brand !important;
 }
 
 .btn-secondary:hover, .dropdown-item:hover {
   background-color: $blue-bg;
-  color: $brand;
+  color: $btn-brand;
   border-color: $blue-bg !important;
 }
 
 .btn-secondary:active {
   background-color: $blue-bg !important;
-  border-color: $brand !important;
-  color: $brand !important;
+  border-color: $btn-brand !important;
+  color: $btn-brand !important;
 }
 
 input.SDLC-form{
@@ -221,21 +276,15 @@ html {
   opacity: 1;
 }
 
-
 hr {
   margin-left: auto;
   margin-right: auto;
 }
 .heavyDivider{
   height:2px;
-  background-color: $brand-pressed
+  background-color: $brand
 }
-.mediumDivider{
-  height: 2px;
-  border: 1px solid #D8D8D8;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
-  box-sizing: border-box;
-}
+
 .lightDivider{
   height:2px;
   background-color: $greyscale-pale;
@@ -243,43 +292,3 @@ hr {
 .spacer{
   padding:25px;
 }
-
-.sideVerticalLine{
-  position:fixed;
-  display:block;
-  overflow-y:auto;
-  border-right:2px solid $greyscale-pale;
-  width: 120px;
-  height:100vh;
-  top:82px;
-}
-.disappearingSideBar{
-  position:fixed;
-  display:block;
-  // overflow-x:hidden;
-  overflow-y:auto;
-  width: 120px;
-  height:100vh;
-  top:82px;
-}
-.headerTitle{
-  font-family: "Roboto", sans-serif;
-  font-size:30px;
-  letter-spacing: -1.6px;
-  color: $lighterbrand;
-  font-weight: 300;
-  margin:.75rem 0 -1rem .75rem;
-}
-.anchor{
-  padding-top: 82px;
-}
-
-.boxed:active{
-  margin-right: 0;
-  border-right: 2px solid $brand-pressed;
-}
-
-
-
-
-

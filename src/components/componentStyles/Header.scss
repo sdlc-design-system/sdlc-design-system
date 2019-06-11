@@ -16,8 +16,6 @@
   }
 }
 @media (max-width: 767px){
-  .disappearingSideBar,
-  .sideVerticalLine,
   .headerLarge{
     display:none;
   }
@@ -29,4 +27,5 @@
     align-items: center;
     padding: 10px 0 10px;
   }
+
 }

@@ -1,0 +1,59 @@
+@import "../../_masterColors.scss";
+
+.sideVerticalLine{
+  position:fixed;
+  display:block;
+  overflow-y:auto;
+  border-right:2px solid $greyscale-pale;
+  width: 120px;
+  height:100vh;
+  top:82px;
+}
+.disappearingSideBar{
+  position:fixed;
+  display:block;
+  // overflow-x:hidden;
+  overflow-y:auto;
+  width: 120px;
+  height:100vh;
+  top:82px;
+}
+.headerTitle{
+  font-family: "Roboto", sans-serif;
+  font-size:30px;
+  letter-spacing: -1.6px;
+  color: $lighterbrand;
+  font-weight: 300;
+  margin:.75rem 0 -1rem .75rem;
+}
+.anchor{
+  padding-top: 82px;
+}
+
+.boxed{
+  // margin-right: 0;
+  // border-right: 2px solid $brand-pressed;
+}
+
+@media (min-width: 768px){
+  .main{
+    padding-right: 25px;
+    padding-left: 80px;
+  }
+  .headerSmall{
+    display:none;
+  }
+}
+@media (max-width: 767px){
+  .disappearingSideBar,
+  .sideVerticalLine{
+    display:none;
+  }
+}
+.sidebarList{
+  color: black;
+}
+.sidebarList:hover{
+  color: $brand;
+  text-decoration: none;
+}

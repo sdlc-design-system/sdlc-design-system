@@ -1,0 +1,145 @@
+@import "../../_masterColors.scss";
+
+.flexRow{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:nowrap;
+  padding-bottom:30px;
+  justify-content:space-between;
+}
+// .flexRowDescription{
+//   width: 80% !important;
+//   color: red;
+
+// }
+.flexColumnSwatch{
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
+}
+.flexColumnDescription{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
+}
+
+// .flexColumnRightJustified{
+//   display: flex;
+//   justify-content: flex-end;
+// }
+
+
+@media (max-width: 767px){
+  .flexRow{
+    width: 100%;
+  }
+}
+.anchor{
+  padding-top: 82px;
+}
+
+.swatch {
+  display:flex;
+	height: 38px;
+	width: 300px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem 0 2rem;
+}
+.brand{
+  color:white;
+  background-color:$brand;
+}
+.lighterbrand{
+  color:white;
+  background-color:$lighterbrand;
+}
+.btn-brand{
+  color:white;
+  background-color:$btn-brand;
+}
+.btn-brand-hover
+{
+  color:white;
+  background-color:$btn-brand-hover;
+}
+.btn-brand-disabled{
+  color:white;
+  background-color:$btn-brand-disabled;
+}
+.btn-brand-pressed{
+  color:white;
+  background-color:$btn-brand-pressed;
+}
+.coral{
+  color:white;
+  background-color:$coral;
+}
+.bisque{
+  color:black;
+  background-color:$bisque;
+}
+.blue{
+  color:white;
+  background-color:$blue;
+}
+.turquoise{
+  color:white;
+  background-color:$turquoise;
+}
+.olive{
+  color:white;
+  background-color:$olive;
+}
+.grey{
+  color:white;
+  background-color:$grey;
+}
+.greyscale-pale{
+  color:black;
+  background-color:$greyscale-pale;
+}
+.greyscale-light{
+  color:black;
+  background-color:$greyscale-light;
+}
+.greyscale-medium{
+  color:white;
+  background-color:$greyscale-medium;
+}
+.greyscale-dark{
+  color:white;
+  background-color:$greyscale-dark;
+}
+.blue-bg{
+  color:black;
+  background-color:$blue-bg;
+}
+.green-bg{
+  color:black;
+  background-color:$green-bg;
+}
+.green{
+  color:white;
+  background-color:$green;
+}
+.red{
+  color:white;
+  background-color:$red;
+}
+.yellow{
+  color:white;
+  background-color:$yellow;
+}
+.red-bg{
+  color:black;
+  background-color:$red-bg;
+}
+.yellow-bg{
+  color:black;
+  background-color:$yellow-bg;
+}
+.bold{
+  font-weight:900;
+}
+

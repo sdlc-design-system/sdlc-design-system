@@ -3,7 +3,7 @@
   display: inline-block;
   border: 3px solid rgba(68,104,125,0.2);
   border-radius: 50%;
-  border-top-color: $brand-pressed;
+  border-top-color: $btn-brand-pressed;
   animation: spin 1s infinite linear;
   -webkit-animation: spin 1s infinite linear;
 }

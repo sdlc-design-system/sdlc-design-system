@@ -21,6 +21,9 @@ import ModalSDLC from './components/ModalSDLC'
 import Loading from './components/Loading'
 import Searchbox from './components/Searchbox'
 import Header from './components/Header'
+import Sidebar from './components/Sidebar'
+import Color from './components/Color'
+import Typography from './components/Typography'
 
 import IconAlert from './svgs/IconAlert'
 import IconAlertStopSign from './svgs/IconAlertStopSign'
@@ -90,15 +93,22 @@ class App extends Component {
         <Header />
         <Container fluid style={{marginLeft: "10px"}}>
           <Row>
-            <div className="sideVerticalLine"></div>
-            <div className="disappearingSideBar">
-              <div className="boxed"><a href="#buttons-section">Buttons</a></div>
-              <div className="boxed"><a href="#icons-section">Icons</a></div>
-              <div></div>
-            </div>
+            <Sidebar 
+              content={[
+                {id:'colors',title:'Colors'},
+                {id:'typography',title:'Typography'},
+                {id:'buttons',title:'Buttons'},
+                {id:'icons', title:'Icons'}
+              ]}
+
+            />
             <div className="main">
             <Col className="main" style={{height:"1500px"}}>
-              <h2 id="buttons-section" className="anchor">Buttons</h2>
+              <div id="colors-section" className="anchor"></div>
+              <Color/>
+              <div id="typography-section" className="anchor"></div>
+              <Typography/>
+              <h2 id="buttons-section" ref="buttons-section" className="anchor">Buttons</h2>
               <Row>
                 <Col></Col>
                 <Col>.btn-primary</Col>
@@ -382,9 +392,8 @@ class App extends Component {
                 ]} 
               />  
               <br />
-              Heavy, medium & light dividers:
+              Heavy & light dividers:
               <hr className="heavyDivider"></hr>
-              <hr className="mediumDivider"></hr>
               <hr className="lightDivider"></hr>
               
               <Button className="btn btn-sm btn-primary" onClick={this.handleModalShow}>
@@ -402,7 +411,7 @@ class App extends Component {
                 /> : null
               }
               <div></div>
-              <h2 id="icons-section" className="anchor">Icons</h2>
+              <h2 id="icons-section" ref="icons-section" className="anchor">Icons</h2>
               <div>Messaging</div>
               <Row>
                 <span className="spacer"><IconPhatCheck width="25px" fill="black" /></span>

@@ -45,7 +45,7 @@ input[type="checkbox"].switch + div > div {
 input[type="checkbox"].switch:checked + div > div {
 	-webkit-transform: translate3d(1.125rem, 0, 0);
 	transform: translate3d(.875rem, 0, 0);
-  background-color: $brand-pressed;
+  background-color: $btn-brand-pressed;
   //how far right the ball will go
 }
 .switch-container{
