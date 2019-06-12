@@ -52,7 +52,7 @@ class Typography extends React.Component {
             </span>
           </div>
           <div className="flexRowTypography">
-            <span className="col1">.bodyCopy;</span>
+            <span className="col1">.bodyCopy</span>
             <span className="col2">16px/24px</span>
             <span className="col3 bodyCopy">
               Sed posuere consectetur est at lobortis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.

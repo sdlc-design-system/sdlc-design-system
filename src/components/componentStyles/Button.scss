@@ -1,0 +1,94 @@
+@import "../../_masterColors.scss";
+.button{
+
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  text-align: center;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight:600;
+}
+.primaryButton:hover {
+  background-color: $btn-brand-hover;
+  border-color: $btn-brand-hover;
+}
+
+.primaryButton:active {
+  background-color: $btn-brand-pressed;
+  border-color: $btn-brand-pressed;
+}
+.primaryButton:disabled {
+  background-color: $btn-brand-disabled;
+  border-color: $btn-brand-disabled;
+  cursor: not-allowed;
+}
+
+.primaryButton, 
+.show>.primaryButton.dropdown-toggle, //removes royal blue from a clicked dropdown
+.dropdown-item:active:focus { //causes a clicked dropdown menu item to turn the final color
+  background-color: $btn-brand;
+  color: white;
+  border-color: $btn-brand;
+  border-width: 2px;
+}
+
+.button:focus,.button:active:focus,.button.active:focus, //removes the 'glow' from a clicked button
+.button.focus,.button:active.focus,.button.active.focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.secondaryButton:disabled {
+  background-color: $greyscale-pale;
+  border-color: $greyscale-pale;
+  color: $btn-brand;
+  cursor: not-allowed;
+}
+
+.secondaryButton {
+  background-color: white;
+  color: $btn-brand;
+  border: 2px solid $btn-brand;
+
+}
+
+.secondaryButton:hover, .dropdown-item:hover {
+  background-color: $blue-bg;
+  color: $btn-brand;
+  border-color: $blue-bg;
+}
+
+.secondaryButton:active {
+  background-color: $blue-bg;
+  border-color: $btn-brand;
+  color: $btn-brand;
+}
+
+
+
+
+
+.largeButton{
+  border-radius: 4px;
+  font-size: 18px;
+  margin: 4px 2px;
+  padding: .5rem 1.75rem;
+}
+
+.mediumButton{
+  border-radius: 3px;
+  font-size: 14px;
+  margin: 4px 2px;
+  padding: .5rem 1.75rem;
+}
+
+.smallButton{
+  border-radius: 2px;
+  font-size: 14px;
+  margin: 2px 1px;
+  padding: .25rem 1rem;
+
+
+}

@@ -6,7 +6,7 @@ import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import FormControl from 'react-bootstrap/FormControl'
 import Container from 'react-bootstrap/Container'
-import Button from 'react-bootstrap/Button'
+// import Button from 'react-bootstrap/Button'
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Form from 'react-bootstrap/Form'
@@ -24,6 +24,9 @@ import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import Color from './components/Color'
 import Typography from './components/Typography'
+import ButtonsDemo from './components/ButtonsDemo'
+import Button from './components/Button'
+
 
 import IconAlert from './svgs/IconAlert'
 import IconAlertStopSign from './svgs/IconAlertStopSign'
@@ -84,6 +87,7 @@ class App extends Component {
   }
 
   handleModalShow=()=> {
+    console.log("OLD MAN NEILL")
     this.setState({ showModal: true });
   }
 
@@ -108,219 +112,9 @@ class App extends Component {
               <Color/>
               <div id="typography-section" className="anchor"></div>
               <Typography/>
-              <h2 id="buttons-section" ref="buttons-section" className="anchor">Buttons</h2>
-              <Row>
-                <Col></Col>
-                <Col>.btn-primary</Col>
-                <Col>.btn-secondary</Col>
-                <Col>.btn-primary disabled</Col>
-                <Col>.btn-secondary disabled</Col>
-              </Row>
-              <br/>
-              <Row>
-                <Col>.btn-large</Col>
-                <Col>
-                  <Button className="btn btn-lg btn-primary">Default</Button>
-                  <br/>
-                  <br/>
-                  <Dropdown>
-                    <Dropdown.Toggle className="btn btn-lg btn-primary" id="dropdown-basic">
-                      Dropdown
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </Col>
-                <Col>
-                  <Button className="btn btn-lg btn-secondary">Default</Button>
-                  <br/>
-                  <br/>
-                  <Dropdown>
-                    <Dropdown.Toggle className="btn btn-lg btn-secondary" id="dropdown-basic">
-                      Dropdown
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </Col>
-                <Col>
-                  <Button className="btn btn-lg btn-primary" disabled>disabled</Button>
-                  <br/>
-                  <br/>
-                  <Dropdown>
-                    <Dropdown.Toggle disabled className="btn btn-lg btn-primary" id="dropdown-basic">
-                      Dropdown
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </Col>
-                <Col>
-                  <Button className="btn btn-lg btn-secondary" disabled>disabled</Button>
-                  <br/>
-                  <br/>
-                  <Dropdown>
-                    <Dropdown.Toggle disabled className="btn btn-lg btn-secondary" id="dropdown-basic">
-                      Dropdown
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </Col>
-              </Row>
-              <br/>
-              <Row>
-                <Col>.btn-sm</Col>
-                <Col>
-                  <Button className="btn btn-sm btn-primary">Default</Button>
-                  <br />
-                  <br />
-                  <Dropdown>
-                    <Dropdown.Toggle className="btn btn-sm btn-primary" id="dropdown-basic">
-                      Dropdown
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </Col>
-                <Col>
-                  <Button className="btn btn-sm btn-secondary">Default</Button>
-                  <br/>
-                  <br/>
-                  <Dropdown>
-                    <Dropdown.Toggle className="btn btn-sm btn-secondary" id="dropdown-basic">
-                      Dropdown
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </Col>
-                <Col>
-                  <Button className="btn btn-sm btn-primary" disabled>disabled</Button>
-                  <br/>
-                  <br/>
-                  <Dropdown>
-                    <Dropdown.Toggle disabled className="btn btn-sm btn-primary" id="dropdown-basic">
-                      Dropdown
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </Col>
-                <Col>
-                  <Button className="btn btn-sm btn-secondary" disabled>disabled</Button>
-                  <br/>
-                  <br/>
-                  <Dropdown>
-                    <Dropdown.Toggle disabled className="btn btn-lg btn-secondary" id="dropdown-basic">
-                      Dropdown
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </Col>
-              </Row>
-              <br/>
-        
-              <Row>
-                <Col>.btn-xs</Col>
-                <Col>
-                  <Button className="btn btn-xs btn-primary">Default</Button>
-                  <br/>
-                  <br/>
-                  <Dropdown>
-                    <Dropdown.Toggle className="btn btn-xs btn-primary" id="dropdown-basic">
-                      Dropdown
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </Col>
-                <Col>
-                  <Button className="btn btn-xs btn-secondary">Default</Button>
-                  <br/>
-                  <br/>
-                  <Dropdown>
-                    <Dropdown.Toggle className="btn btn-xs btn-secondary" id="dropdown-basic">
-                      Dropdown
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </Col>
-                <Col>
-                  <Button className="btn btn-xs btn-primary" disabled>disabled</Button>
-                  <br/>
-                  <br/>
-                  <Dropdown>
-                    <Dropdown.Toggle disabled className="btn btn-xs btn-primary" id="dropdown-basic">
-                      Dropdown
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </Col>
-                <Col>
-                  <Button className="btn btn-xs btn-secondary" disabled>disabled</Button>
-                  <br/>
-                  <br/>
-                  <Dropdown>
-                    <Dropdown.Toggle disabled className="btn btn-xs btn-secondary" id="dropdown-basic">
-                      Dropdown
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                      <Dropdown.Divider />
-                      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </Col>
-              </Row>
+              <div id="buttons-section" ref="buttons-section" className="anchor"></div>
+              <ButtonsDemo />
+              
               
               
               <br></br>
@@ -396,9 +190,7 @@ class App extends Component {
               <hr className="heavyDivider"></hr>
               <hr className="lightDivider"></hr>
               
-              <Button className="btn btn-sm btn-primary" onClick={this.handleModalShow}>
-                Modal
-              </Button>
+              <Button onClick={this.handleModalShow} size="largeButton" buttonStyle="primaryButton" text="Modal"></Button>
               {this.state.showModal ? 
                 <ModalSDLC
                   showModal = {this.state.showModal}

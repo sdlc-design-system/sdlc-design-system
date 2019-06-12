@@ -1,0 +1,33 @@
+@import "../../_masterColors.scss";
+.flexColumnButtonsDemo{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+.flexRowButtonsDemo{
+  display: flex;
+  flex-direction: row;
+  flex-basis: auto;
+  justify-content:start;
+  align-items: center;
+
+}
+
+.rectangleButtonsDemo{
+  background-color: $greyscale-pale;
+  padding:10px;
+
+}
+.codeFont{
+  font-family: "Roboto Mono";
+  padding-left: 25px;
+
+}
+
+.buttonIndent{
+  padding-left: 1rem;
+}
+
+.buttonDemoPadding{
+  padding:0 2rem 0 0;
+}
