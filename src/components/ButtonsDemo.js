@@ -4,8 +4,8 @@ import Col from 'react-bootstrap/Col'
 import Dropdown from 'react-bootstrap/Dropdown'
 import './componentStyles/ButtonsDemo.scss';
 import IconLock from '../svgs/IconLock' 
-import Button from './Button'
-
+import ButtonSDLC from './ButtonSDLC'
+import Prism from 'prismjs';
 
 
 class ButtonsDemo extends React.Component {
@@ -23,24 +23,24 @@ When combined within button sets, the primary button should appear at the top wh
         <br></br>
         <div className="flexColumnButtonsDemo">
           <div className="flexRowButtonsDemo">
-            <div className="caption buttonDemoPadding" style={{color:"#F58466"}}>Large</div>
+            <div className="caption buttonDemoPadding">Large</div>
             <span className="buttonDemoPadding">
-              <Button size="largeButton" 
+              <ButtonSDLC size="largeButton" 
                       buttonStyle="primaryButton" 
                       text="Primary" 
               />
             </span>
             <span className="buttonDemoPadding">
-              <Button disabled={true} size="largeButton" buttonStyle="primaryButton" text="Disabled"></Button>
+              <ButtonSDLC disabled={true} size="largeButton" buttonStyle="primaryButton" text="Disabled"></ButtonSDLC>
             </span>
             <span className="buttonDemoPadding">
-              <Button size="largeButton" 
+              <ButtonSDLC size="largeButton" 
                     icon={<IconLock width="15px" fill="white" />} 
                     buttonStyle="primaryButton" 
                     text="Primary"
               />
             </span>
-            <Button disabled={true}
+            <ButtonSDLC disabled={true}
                   size="largeButton" 
                   icon={<IconLock width="15px" fill="white" />} 
                   buttonStyle="primaryButton" 
@@ -49,97 +49,101 @@ When combined within button sets, the primary button should appear at the top wh
           </div>
         </div>
         <br></br>
-        <h4>Code</h4>
-        First Button:
-        <div className="rectangleButtonsDemo">
-          <div className="codeFont">
-            &lt;Button 
-            <div className="buttonIndent">
-              size="largeButton"<br></br>
-              buttonStyle="primaryButton" <br></br>
-              text="Primary" <br></br>
-              onClick=&#123;...&#125;<br></br>
-            </div>
-            /&gt;
-          </div>
-        </div>
+        Large, Primary (First Button):
+        <pre><code className="language-jsx">
+          {`
+            import ButtonSDLC from './ButtonSDLC'
+            
+            ...
+            
+            <ButtonSDLC 
+              size="largeButton" 
+              buttonStyle="primaryButton" 
+              text="Primary" 
+              OnClick={...}
+            />
+          `}
+        </code></pre>
         <br></br>
-        Fourth Button: (Any icon component can be added - just don't forget to import it...)
-        <div className="rectangleButtonsDemo">
-          <div className="codeFont">
-            import IconLock from '../svgs/IconLock' <br></br>
-            ...<br></br>
-            ...<br></br>
-            ...<br></br>
-            &lt;Button 
-            <div className="buttonIndent">
-              disabled={true} <br></br>
-              size="largeButton"<br></br>
-              icon=&#123;&lt;IconLock width="15px" fill="white" /&gt;&#125; <br></br>
-              buttonStyle="primaryButton" <br></br>
-              text="Primary" <br></br>
-              onClick=&#123;...&#125;<br></br>
-            </div>
-            /&gt;
-          </div>
-        </div>
+        Large, Primary, Disabled, with Icon (Fourth Button):<br />
+        *Note: Any icon component can be added - just don't forget to import it.
+        <pre><code className="language-jsx">
+          {`
+          import ButtonSDLC from './ButtonSDLC'
+          import IconLock from '../svgs/IconLock' 
+          ...
+                    
+          <ButtonSDLC 
+            disabled={true}
+            size="largeButton" 
+            icon={<IconLock width="15px" fill="white" />} 
+            buttonStyle="primaryButton" 
+            text="Disabled"
+            OnClick={...}
+          />
+          `} 
+        </code></pre>
         <br></br>
         <div className="flexColumnButtonsDemo">
           <div className="flexRowButtonsDemo">
-            <div className="caption buttonDemoPadding" style={{color:"#F58466"}}>Medium</div>
+            <div className="caption buttonDemoPadding">Medium</div>
             <span className="buttonDemoPadding">
-              <Button size="mediumButton" 
+              <ButtonSDLC size="mediumButton" 
                     buttonStyle="primaryButton" 
                     text="Primary"
               />
             </span>
-            <Button disabled={true} size="mediumButton" buttonStyle="primaryButton" text="Disabled"></Button>
+            <ButtonSDLC disabled={true} size="mediumButton" buttonStyle="primaryButton" text="Disabled"></ButtonSDLC>
             
           </div>
         </div>
-        <h4>Code</h4>
-        First Button:
-        <div className="rectangleButtonsDemo">
-          <div className="codeFont">
-            &lt;Button 
-            <div className="buttonIndent">
-              size="mediumButton"<br></br>
-              buttonStyle="primaryButton" <br></br>
-              text="Primary" <br></br>
-              onClick=&#123;...&#125;<br></br>
-            </div>
-            /&gt;
-          </div>
-        </div>
-        <br></br>
+        <br/>
+        Medium, Primary (First Button):
+        <pre><code className="language-jsx">
+          {`
+            import ButtonSDLC from './ButtonSDLC'
+            
+            ...
+            
+            <ButtonSDLC 
+              size="mediumButton" 
+              buttonStyle="primaryButton" 
+              text="Primary" 
+              OnClick={...}
+            />
+          `}
+        </code></pre>
+        <br />
 
         <div className="flexColumnButtonsDemo">
           <div className="flexRowButtonsDemo">
-            <div className="caption buttonDemoPadding" style={{color:"#F58466"}}>Small</div>
+            <div className="caption buttonDemoPadding">Small</div>
             <span className="buttonDemoPadding">
-              <Button size="smallButton" 
+              <ButtonSDLC size="smallButton" 
                       buttonStyle="primaryButton" 
                       text="Primary" 
               />
             </span>
-            <Button disabled={true} size="smallButton" buttonStyle="primaryButton" text="Disabled"></Button>
+            <ButtonSDLC disabled={true} size="smallButton" buttonStyle="primaryButton" text="Disabled"></ButtonSDLC>
             
           </div>
         </div>
-        <h4>Code</h4>
-        First Button:
-        <div className="rectangleButtonsDemo">
-          <div className="codeFont">
-            &lt;Button 
-            <div className="buttonIndent">
-              size="smallButton"<br></br>
-              buttonStyle="primaryButton" <br></br>
-              text="Primary" <br></br>
-              onClick=&#123;...&#125;<br></br>
-            </div>
-            /&gt;
-          </div>
-        </div>
+        <br/>
+        Small, Primary (First Button):
+        <pre><code className="language-jsx">
+          {`
+            import ButtonSDLC from './ButtonSDLC'
+            
+            ...
+            
+            <ButtonSDLC 
+              size="smallButton" 
+              buttonStyle="primaryButton" 
+              text="Primary" 
+              OnClick={...}
+            />
+          `}
+        </code></pre>
         <br></br>
 
         <h4>Secondary Action</h4>
@@ -149,61 +153,62 @@ When combined within button sets, the primary button should appear at the top wh
         <br></br>
         <div className="flexColumnButtonsDemo">
           <div className="flexRowButtonsDemo">
-            <div className="caption buttonDemoPadding" style={{color:"#F58466"}}>Large</div>
+            <div className="caption buttonDemoPadding">Large</div>
             <span className="buttonDemoPadding">
-              <Button size="largeButton" 
+              <ButtonSDLC size="largeButton" 
                       buttonStyle="secondaryButton" 
                       text="Secondary" 
               />
             </span>
-            <Button disabled={true} size="largeButton" buttonStyle="secondaryButton" text="Disabled"></Button>
+            <ButtonSDLC disabled={true} size="largeButton" buttonStyle="secondaryButton" text="Disabled"></ButtonSDLC>
             
           </div>
         </div>
         <br></br>
         <div className="flexColumnButtonsDemo">
           <div className="flexRowButtonsDemo">
-            <div className="caption buttonDemoPadding" style={{color:"#F58466"}}>Medium</div>
+            <div className="caption buttonDemoPadding">Medium</div>
             <span className="buttonDemoPadding">
-              <Button size="mediumButton" 
+              <ButtonSDLC size="mediumButton" 
                       buttonStyle="secondaryButton" 
                       text="Secondary" 
               />
             </span>
-            <Button disabled={true} size="mediumButton" buttonStyle="secondaryButton" text="Disabled"></Button>
+            <ButtonSDLC disabled={true} size="mediumButton" buttonStyle="secondaryButton" text="Disabled"></ButtonSDLC>
             
           </div>
         </div>
         <br></br>
         <div className="flexColumnButtonsDemo">
           <div className="flexRowButtonsDemo">
-            <div className="caption buttonDemoPadding" style={{color:"#F58466"}}>Small</div>
+            <div className="caption buttonDemoPadding">Small</div>
             <span className="buttonDemoPadding">
-              <Button size="smallButton" 
+              <ButtonSDLC size="smallButton" 
                       buttonStyle="secondaryButton" 
                       text="Secondary" 
               />
             </span>
-            <Button disabled={true} size="smallButton" buttonStyle="secondaryButton" text="Disabled"></Button>
+            <ButtonSDLC disabled={true} size="smallButton" buttonStyle="secondaryButton" text="Disabled"></ButtonSDLC>
             
           </div>
         </div>
         <br></br>
-        <h4>Code</h4>
-        First Button:
-        <div className="rectangleButtonsDemo">
-          <div className="codeFont">
-            &lt;Button 
-            <div className="buttonIndent">
-              size="largeButton"<br></br>
-              buttonStyle="secondaryButton" <br></br>
-              text="Secondary" <br></br>
-              onClick=&#123;...&#125;<br></br>
-            </div>
-            /&gt;
-          </div>
-        </div>
-        <Row>
+        Large, Secondary (First Button):
+        <pre><code className="language-jsx">
+          {`
+            import ButtonSDLC from './ButtonSDLC'
+            
+            ...
+            
+            <ButtonSDLC 
+              size="largeButton" 
+              buttonStyle="secondaryButton" 
+              text="Secondary" 
+              OnClick={...}
+            />
+          `}
+        </code></pre>
+        {/* <Row>
           <Col>
             <Dropdown>
               <Dropdown.Toggle className="btn btn-lg btn-primary" id="dropdown-basic">
@@ -367,7 +372,7 @@ When combined within button sets, the primary button should appear at the top wh
               </Dropdown.Menu>
             </Dropdown>
           </Col>
-        </Row>
+        </Row> */}
       </div>
     );
   }

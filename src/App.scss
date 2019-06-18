@@ -167,7 +167,7 @@ h5{
 }
 
 input.SDLC-form{
-	border: 1px solid #979797 !important;
+	border: 1px solid #979797;
   border-radius: 2px !important;
   height: 40px !important;
   width: 296px !important;
@@ -200,7 +200,7 @@ input.SDLC-form.focus,input.SDLC-form:active.focus,input.SDLC-form.active.focus 
 }
 
  .inputError{
-	 border: 1px solid #E15554 !important;
+	 border: 1px solid $red !important;
 	 background-color: rgba(225,85,84,0.05) !important;
  }
 
@@ -211,69 +211,6 @@ input.SDLC-form.focus,input.SDLC-form:active.focus,input.SDLC-form.active.focus 
 
 html {
   box-sizing: border-box;
-}
-
-/* Inherit box-sizing to make it easier to change the property
-* for components that leverage other behavior.*/
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-/*style wrapper to give some space*/
-.wrapper {
-  position: relative;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-/*style label to give some more space*/
-.wrapper label {
-  display: block;
-  padding: 0 0 0 1.5rem;
-  margin-bottom: 0;
-
-}
-
-/*style and hide original checkbox*/
-.wrapper input {
-  height: 1rem;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  top: .25rem;
-  width: 1rem;
-}
-
-/*position new box*/
-.wrapper input + label::before {
-  border: 2px solid #446b7c;
-  content: "";
-  height: 1rem;
-  left: 0;
-  position: absolute;
-  top: .25rem;
-  width: 1rem;
-}
-
-/*svg background styles*/
-.wrapper input + label::after {
-  content: "";
-  opacity: 0;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><path d='M0 201L0 400 200 400 400 400 400 201 400 0 200 0 0 0 0 201M366 70C368 71 385 88 386 90 387 93 387 95 386 97 385 99 170 315 155 329 143 340 143 340 132 329 117 316 38 236 36 233 34 230 34 227 35 225 37 221 54 204 57 202 62 200 60 198 102 240 141 279 141 279 144 279 148 279 146 281 253 174 311 116 358 70 358 70 358 70 359 69 359 69 361 68 363 69 366 70' fill='%23446b7c'/><path d='M359 69C359 69 358 70 358 70 358 70 311 116 253 174 146 281 148 279 144 279 141 279 141 279 102 240 60 198 62 200 57 202 54 204 37 221 35 225 34 227 34 230 36 233 38 236 117 316 132 329 143 340 143 340 155 329 170 315 385 99 386 97 388 93 387 91 376 80 365 69 363 68 359 69' fill='%23fff'/></svg>");
-  background-repeat: no-repeat;
-  height: 1rem;
-  width: 1rem;
-  position: absolute;
-  left: 0px;
-  top: .25rem;
-  transition: opacity 0.2s ease-in-out;
-}
-
-/*reveal check for 'on' state*/
-.wrapper input:checked + label::after {
-  opacity: 1;
 }
 
 hr {
@@ -291,4 +228,17 @@ hr {
 }
 .spacer{
   padding:25px;
+}
+.codeSnippets{
+  background-color: $greyscale-pale;
+  font-family: "Roboto Mono";
+  padding: 20px 10px 20px 35px;
+}
+.codeIndent2{
+  padding-left: 1rem;
+}
+.basicBorder{
+  padding:20px;
+  border: 2px solid $greyscale-pale;
+  border-radius: 5px;
 }

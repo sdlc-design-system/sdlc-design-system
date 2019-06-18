@@ -1,0 +1,30 @@
+@import "../../_masterColors.scss";
+@import "../../_prism.scss";
+.rightX{
+  display:flex;
+  justify-content: flex-end;
+  font-size:24px;
+  padding-right:10px;
+}
+.centerTitleModal{
+  display:flex;
+  justify-content: center;
+}
+
+.seventyPercentWidth{
+  width: 65%;
+}
+
+.modalContent{
+  padding: 0 20px;
+}
+
+.buttonsModal{
+  display:flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+
+ 
+ 

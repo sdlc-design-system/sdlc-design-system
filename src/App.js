@@ -13,7 +13,7 @@ import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Switch from './components/Switch'
-import Accordian from './components/Accordian'
+import Accordion from './components/Accordion'
 import Radio from './components/Radio'
 import './App.scss';
 import Panel from './components/Panel'
@@ -25,8 +25,19 @@ import Sidebar from './components/Sidebar'
 import Color from './components/Color'
 import Typography from './components/Typography'
 import ButtonsDemo from './components/ButtonsDemo'
-import Button from './components/Button'
-
+import ButtonSDLC from './components/ButtonSDLC'
+import PanelDemo from './components/PanelDemo' 
+import AccordionsDemo from './components/AccordionsDemo' 
+import ModalDemo from './components/ModalDemo' 
+import FormsDemo from './components/FormsDemo' 
+import StandardInputDemo from './components/StandardInputDemo' 
+import DropDownDemo from './components/DropDownDemo' 
+import RadioButtonsDemo from './components/RadioButtonsDemo' 
+import CheckBoxDemo from './components/CheckBoxDemo' 
+import SwitchDemo from './components/SwitchDemo' 
+import DividersDemo from './components/DividersDemo' 
+import LoadingDemo from './components/LoadingDemo'
+import IconsDemo from './components/IconsDemo'
 
 import IconAlert from './svgs/IconAlert'
 import IconAlertStopSign from './svgs/IconAlertStopSign'
@@ -73,24 +84,8 @@ import IconCopy from './svgs/IconCopy'
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      switchState:false,
-      showModal: false,
-    }
   }
-  handleSwitchChange = ()=> {
-    this.setState({ switchState: !this.state.switchState })
-  }
-
-  handleModalClose=()=> {
-    this.setState({ showModal: false });
-  }
-
-  handleModalShow=()=> {
-    console.log("OLD MAN NEILL")
-    this.setState({ showModal: true });
-  }
-
+  
   render(){
     return (
       <div>
@@ -99,109 +94,49 @@ class App extends Component {
           <Row>
             <Sidebar 
               content={[
-                {id:'colors',title:'Colors'},
+                {id:'colors',title:'Colors',indent:'0'},
                 {id:'typography',title:'Typography'},
+                {id:'icons', title:'Icons'},
                 {id:'buttons',title:'Buttons'},
-                {id:'icons', title:'Icons'}
+                {id:'forms',title:'Forms'},
+                {id:'containers',title:'Containers'},
+                {id:'content',title:'Content'},
+
+
               ]}
 
             />
             <div className="main">
             <Col className="main" style={{height:"1500px"}}>
-              <div id="colors-section" className="anchor"></div>
+              <div id="colors-section" ref="colors-section" className="anchor"></div>
               <Color/>
-              <div id="typography-section" className="anchor"></div>
+              <div id="typography-section" ref="typography-section" className="anchor"></div>
               <Typography/>
+              <div id="icons-section" ref="icons-section" className="anchor"></div>
+              <IconsDemo />
               <div id="buttons-section" ref="buttons-section" className="anchor"></div>
               <ButtonsDemo />
-              
-              
-              
+              <div id="forms-section" ref="forms-section" className="anchor"></div>
+              <FormsDemo />
+              <StandardInputDemo />
+              <DropDownDemo />
+              <RadioButtonsDemo />
+              <CheckBoxDemo />
+              <SwitchDemo />
+              <div id="containers-section" ref="containers-section" className="anchor"></div>
+              <h2>Containers</h2>
+              <div id="panel-section" ref="panel-section" className="anchor"></div>
+              <PanelDemo />
+              <div id="accordions-section" ref="accordions-section" className="anchor"></div>
+              <AccordionsDemo />
+              <div id="modal-section" ref="modal-section" className="anchor"></div>
+              <ModalDemo />
+              <div id="content-section" ref="content-section" className="anchor"></div>
+              <h2>Content</h2>
+              <DividersDemo />
               <br></br>
-              <Form>
-                <Row>
-                  <Col>
-                    <input className="SDLC-form"
-                      placeholder="Placeholder Text...">
-                    </input>
-                  </Col>
-                  <Col>
-                    <input
-                      placeholder="error"
-                      className="inputError SDLC-form">
-                    </input>
-                  </Col>
-                  <Col>
-                    <input 
-                      className="inputSuccess SDLC-form"
-                      placeholder="success">
-                    </input>
-                  </Col>
-                  <br />
-                  <br />
-                  <Col>
-                    <input
-                      placeholder="disabled" disabled
-                      className="SDLC-form">
-                      
-                    </input>
-                  </Col>
-                </Row>
-              </Form>
-                
-              <Form>
-                <div className="wrapper">
-                  <input id="a11y-issue-1" name="a11y-issues" type="checkbox" value="no-issues" /> 
-                  <label for="a11y-issue-1">First check/toggle</label>
-                </div>
-                <div className="wrapper">
-                  <input id="a11y-issue-2" name="a11y-issues" type="checkbox" value="no-focus-styles" />
-                  <label for="a11y-issue-2">Second check/toggle</label>
-                </div>
-              </Form>
-
-              <Radio content={[
-                {content:'radio toggle one'},
-                {content:'radio toggle two'},
-                {content:'radio toggle three'},
-              ]}/>
-
-              <Switch isChecked={ this.state.switchState }
-                      handleSwitchChange={this.handleSwitchChange} 
-              />The switch is {this.state.switchState ? "on":"off"}
-        
-              <Accordian
-                content={[
-                  {title:'Label 1',content:'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.'},
-                  {title:'Label 2',content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'},
-                  {title:'Label 3',content:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'}
-                ]} 
-              />
-
-              <Panel
-                content={[
-                  {title:'Label 1',content:'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.'},
-                  {title:'Label 2',content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'},
-                  {title:'Label 3',content:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'}
-                ]} 
-              />  
-              <br />
-              Heavy & light dividers:
-              <hr className="heavyDivider"></hr>
-              <hr className="lightDivider"></hr>
+              <LoadingDemo />
               
-              <Button onClick={this.handleModalShow} size="largeButton" buttonStyle="primaryButton" text="Modal"></Button>
-              {this.state.showModal ? 
-                <ModalSDLC
-                  showModal = {this.state.showModal}
-                  handleModalClose = {this.handleModalClose}
-                  handleModalShow = {this.handleModalShow}
-                  buttonOnRightTitle = "Confirm"//custom content here
-                  buttonOnRightAction = {this.handleModalClose}//custom handle click here
-                  title = "Title"
-                  content= "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."
-                /> : null
-              }
               <div></div>
               <h2 id="icons-section" ref="icons-section" className="anchor">Icons</h2>
               <div>Messaging</div>
@@ -266,8 +201,7 @@ class App extends Component {
 
               </Row>
               <SdlcLogo width="103px"></SdlcLogo>
-              <div>Loading Indicator</div>
-              <Loading width="24px" />
+
             </Col>
           </div>
           </Row>

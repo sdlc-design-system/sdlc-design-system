@@ -1,8 +1,8 @@
 import React from 'react';
-import './componentStyles/Button.scss';
+import './componentStyles/ButtonSDLC.scss';
 
 
-class Button extends React.Component {
+class ButtonSDLC extends React.Component {
   constructor ( props ) {
     super( props );
   }
@@ -21,4 +21,4 @@ class Button extends React.Component {
     );
   }
 }
-export default Button
+export default ButtonSDLC

@@ -13,7 +13,7 @@ import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Switch from './components/Switch'
-import Accordian from './components/Accordian'
+import Accordion from './components/Accordion'
 import Radio from './components/Radio'
 import './App.scss';
 import Panel from './components/Panel'

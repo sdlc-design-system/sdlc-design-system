@@ -1,11 +1,5 @@
-@import "../../_masterColors.scss";
 @import "../../_prism.scss";
 
-.flexColumnButtonsDemo{
-  display: flex;
-  flex-direction: column;
-  flex:1;
-}
 .flexRowButtonsDemo{
   display: flex;
   flex-direction: row;
@@ -17,8 +11,4 @@
 
 .buttonDemoPadding{
   padding:0 2rem 0 0;
-}
-
-.caption{
-  color:$coral;
 }
