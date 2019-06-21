@@ -2,47 +2,47 @@ import React from 'react';
 import Prism from 'prismjs';
 import './componentStyles/IconsDemo.scss';
 
-import IconAlert from '../svgs/IconAlert'
-import IconAlertStopSign from '../svgs/IconAlertStopSign'
-import IconAnalysis from '../svgs/IconAnalysis'
-import IconApproveInvoice from '../svgs/IconApproveInvoice'
-import IconCheck from '../svgs/IconCheck'
-import IconClose from '../svgs/IconClose'
-import IconContract from '../svgs/IconContract' 
-import IconControls from '../svgs/IconControls' 
-import IconDeleteButton from '../svgs/IconDeleteButton' 
-import IconDown from '../svgs/IconDown' 
-import IconFolder from '../svgs/IconFolder' 
-import IconGraphicTool from '../svgs/IconGraphicTool' 
-import IconGroup from '../svgs/IconGroup' 
-import IconInformation from '../svgs/IconInformation' 
-import IconLeft from '../svgs/IconLeft' 
-import IconRight from '../svgs/IconRight' 
-import IconLeftArrow from '../svgs/IconLeftArrow' 
-import IconRightArrow from '../svgs/IconRightArrow' 
-import IconLock from '../svgs/IconLock' 
-import IconMagnifyingGlass from '../svgs/IconMagnifyingGlass' 
-import IconQuality from '../svgs/IconQuality' 
-import IconQuestion from '../svgs/IconQuestion' 
-import IconRunning from '../svgs/IconRunning' 
-import IconSketch from '../svgs/IconSketch' 
-import IconSmallUp from '../svgs/IconSmallUp' 
-import IconSmallDown from '../svgs/IconSmallDown' 
-import IconSmallLeft from '../svgs/IconSmallLeft' 
-import IconSmallRight from '../svgs/IconSmallRight' 
-import IconSolution from '../svgs/IconSolution' 
-import IconSpinnerOfDots from '../svgs/IconSpinnerOfDots' 
-import IconStandingUpMan from '../svgs/IconStandingUpMan' 
-import IconTools from '../svgs/IconTools' 
-import IconUp from '../svgs/IconUp' 
-import IconWeb from '../svgs/IconWeb' 
-import IconTeam from '../svgs/IconTeam' 
-import IconBlueprint from '../svgs/IconBlueprint' 
-import IconPhatCheck from '../svgs/IconPhatCheck' 
-import IconTick from '../svgs/IconTick' 
+import Alert from '../svgs/Alert'
+import StopSign from '../svgs/StopSign'
+import Analysis from '../svgs/Analysis'
+import ApproveInvoice from '../svgs/ApproveInvoice'
+import RoundCheck from '../svgs/RoundCheck'
+import Close from '../svgs/Close'
+import Contract from '../svgs/Contract' 
+import Controls from '../svgs/Controls' 
+import Delete from '../svgs/Delete' 
+import Down from '../svgs/Down' 
+import Folder from '../svgs/Folder' 
+import GraphicTool from '../svgs/GraphicTool' 
+import Group from '../svgs/Group' 
+import Information from '../svgs/Information' 
+import Left from '../svgs/Left' 
+import Right from '../svgs/Right' 
+import LeftArrow from '../svgs/LeftArrow' 
+import RightArrow from '../svgs/RightArrow' 
+import Lock from '../svgs/Lock' 
+import SearchIcon from '../svgs/SearchIcon' 
+import Quality from '../svgs/Quality' 
+import Question from '../svgs/Question' 
+import Running from '../svgs/Running' 
+import Sketch from '../svgs/Sketch' 
+import SmallUp from '../svgs/SmallUp' 
+import SmallDown from '../svgs/SmallDown' 
+import SmallLeft from '../svgs/SmallLeft' 
+import SmallRight from '../svgs/SmallRight' 
+import Solution from '../svgs/Solution' 
+import Spinner from '../svgs/Spinner' 
+import Standing from '../svgs/Standing' 
+import Tools from '../svgs/Tools' 
+import Up from '../svgs/Up' 
+import Web from '../svgs/Web' 
+import Team from '../svgs/Team' 
+import Blueprint from '../svgs/Blueprint' 
+import Check from '../svgs/Check' 
+import Tick from '../svgs/Tick' 
 import SdlcLogo from '../svgs/SdlcLogo' 
-import IconHamburger from '../svgs/IconHamburger' 
-import IconCopy from '../svgs/IconCopy' 
+import Hamburger from '../svgs/Hamburger' 
+import Copy from '../svgs/Copy' 
 
 class DividersDemo extends React.Component {
   constructor ( props ) {
@@ -50,221 +50,219 @@ class DividersDemo extends React.Component {
   }
   render () {
     return(
-      <div className="iconsSpacing labels14">
+      <div className="iconsSpacing">
         <h2>Icons</h2>
         <h4>Messaging</h4>
-        <div className="iconGrouping">
+        <div className=" iconGrouping labels14">
           <div className="iconBlock">
-            <div className="iconIcon"><IconPhatCheck width="25px" fill="black" /></div>
-            <div>&lt;IconPhatCheck&gt;</div>
+            <div className="iconIcon"><Check width="35px" fill="black" /></div>
+            <div>&lt;Check&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconAlertStopSign width="25px" fill="black" /></div>
-            <div>&lt;IconAlertStopSign&gt;</div>
+            <div className="iconIcon"><StopSign width="35px" fill="black" /></div>
+            <div>&lt;StopSign&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconQuestion width="25px" fill="black" /></div>
-            <div>&lt;IconQuestion&gt;</div>
+            <div className="iconIcon"><Question width="35px" fill="black" /></div>
+            <div>&lt;Question&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconInformation width="25px" fill="black" /></div>
-            <div>&lt;IconInformation&gt;</div>
+            <div className="iconIcon"><Information width="35px" fill="black" /></div>
+            <div>&lt;Information&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconCheck width="25px" fill="black" /></div>
-            <div>&lt;IconCheck&gt;</div>
+            <div className="iconIcon"><RoundCheck width="35px" fill="black" /></div>
+            <div>&lt;RoundCheck&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconAlert width="25px" fill="black" /></div>
-            <div>&lt;IconAlert&gt;</div>
+            <div className="iconIcon"><Alert width="35px" fill="black" /></div>
+            <div>&lt;Alert&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconQuestion width="25px" fill="black" /></div>
-            <div>&lt;IconQuestion&gt;</div>
-          </div>
-          <div className="iconBlock">
-            <div className="iconIcon"><IconInformation width="25px" fill="black" /></div>
-            <div>&lt;IconInformation&gt;</div>
-          </div>
-          <div className="iconBlock">
-            <div className="iconIcon"><IconCheck width="25px" fill="black" /></div>
-            <div>&lt;IconCheck&gt;</div>
-          </div>
-          <div className="iconBlock">
-            <div className="iconIcon"><IconAlert width="25px" fill="black" /></div>
-            <div>&lt;IconAlert&gt;</div>
+            <div className="iconIcon"><Question width="35px" fill="black" /></div>
+            <div>&lt;Question&gt;</div>
           </div>
         </div>
         <h4>Arrows</h4>
-        <div className="iconGrouping">
+        <div className=" iconGrouping labels14">
           <div className="iconBlock">
-            <div className="iconIcon"><IconLeftArrow width="25px" fill="Black" /></div>
-            <div>&lt;IconLeftArrow&gt;</div>
+            <div className="iconIcon"><Left width="35px" fill="black" /></div>
+            <div>&lt;Left&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconRightArrow width="25px" fill="black" /></div>
-            <div>&lt;IconRightArrow&gt;</div>
+            <div className="iconIcon"><Right width="35px" fill="black" /></div>
+            <div>&lt;Right&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconDown width="25px" fill="black" /></div>
-            <div>&lt;IconDown&gt;</div>
+            <div className="iconIcon"><Up width="35px" fill="black" /></div>
+            <div>&lt;Up&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconLeft width="25px" fill="black" /></div>
-            <div>&lt;IconLeft&gt;</div>
+            <div className="iconIcon"><Down width="35px" fill="black" /></div>
+            <div>&lt;Down&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconRight width="25px" fill="black" /></div>
-            <div>&lt;IconRight&gt;</div>
+            <div className="iconIcon"><LeftArrow width="35px" fill="Black" /></div>
+            <div>&lt;LeftArrow&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconUp width="25px" fill="black" /></div>
-            <div>&lt;IconUp&gt;</div>
+            <div className="iconIcon"><RightArrow width="35px" fill="black" /></div>
+            <div>&lt;RightArrow&gt;</div>
+          </div>
+          <div className="iconBlock"><br /></div>
+
+          <div className="iconBlock">
+            <div className="iconIcon"><SmallLeft width="20px" fill="black" /></div>
+            <div>&lt;SmallLeft&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconSmallUp width="25px" fill="black" /></div>
-            <div>&lt;IconSmallUp&gt;</div>
+            <div className="iconIcon"><SmallRight width="20px" fill="black" /></div>
+            <div>&lt;SmallRight&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconSmallLeft width="25px" fill="black" /></div>
-            <div>&lt;IconSmallLeft&gt;</div>
-          </div>
+            <div className="iconIcon"><SmallUp width="20px" fill="black" /></div>
+            <div>&lt;SmallUp&gt;</div>
+          </div>          
           <div className="iconBlock">
-            <div className="iconIcon"><IconSmallRight width="25px" fill="black" /></div>
-            <div>&lt;IconSmallRight&gt;</div>
-          </div>
-          <div className="iconBlock">
-            <div className="iconIcon"><IconSmallDown width="25px" fill="black" /></div>
-            <div>&lt;IconSmallDown&gt;</div>
+            <div className="iconIcon"><SmallDown width="20px" fill="black" /></div>
+            <div>&lt;SmallDown&gt;</div>
           </div>
         </div>
         <h4>Actions</h4>
-        <div className="iconGrouping">
+        <div className=" iconGrouping labels14">
           <div className="iconBlock">
-            <div className="iconIcon"><IconTick width="25px" fill="black" /></div>
-            <div>&lt;IconTick&gt;</div>
+            <div className="iconIcon"><Tick width="35px" fill="black" /></div>
+            <div>&lt;Tick&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconClose width="25px" fill="black" /></div>
-            <div>&lt;IconClose&gt;</div>
+            <div className="iconIcon"><Close width="35px" fill="black" /></div>
+            <div>&lt;Close&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconDeleteButton width="25px" fill="black" /></div>
-            <div>&lt;IconDeleteButton&gt;</div>
+            <div className="iconIcon"><Delete width="35px" fill="black" /></div>
+            <div>&lt;Delete&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconMagnifyingGlass width="25px" fill="black" /></div>
-            <div>&lt;IconMagnifyingGlass&gt;</div>
+            <div className="iconIcon"><SearchIcon width="35px" fill="black" /></div>
+            <div>&lt;SearchIcon&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconSpinnerOfDots width="25px" fill="black" /></div>
-            <div>&lt;IconSpinnerOfDots&gt;</div>
+            <div className="iconIcon"><Spinner width="35px" fill="black" /></div>
+            <div>&lt;Spinner&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconCopy width="25px" fill="black" /></div>
-            <div>&lt;IconCopy&gt;</div>
+            <div className="iconIcon"><Copy width="35px" fill="black" /></div>
+            <div>&lt;Copy&gt;</div>
           </div>
         </div>
           
         <h4>Human</h4>
-        <div className="iconGrouping">
+        <div className=" iconGrouping labels14">
           <div className="iconBlock">
-            <div className="iconIcon"><IconStandingUpMan width="25px" fill="black" /></div>
-            <div>&lt;IconStandingUpMan&gt;</div>
+            <div className="iconIcon"><Standing width="35px" fill="black" /></div>
+            <div>&lt;Standing&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconRunning width="25px" fill="black" /></div>
-            <div>&lt;IconRunning&gt;</div>
+            <div className="iconIcon"><Running width="35px" fill="black" /></div>
+            <div>&lt;Running&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconTeam width="25px" fill="black" /></div>
-            <div>&lt;IconTeam&gt;</div>
+            <div className="iconIcon"><Team width="35px" fill="black" /></div>
+            <div>&lt;Team&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconGroup width="25px" fill="black" /></div>
-            <div>&lt;IconGroup&gt;</div>
+            <div className="iconIcon"><Group width="35px" fill="black" /></div>
+            <div>&lt;Group&gt;</div>
           </div>
         </div>
         <h4>Work</h4>
-        <div className="iconGrouping">
+        <div className=" iconGrouping labels14">
           <div className="iconBlock">
-            <div className="iconIcon"><IconApproveInvoice width="25px" fill="black" /></div>
-            <div>&lt;IconApproveInvoice&gt;</div>
+            <div className="iconIcon"><ApproveInvoice width="35px" fill="black" /></div>
+            <div>&lt;ApproveInvoice&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconBlueprint width="25px" fill="black" /></div>
-            <div>&lt;IconBlueprint&gt;</div>
+            <div className="iconIcon"><Blueprint width="35px" fill="black" /></div>
+            <div>&lt;Blueprint&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconContract width="25px" fill="black" /></div>
-            <div>&lt;IconContract&gt;</div>
+            <div className="iconIcon"><Contract width="35px" fill="black" /></div>
+            <div>&lt;Contract&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconAnalysis width="25px" fill="black" /></div>
-            <div>&lt;IconAnalysis&gt;</div>
+            <div className="iconIcon"><Analysis width="35px" fill="black" /></div>
+            <div>&lt;Analysis&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconQuality width="25px" fill="black" /></div>
-            <div>&lt;IconQuality&gt;</div>
+            <div className="iconIcon"><Quality width="35px" fill="black" /></div>
+            <div>&lt;Quality&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconFolder width="25px" fill="black" /></div>
-            <div>&lt;IconFolder&gt;</div>
+            <div className="iconIcon"><Folder width="35px" fill="black" /></div>
+            <div>&lt;Folder&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconGraphicTool width="25px" fill="black" /></div>
-            <div>&lt;IconGraphicTool&gt;</div>
+            <div className="iconIcon"><GraphicTool width="35px" fill="black" /></div>
+            <div>&lt;GraphicTool&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconSketch width="25px" fill="black" /></div>
-            <div>&lt;IconSketch&gt;</div>
+            <div className="iconIcon"><Sketch width="35px" fill="black" /></div>
+            <div>&lt;Sketch&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconSolution width="25px" fill="black" /></div>
-            <div>&lt;IconSolution&gt;</div>
+            <div className="iconIcon"><Solution width="35px" fill="black" /></div>
+            <div>&lt;Solution&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconTools width="25px" fill="black" /></div>
-            <div>&lt;IconTools&gt;</div>
+            <div className="iconIcon"><Tools width="35px" fill="black" /></div>
+            <div>&lt;Tools&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconWeb width="25px" fill="black" /></div>
-            <div>&lt;IconWeb&gt;</div>
+            <div className="iconIcon"><Web width="35px" fill="black" /></div>
+            <div>&lt;Web&gt;</div>
           </div>
         </div>
         <h4>Other</h4>
-        <div className="iconGrouping">
+        <div className=" iconGrouping labels14">
           <div className="iconBlock">
-            <div className="iconIcon"><IconLock width="25px" fill="black" /></div>
-            <div>&lt;IconLock&gt;</div>
+            <div className="iconIcon"><Lock width="35px" fill="black" /></div>
+            <div>&lt;Lock&gt;</div>
           </div>
           <div className="iconBlock">
-            <div className="iconIcon"><IconHamburger width="25px" fill="black" /></div>
-            <div>&lt;IconHamburger&gt;</div>
+            <div className="iconIcon"><Hamburger width="35px" fill="black" /></div>
+            <div>&lt;Hamburger&gt;</div>
           </div>
         </div>
         <h4>Logo</h4>
-        <div className="iconGrouping">
+        <div className=" iconGrouping labels14">
           <div className="iconBlock">
             <div className="iconIcon"><SdlcLogo width="75px" /></div>
             <div>&lt;SdlcLogo&gt;</div>
           </div>
         </div>
 
-        {/* <br />
-        
-        <div>Heavy divider</div>
-        <hr className="heavyDivider"></hr>
-        <div>Light divider</div>
-        <hr className="lightDivider"></hr>
-              
         <br />
+        <div>General Icon Usage</div>
         <pre><code className="language-jsx">
           {`
-            <hr className="heavyDivider"></hr>
-            <hr className="lightDivider"></hr>
+            import Hamburger from '../svgs/Hamburger' 
+
+            ...
+
+            <Hamburger width="25px" fill="black" />
           `} 
-        </code></pre> */}
+        </code></pre>
+        <br />
+        <div>SDLC Logo</div>
+        <pre><code className="language-jsx">
+          {`
+            import SdlcLogo from '../svgs/Hamburger' 
+
+            ...
+
+            <SdlcLogo width="100px" /> //colors are set automatically
+          `} 
+        </code></pre>
       </div>
     );
   }

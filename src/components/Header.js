@@ -1,8 +1,8 @@
 import React from 'react';
 import './componentStyles/Header.scss';
 import SdlcLogo from '../svgs/SdlcLogo' 
-import IconHamburger from '../svgs/IconHamburger' 
-import IconMagnifyingGlass from '../svgs/IconMagnifyingGlass' 
+import Hamburger from '../svgs/Hamburger' 
+import SearchIcon from '../svgs/SearchIcon' 
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import Searchbox from './Searchbox'
@@ -37,12 +37,12 @@ class Header extends React.Component {
           </Container>
 
           <div className="headerSmall">
-            <div><IconHamburger width="28px" fill="#44687D" /></div>
+            <div><Hamburger width="28px" fill="#44687D" /></div>
             <div><SdlcLogo
               width="80"
               alt="SDLC Partners logo"
             /></div>
-            <div><IconMagnifyingGlass width="20px" fill="#44687D" /></div>
+            <div><SearchIcon width="20px" fill="#44687D" /></div>
           </div>
         </div>   
         <hr className="heavyDivider" style={{marginTop:"0",marginBottom:"0"}}></hr>

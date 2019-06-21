@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Collapse from 'react-bootstrap/Collapse'
 import '../App.scss'
 import './componentStyles/Accordion.scss';
-import IconUp from '../svgs/IconUp' 
-import IconDown from '../svgs/IconDown' 
+import Up from '../svgs/Up' 
+import Down from '../svgs/Down' 
 
 // see https://react-bootstrap.github.io/utilities/transitions/#collapse-props
 class Accordion extends React.Component {
@@ -39,7 +39,7 @@ class Accordion extends React.Component {
               <span className={this.state.openAccordion[index] ? "boldFont":"regularFont"}>{item.title}</span>
               <span className= {this.state.openAccordion[index] ? "upArrow":"downArrow"}></span>
               {this.state.openAccordion[index] ? 
-                <IconUp width="15px" fill="#44687d"></IconUp> : <IconDown width="15px" fill="#44687d"></IconDown>
+                <Up width="15px" fill="#44687d"></Up> : <Down width="15px" fill="#44687d"></Down>
               }
             </div>
 

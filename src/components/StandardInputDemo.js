@@ -2,8 +2,8 @@ import React from 'react';
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import IconAlertStopSign from '../svgs/IconAlertStopSign'
-import IconCheck from '../svgs/IconCheck'
+import StopSign from '../svgs/StopSign'
+import RoundCheck from '../svgs/RoundCheck'
 
 class StandardInputDemo extends React.Component {
   constructor ( props ) {
@@ -33,7 +33,7 @@ class StandardInputDemo extends React.Component {
                 className="SDLC-form inputError spacer">
               </input>
               <div style={{color:"red", display:"flex",alignItems:"center" }} className="labels14">
-                <div><IconAlertStopSign width="15px" fill="red" /></div>
+                <div><StopSign width="15px" fill="red" /></div>
                 <span style={{padding:".25rem 0 0 .25rem"}}>This is an error message</span>
               </div>
             </Col>
@@ -44,7 +44,7 @@ class StandardInputDemo extends React.Component {
                 placeholder="success">
               </input>
               <div style={{color:"green", display:"flex",alignItems:"center" }} className="labels14">
-                <div><IconCheck width="15px" fill="green" /></div>
+                <div><RoundCheck width="15px" fill="green" /></div>
                 <span style={{padding:".25rem 0 0 .25rem"}}>This is a success message</span>
               </div>
             </Col>

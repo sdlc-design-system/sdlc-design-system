@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Dropdown from 'react-bootstrap/Dropdown'
 import './componentStyles/ButtonsDemo.scss';
-import IconLock from '../svgs/IconLock' 
+import Lock from '../svgs/Lock' 
 import ButtonSDLC from './ButtonSDLC'
 import Prism from 'prismjs';
 
@@ -35,14 +35,14 @@ When combined within button sets, the primary button should appear at the top wh
             </span>
             <span className="buttonDemoPadding">
               <ButtonSDLC size="largeButton" 
-                    icon={<IconLock width="15px" fill="white" />} 
+                    icon={<Lock width="15px" fill="white" />} 
                     buttonStyle="primaryButton" 
                     text="Primary"
               />
             </span>
             <ButtonSDLC disabled={true}
                   size="largeButton" 
-                  icon={<IconLock width="15px" fill="white" />} 
+                  icon={<Lock width="15px" fill="white" />} 
                   buttonStyle="primaryButton" 
                   text="Disabled"
             />
@@ -70,13 +70,13 @@ When combined within button sets, the primary button should appear at the top wh
         <pre><code className="language-jsx">
           {`
           import ButtonSDLC from './ButtonSDLC'
-          import IconLock from '../svgs/IconLock' 
+          import Lock from '../svgs/Lock' 
           ...
                     
           <ButtonSDLC 
             disabled={true}
             size="largeButton" 
-            icon={<IconLock width="15px" fill="white" />} 
+            icon={<Lock width="15px" fill="white" />} 
             buttonStyle="primaryButton" 
             text="Disabled"
             OnClick={...}
