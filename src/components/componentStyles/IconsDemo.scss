@@ -1,0 +1,21 @@
+@import "../../_masterColors.scss";
+
+.iconsSpacing h4{
+  padding:1rem 0 1rem 0;
+}
+.iconGrouping {
+  display:flex;
+  flex-wrap:wrap;
+}
+.iconIcon{
+  display:flex;
+  justify-content:center;
+  padding-bottom:1rem;
+
+}
+.iconBlock{
+  display:flex;
+  flex-direction:column;
+  padding-bottom:2rem;
+  padding-right:2rem;
+}

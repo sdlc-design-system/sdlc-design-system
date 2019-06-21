@@ -6,30 +6,31 @@ body{
 h1{
   font-size:72px;
   line-height:80px;
-  font-weight: 700;
+  font-weight: 400;
 }
 h2{
   font-size:48px;
   line-height:64px;
-  font-weight: 700;
+  font-weight: 400;
+  padding: 32px 0 32px 0;
 
 }
 h3{
   font-size:32px;
   line-height:40px;
-  font-weight: 700;
+  font-weight: 600;
 
 }
 h4{
   font-size:24px;
   line-height:32px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h5{
   font-size:20px;
   line-height:32px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .largeBodyCopy{
@@ -55,20 +56,20 @@ h5{
 .labels16{
   font-size: 16px;	
   line-height: 24px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .labels14{
   font-size: 14px;	
   line-height: 24px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .textLink16{
   font-size: 16px;	
   line-height: 24px;
   color: $btn-brand;  
-  font-weight: 700;
+  font-weight: 600;
 
 }
 
@@ -76,11 +77,14 @@ h5{
   font-size: 14px;	
   line-height: 24px; 
   color: $btn-brand; 
-  font-weight: 700;
+  font-weight: 600;
 
 }
 .bold{
-  font-weight:900;
+  font-weight:800;
+}
+.semi-bold{
+  font-weight:600;
 }
 .btn {
  font-family: "Open Sans";
@@ -241,4 +245,13 @@ hr {
   padding:20px;
   border: 2px solid $greyscale-pale;
   border-radius: 5px;
+}
+// .anchor:target {
+//   padding-top: 82px;
+// }
+.anchor:target::before {
+  content: "";
+  display: block;
+  height: 88px; /* fixed header height*/
+  margin: -88px 0 0; /* negative fixed header height */
 }

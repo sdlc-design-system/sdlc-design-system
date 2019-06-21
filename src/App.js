@@ -92,115 +92,44 @@ class App extends Component {
         <Header />
         <Container fluid style={{marginLeft: "10px"}}>
           <Row>
-            <Sidebar 
-              content={[
-                {id:'colors',title:'Colors',indent:'0'},
-                {id:'typography',title:'Typography'},
-                {id:'icons', title:'Icons'},
-                {id:'buttons',title:'Buttons'},
-                {id:'forms',title:'Forms'},
-                {id:'containers',title:'Containers'},
-                {id:'content',title:'Content'},
-
-
-              ]}
-
-            />
+            <Sidebar />
             <div className="main">
             <Col className="main" style={{height:"1500px"}}>
-              <div id="colors-section" ref="colors-section" className="anchor"></div>
-              <Color/>
-              <div id="typography-section" ref="typography-section" className="anchor"></div>
-              <Typography/>
-              <div id="icons-section" ref="icons-section" className="anchor"></div>
+              <div id="colors" ref="colors" className="anchor"></div>
+              <div style={{paddingTop:"88px"}}><Color /></div>
+              <div id="typography" ref="typography" className="anchor"></div> 
+              <Typography />
+              <div id="icons" ref="icons" className="anchor"></div>
               <IconsDemo />
-              <div id="buttons-section" ref="buttons-section" className="anchor"></div>
+              <div id="buttons" ref="buttons" className="anchor"></div>
               <ButtonsDemo />
-              <div id="forms-section" ref="forms-section" className="anchor"></div>
+              <div id="forms" ref="forms" className="anchor"></div>
               <FormsDemo />
+              <div id="standardInput" ref="standardInput" className="anchor"></div>
               <StandardInputDemo />
+              <div id="dropdownMenu" ref="dropdownMenu" className="anchor"></div>
               <DropDownDemo />
+              <div id="radioButtons" ref="radioButtons" className="anchor"></div>
               <RadioButtonsDemo />
+              <div id="checkbox" ref="checkbox" className="anchor"></div>
               <CheckBoxDemo />
+              <div id="switch" ref="switch" className="anchor"></div>
               <SwitchDemo />
-              <div id="containers-section" ref="containers-section" className="anchor"></div>
+              <div id="containers" ref="containers" className="anchor"></div>
               <h2>Containers</h2>
-              <div id="panel-section" ref="panel-section" className="anchor"></div>
+              <div id="panel" ref="panel" className="anchor"></div>
               <PanelDemo />
-              <div id="accordions-section" ref="accordions-section" className="anchor"></div>
+              <div id="accordion" ref="accordion" className="anchor"></div>
               <AccordionsDemo />
-              <div id="modal-section" ref="modal-section" className="anchor"></div>
+              <div id="modal" ref="modal" className="anchor"></div>
               <ModalDemo />
-              <div id="content-section" ref="content-section" className="anchor"></div>
+              <div id="content" ref="content" className="anchor"></div>
               <h2>Content</h2>
+              <div id="dividers" ref="dividers" className="anchor"></div>
               <DividersDemo />
-              <br></br>
+              <div id="loadingIndicator" ref="loadingIndicator" className="anchor"></div>
               <LoadingDemo />
               
-              <div></div>
-              <h2 id="icons-section" ref="icons-section" className="anchor">Icons</h2>
-              <div>Messaging</div>
-              <Row>
-                <span className="spacer"><IconPhatCheck width="25px" fill="black" /></span>
-                <span className="spacer"><IconAlertStopSign width="25px" fill="Black" /></span>
-                <span className="spacer"><IconQuestion width="25px" fill="black" /></span>
-                <span className="spacer"><IconInformation width="25px" fill="black" /></span>
-                <span className="spacer"><IconCheck width="25px" fill="black" /></span>
-                <span className="spacer"><IconAlert width="25px" fill="black" /></span>
-              </Row>
-              <div>Arrows</div>
-              <Row>
-                <span className="spacer"><IconLeftArrow width="25px" fill="black" /></span>
-                <span className="spacer"><IconRightArrow width="25px" fill="black" /></span>
-                <span className="spacer"><IconDown width="25px" fill="black" /> </span>
-                <span className="spacer"><IconLeft width="25px" fill="black" /> </span>
-                <span className="spacer"><IconRight width="25px" fill="black" /> </span>
-                <span className="spacer"><IconUp width="25px" fill="black" /> </span>
-                <span className="spacer"><IconSmallUp width="15px" fill="black" /> </span>
-                <span className="spacer"><IconSmallLeft width="15px" fill="black" /> </span>
-                <span className="spacer"><IconSmallRight width="15px" fill="black" /> </span>
-                <span className="spacer"><IconSmallDown width="15px" fill="black" /> </span>
-              </Row>
-              <div>Actions</div>
-              <Row>
-                <span className="spacer"><IconTick width="25px" fill="black" /></span>
-                <span className="spacer"><IconClose width="25px" fill="black" /></span>
-                <span className="spacer"><IconDeleteButton width="25px" fill="black" /></span>
-                <span className="spacer"><IconMagnifyingGlass width="25px" fill="black" /></span>
-                <span className="spacer"><IconSpinnerOfDots width="25px" fill="black" /></span>
-                <span className="spacer"> <IconCopy width="25px" fill="black" /></span>
-
-              </Row>
-              <div>Human</div>
-              <Row>
-                <span className="spacer"><IconStandingUpMan width="25px" fill="black" /></span>
-                <span className="spacer"><IconRunning width="25px" fill="black" /></span>
-                <span className="spacer"><IconTeam width="25px" fill="black" /></span>
-                <span className="spacer"><IconGroup width="25px" fill="black" /></span>
-              </Row>
-              <div>Work</div>
-              <Row>
-                <span className="spacer"><IconApproveInvoice width="25px" fill="black" /></span>
-                <span className="spacer"><IconBlueprint width="25px" fill="black" /></span>
-                <span className="spacer"><IconContract width="25px" fill="black" /></span>
-                <span className="spacer"><IconAnalysis width="25px" fill="black" /></span>
-                <span className="spacer"><IconQuality width="25px" fill="black" /></span>
-                <span className="spacer"><IconFolder width="25px" fill="black" /></span>
-                <span className="spacer"><IconGraphicTool width="25px" fill="black" /></span> 
-
-                {/* <IconControls width="25px" fill="black" /></span> */}
-                <span className="spacer"><IconSketch width="25px" fill="black" /></span>
-                <span className="spacer"><IconSolution width="25px" fill="black" /></span>
-                <span className="spacer"><IconTools width="25px" fill="black" /></span>
-                <span className="spacer"><IconWeb width="25px" fill="black" /></span>
-              </Row>
-              <div>Other</div>
-              <Row>
-                <span className="spacer"> <IconLock width="25px" fill="black" /></span>
-                <span className="spacer"> <IconHamburger width="25px" fill="black" /></span>
-
-              </Row>
-              <SdlcLogo width="103px"></SdlcLogo>
 
             </Col>
           </div>

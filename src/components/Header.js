@@ -14,35 +14,38 @@ class Header extends React.Component {
   }
   render () {
     return(
-      <div className="headerNav">       
-        <Container fluid className="headerLarge">
-          <Navbar>
-            <Navbar.Brand href="#home">
-              <SdlcLogo
-                width="103"
-                className="d-inline-block align-top"
-                alt="SDLC Partners logo"
-              />
-              <span className="headerTitle d-inline-block">design system</span>
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto"></Nav>
-              <Searchbox />
-            </Navbar.Collapse>
-          </Navbar>
-        </Container>
+      <div className="headerNav">  
+        <div className="headerNavSpacing" style={{display:"flex",justifyContent:"space-between"}}>  
+          <Container fluid className="headerLarge">
+            <Navbar>
+              <div>
+                <Navbar.Brand href="#home">
+                  <SdlcLogo
+                    width="103"
+                    className="d-inline-block align-top"
+                    alt="SDLC Partners logo"
+                  />
+                  <span className="headerTitle d-inline-block">design system</span>
+                </Navbar.Brand>
+              </div>
+              {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
+              {/* <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="mr-auto"></Nav> */}
+                <Searchbox />
+              {/* </Navbar.Collapse> */}
+            </Navbar>
+          </Container>
 
-        <div className="headerSmall">
-          <div><IconHamburger width="28px" fill="#44687D" /></div>
-          <div><SdlcLogo
-            width="80"
-            alt="SDLC Partners logo"
-          /></div>
-          <div><IconMagnifyingGlass width="20px" fill="#44687D" /></div>
-        </div>
-
-        <hr className="heavyDivider" style={{margin:0}}></hr>
+          <div className="headerSmall">
+            <div><IconHamburger width="28px" fill="#44687D" /></div>
+            <div><SdlcLogo
+              width="80"
+              alt="SDLC Partners logo"
+            /></div>
+            <div><IconMagnifyingGlass width="20px" fill="#44687D" /></div>
+          </div>
+        </div>   
+        <hr className="heavyDivider" style={{marginTop:"0",marginBottom:"0"}}></hr>
       </div>
     );
   }

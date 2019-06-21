@@ -14,9 +14,11 @@
   display:block;
   // overflow-x:hidden;
   overflow-y:auto;
-  width: 120px;
+  width: 172px;
   height:100vh;
-  top:82px;
+  padding-top: 146px;
+  left: 32px;
+  
 }
 .headerTitle{
   font-family: "Roboto", sans-serif;
@@ -25,9 +27,6 @@
   color: $lighterbrand;
   font-weight: 300;
   margin:.75rem 0 -1rem .75rem;
-}
-.anchor{
-  padding-top: 82px;
 }
 
 .boxed{
@@ -50,10 +49,29 @@
     display:none;
   }
 }
-.sidebarList{
-  color: black;
-}
-.sidebarList:hover{
+
+.disappearingSideBar a:hover{
   color: $brand;
   text-decoration: none;
+}
+html .disappearingSideBar {//removes side scrollbar 1 of 2
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.disappearingSideBar::-webkit-scrollbar { //removes side scrollbar 2 of 2
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.indentSidebar{
+  padding-left:1rem;
+}
+.disappearingSideBar div {
+  padding-bottom:1rem;
+
+}
+.disappearingSideBar a{
+  color: black;
+  cursor: pointer;
+
 }
