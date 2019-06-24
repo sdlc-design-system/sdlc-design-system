@@ -31,7 +31,7 @@ class Panel extends React.Component {
         <Row>
           {this.props.content.map((item,index)=>
             <Col className="tabs" onClick={()=>this.handleTabChange(index)}>
-              <span>
+              <span style={{cursor:"pointer"}}>
                 {item.title}
               </span>
               <hr style={{

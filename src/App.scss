@@ -25,6 +25,7 @@ h4{
   font-size:24px;
   line-height:32px;
   font-weight: 600;
+  padding: 16px 0 16px 0;
 }
 
 h5{
@@ -247,7 +248,7 @@ hr {
   padding-left: 1rem;
 }
 .basicBorder{
-  padding:20px;
+  padding: 1rem;
   border: 2px solid $greyscale-pale;
   border-radius: 5px;
 }

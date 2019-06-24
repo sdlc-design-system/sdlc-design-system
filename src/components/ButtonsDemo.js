@@ -153,27 +153,31 @@ When combined within button sets, the primary button should appear at the top wh
         <br></br>
         <div className="flexColumnButtonsDemo">
           <div className="flexRowButtonsDemo">
-            <div className="caption buttonDemoPadding">Large</div>
-            <span className="buttonDemoPadding">
+            <div className="caption buttonDemoDescWidth">Large</div>
+            <div className="buttonDemoSecondaryWidth">
               <ButtonSDLC size="largeButton" 
                       buttonStyle="secondaryButton" 
                       text="Secondary" 
               />
-            </span>
-            <ButtonSDLC disabled={true} size="largeButton" buttonStyle="secondaryButton" text="Disabled"></ButtonSDLC>
+            </div>
+            <ButtonSDLC disabled={true} 
+              size="largeButton" 
+              buttonStyle="secondaryButton" 
+              text="Disabled"
+            />
             
           </div>
         </div>
         <br></br>
         <div className="flexColumnButtonsDemo">
           <div className="flexRowButtonsDemo">
-            <div className="caption buttonDemoPadding">Medium</div>
-            <span className="buttonDemoPadding">
+            <div className="caption buttonDemoDescWidth">Medium</div>
+            <div className="buttonDemoSecondaryWidth">
               <ButtonSDLC size="mediumButton" 
                       buttonStyle="secondaryButton" 
                       text="Secondary" 
               />
-            </span>
+            </div>
             <ButtonSDLC disabled={true} size="mediumButton" buttonStyle="secondaryButton" text="Disabled"></ButtonSDLC>
             
           </div>
@@ -181,13 +185,13 @@ When combined within button sets, the primary button should appear at the top wh
         <br></br>
         <div className="flexColumnButtonsDemo">
           <div className="flexRowButtonsDemo">
-            <div className="caption buttonDemoPadding">Small</div>
-            <span className="buttonDemoPadding">
+            <div className="caption  buttonDemoDescWidth">Small</div>
+            <div className="buttonDemoSecondaryWidth">
               <ButtonSDLC size="smallButton" 
                       buttonStyle="secondaryButton" 
                       text="Secondary" 
               />
-            </span>
+            </div>
             <ButtonSDLC disabled={true} size="smallButton" buttonStyle="secondaryButton" text="Disabled"></ButtonSDLC>
             
           </div>

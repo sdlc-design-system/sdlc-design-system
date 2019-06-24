@@ -9,7 +9,12 @@ class Switch extends React.Component {
     return(
       <div className="switch-container">
         <label>
-          <input ref="switch" onChange={ this.props.handleSwitchChange } className="switch" type="checkbox" />
+          <input 
+            ref="switch" 
+            onChange={ this.props.handleSwitchChange } 
+            className="switch" 
+            type="checkbox" 
+          />
           <div>
             <div>
 

@@ -16,3 +16,9 @@
 .custom-radio .custom-control-input:focus ~ .custom-control-label::before {
   box-shadow: none;
 }
+
+.custom-radio .custom-control-input:hover~.custom-control-label::before,
+.custom-radio .custom-control-input:hover~.custom-control-label::after {
+  cursor: pointer;
+
+}
