@@ -78,10 +78,6 @@ class DividersDemo extends React.Component {
             <div className="iconIcon"><Alert width="35px" fill="black" /></div>
             <div>&lt;Alert&gt;</div>
           </div>
-          <div className="iconBlock">
-            <div className="iconIcon"><Question width="35px" fill="black" /></div>
-            <div>&lt;Question&gt;</div>
-          </div>
         </div>
         <h4>Arrows</h4>
         <div className=" iconGrouping labels14">

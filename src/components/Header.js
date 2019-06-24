@@ -28,11 +28,7 @@ class Header extends React.Component {
                   <span className="headerTitle d-inline-block">design system</span>
                 </Navbar.Brand>
               </div>
-              {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
-              {/* <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto"></Nav> */}
                 <Searchbox />
-              {/* </Navbar.Collapse> */}
             </Navbar>
           </Container>
 
