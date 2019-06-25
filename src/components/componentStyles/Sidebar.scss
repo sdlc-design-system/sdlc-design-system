@@ -1,70 +1,76 @@
-@import "../../_masterColors.scss";
+@import '../../_masterColors.scss';
 
-.sideVerticalLine{
-  position:fixed;
-  display:block;
-  overflow-y:auto;
-  border-right:2px solid $greyscale-pale;
+.sideVerticalLine {
+  position: fixed;
+  display: block;
+  overflow-y: auto;
+  border-right: 2px solid $greyscale-pale;
   width: 220px;
-  height:100vh;
-  top:82px;
+  height: 100vh;
+  top: 82px;
 }
-.disappearingSideBar{
-  position:fixed;
-  display:block;
+.disappearingSideBar {
+  position: fixed;
+  display: block;
   // overflow-x:hidden;
-  overflow-y:auto;
+  overflow-y: auto;
   width: 172px;
-  height:100vh;
-  padding-top: 146px;
+  height: 100vh;
+  padding-top: 50px;
   left: 32px;
-  
 }
 
-.boxed{
+.boxed {
   // margin-right: 0;
   // border-right: 2px solid $brand-pressed;
 }
 
-@media (min-width: 768px){
-  .main{
+@media (min-width: 768px) {
+  .main {
     padding-right: 25px;
     padding-left: 130px;
   }
-  .headerSmall{
-    display:none;
+  .headerSmall {
+    display: none;
   }
 }
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .disappearingSideBar,
-  .sideVerticalLine{
-    display:none;
+  .sideVerticalLine {
+    display: none;
   }
 }
 
-.disappearingSideBar a:hover{
+.disappearingSideBar a:hover {
   color: $brand;
   text-decoration: none;
 }
-html .disappearingSideBar {//removes side scrollbar 1 of 2
+html .disappearingSideBar {
+  //removes side scrollbar 1 of 2
   overflow: scroll;
   overflow-x: hidden;
 }
-.disappearingSideBar::-webkit-scrollbar { //removes side scrollbar 2 of 2
-  width: 0px;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+.disappearingSideBar::-webkit-scrollbar {
+  //removes side scrollbar 2 of 2
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 
+
 .indentSidebar{
-  padding-left:1rem;
+  padding-left:1rem !important;
   padding-bottom:0 !important;
 }
 .disappearingSideBar div {
-  padding-bottom:1rem;
-
+  padding: 0.5rem 0;
 }
-.disappearingSideBar a{
+.disappearingSideBar a {
   color: black;
   cursor: pointer;
+}
 
+.active {
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #007bff;
 }
