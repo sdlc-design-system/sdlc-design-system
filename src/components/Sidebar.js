@@ -26,6 +26,31 @@ class Sidebar extends React.Component {
   };
 
   render() {
+    const { activeTab } = this.props;
+    if (
+      (activeTab === 'standardInput' ||
+        activeTab === 'dropdownMenu' ||
+        activeTab === 'radioButtons' ||
+        activeTab === 'checkBox' ||
+        activeTab === 'switch') &&
+      this.state.showForms === false
+    )
+      this.setState({ ...this.state, showForms: true });
+
+    if (
+      (activeTab === 'panel' ||
+        activeTab === 'accordion' ||
+        activeTab === 'modal') &&
+      this.state.showContainers === false
+    )
+      this.setState({ ...this.state, showContainers: true });
+
+    if (
+      (activeTab === 'dividers' || activeTab === 'loadingIndicator') &&
+      this.state.showContent === false
+    )
+      this.setState({ ...this.state, showContent: true });
+
     return (
       <div className="sideVerticalLine disappearingSideBar">
         {/* <div className="sideVerticalLine" /> */}
