@@ -1,42 +1,36 @@
 @import "../../_masterColors.scss";
 
-.flexRow{
-  display:flex;
-  flex-direction: row;
-  flex-wrap:nowrap;
-  padding-bottom:30px;
-  justify-content:space-between;
-}
-// .flexRowDescription{
-//   width: 80% !important;
-//   color: red;
 
-// }
 .flexColumnSwatch{
   display: flex;
   flex-direction: column;
   flex-basis: auto;
 }
-.flexColumnDescription{
-  display: flex;
-  flex-direction: column;
-  flex-basis: 60%;
+@media (min-width: 767px){
+  .flexColumnDescription{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 60%;
+  }
+  .flexRow{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    padding-bottom:30px;
+    justify-content:space-between;
+  }
 }
-
-// .flexColumnRightJustified{
-//   display: flex;
-//   justify-content: flex-end;
-// }
-
 
 @media (max-width: 767px){
   .flexRow{
-    width: 100%;
+    // width: 100%;
+    flex-direction:column;
+  }
+  .flexColumnDescription{
+    display:flex;
+    flex-wrap:wrap;
   }
 }
-// .anchor{
-//   padding-top: 82px;
-// }
 
 .swatch {
   display:flex;

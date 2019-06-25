@@ -1,20 +1,6 @@
 import React, { Component, createRef } from 'react';
-import Card from 'react-bootstrap/Card';
-import Breadcrumb from 'react-bootstrap/Breadcrumb';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import FormControl from 'react-bootstrap/FormControl';
+
 import Container from 'react-bootstrap/Container';
-// import Button from 'react-bootstrap/Button'
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Switch from './components/Switch';
-import Accordion from './components/Accordion';
-import Radio from './components/Radio';
 import './App.scss';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
@@ -157,13 +143,13 @@ class App extends Component {
       <div>
         <Header />
         <Container fluid style={{ marginLeft: '10px' }}>
-          <Row>
+          <div>
             <Sidebar
               activeTab={this.state.activeTab}
               onTabClick={this.handleTabClick}
             />
-            <div className="main">
-              <Col className="main" style={{ height: '1500px' }}>
+            <div className="main borderLeft">
+              <div>
                 <div id="colors" ref={this.colorsRef} className="anchor">
                   <div style={{ paddingTop: '88px' }}>
                     <Color />
@@ -232,9 +218,9 @@ class App extends Component {
                   className="anchor">
                   <LoadingDemo />
                 </div>
-              </Col>
+              </div>
             </div>
-          </Row>
+          </div>
         </Container>
       </div>
     );
