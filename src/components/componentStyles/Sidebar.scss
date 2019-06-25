@@ -56,8 +56,10 @@ html .disappearingSideBar {
   background: transparent; /* Optional: just make scrollbar invisible */
 }
 
-.indentSidebar {
-  padding-left: 1rem !important;
+
+.indentSidebar{
+  padding-left:1rem !important;
+  padding-bottom:0 !important;
 }
 .disappearingSideBar div {
   padding: 0.5rem 0;

@@ -32,14 +32,18 @@ class Header extends React.Component {
             </Navbar>
           </Container>
 
-          <div className="headerSmall">
-            <div><Hamburger width="28px" fill="#44687D" /></div>
-            <div><SdlcLogo
-              width="80"
-              alt="SDLC Partners logo"
-            /></div>
+          <Container fluid className="headerSmall">
+            <div style={{display:'flex',justifyContent:"space-between", alignItems:"center"}}>
+              <div style={{paddingRight:"15px"}}>
+                <Hamburger width="28px" fill="#44687D" />
+              </div>
+              <SdlcLogo
+                width="80"
+                alt="SDLC Partners logo"
+              />
+            </div>
             <div><SearchIcon width="20px" fill="#44687D" /></div>
-          </div>
+          </Container>
         </div>   
         <hr className="heavyDivider" style={{marginTop:"0",marginBottom:"0"}}></hr>
       </div>

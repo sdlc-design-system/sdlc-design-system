@@ -51,14 +51,15 @@ class Typography extends React.Component {
               Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor.
             </span>
           </div>
+          <br />
           <div className="flexRowTypography">
             <span className="col1">.bodyCopy</span>
             <span className="col2">16px/24px</span>
             <span className="col3 bodyCopy">
-              Sed posuere consectetur est at lobortis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Inline Text Link Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.
+              Sed posuere consectetur est at lobortis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
             </span>
           </div>
+          <br />
           <div className="flexRowTypography">
             <span className="col1">.caption</span>
             <span className="col2">12px/16px</span>
@@ -66,6 +67,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
               Legal and Copyright information. Limit the use of this type style within interaction and product details
             </span>
           </div>
+          <br />
           <div className="flexRowTypography">
             <span className="col1">.labels16</span>
             <span className="col2">16px/24px</span>
@@ -73,6 +75,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
               Fermentum Pellentesque Adipiscing 
             </span>
           </div>
+          <br />
           <div className="flexRowTypography">
             <span className="col1">.labels14</span>
             <span className="col2">14px/24px</span>
@@ -80,16 +83,19 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
               Fermentum Pellentesque Adipiscing 
             </span>
           </div>
+          <br />
           <div className="flexRowTypography">
             <span className="col1">.textLink16</span>
             <span className="col2">16px/24px</span>
             <span className="col3 textLink16">Text Button or Link</span>
           </div>
+          <br />
           <div className="flexRowTypography">
             <span className="col1">.textLink14</span>
             <span className="col2">14px/24px</span>
             <span className="col3 textLink14">Text Button or Link</span>
           </div>
+          <br />
         </div>
       </div>
     );

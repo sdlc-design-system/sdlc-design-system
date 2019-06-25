@@ -21,19 +21,18 @@
 //   margin-right:.75rem;
 // }
 
-.boldFont{
-  font-weight: 700;
-}
-.regularFont{
-  font-weight: 400;
-}
 .Accordion-hover:hover{
   background-color: $blue-bg;
 }
 
-.someSpace{
+.accordionTitleSpace{
   padding:1rem 1rem 0 1rem;
   margin-top:-1rem;
   display:flex;
   justify-content: space-between;
+}
+
+.accordionContentSpace{
+  margin-left:1rem;
+  margin-right:1rem;
 }

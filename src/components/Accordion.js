@@ -34,18 +34,19 @@ class Accordion extends React.Component {
             aria-controls="collapse-text"
             aria-expanded={this.state.openAccordion[index]}
             className={this.state.openAccordion[index] ? "undefined":"Accordion-hover"}
+            style={{cursor:"pointer"}}
           >
-            <div className="someSpace" onClick={() => { this.handleAccordionChange(index) }}>
-              <span className={this.state.openAccordion[index] ? "boldFont":"regularFont"}>{item.title}</span>
+            <div className="accordionTitleSpace" onClick={() => { this.handleAccordionChange(index) }}>
+              <span className={this.state.openAccordion[index] ? "labels16":"bodyCopy"}>{item.title}</span>
               <span className= {this.state.openAccordion[index] ? "upArrow":"downArrow"}></span>
               {this.state.openAccordion[index] ? 
                 <Up width="15px" fill="#44687d"></Up> : <Down width="15px" fill="#44687d"></Down>
               }
             </div>
 
-              <hr className= {this.state.openAccordion[index] ? "mediumDivider":"lightDivider"}></hr>
+              <hr className="accordionContentSpace" />
             <Collapse in={this.state.openAccordion[index]}>
-              <div id="collapse-text">
+              <div id="collapse-text" className="accordionContentSpace">
                 {item.content}
                 <div><br></br></div>
               </div>

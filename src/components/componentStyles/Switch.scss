@@ -18,7 +18,8 @@ input[type="checkbox"].switch + div {//this is the box
 	width: 2rem;
   height: .75rem;
   position: relative;
-  top:.4rem;
+	top:.4rem;
+	cursor: pointer;
 }
 
 input[type="checkbox"].switch:checked + div {
