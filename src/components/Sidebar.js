@@ -7,10 +7,10 @@ class Sidebar extends React.Component {
     this.state = {
       showForms: false,
       showContainers: false,
-      showContent: false,
-      activeTab: 'colors'
+      showContent: false
     };
   }
+
   handleContainerClick = () => {
     this.setState({ showContainers: !this.state.showContainers });
   };
@@ -22,8 +22,7 @@ class Sidebar extends React.Component {
   };
 
   handleClick = item => {
-    if (this.state.activeTab !== item)
-      this.setState({ ...this.state, activeTab: item });
+    if (this.props.activeTab !== item) this.props.onTabClick(item);
   };
 
   render() {
@@ -31,29 +30,29 @@ class Sidebar extends React.Component {
       <div className="sideVerticalLine disappearingSideBar">
         {/* <div className="sideVerticalLine" /> */}
         {/* <div className="sideVerticalLine disappearingSideBar"> */}
-        <div className={this.state.activeTab === 'colors' ? 'active' : ''}>
+        <div className={this.props.activeTab === 'colors' ? 'active' : ''}>
           <a href="#colors" onClick={() => this.handleClick('colors')}>
             Colors
           </a>
         </div>
-        <div className={this.state.activeTab === 'typography' ? 'active' : ''}>
+        <div className={this.props.activeTab === 'typography' ? 'active' : ''}>
           <a href="#typography" onClick={() => this.handleClick('typography')}>
             Typography
           </a>
         </div>
-        <div className={this.state.activeTab === 'icons' ? 'active' : ''}>
+        <div className={this.props.activeTab === 'icons' ? 'active' : ''}>
           <a href="#icons" onClick={() => this.handleClick('icons')}>
             Icons
           </a>
         </div>
-        <div className={this.state.activeTab === 'buttons' ? 'active' : ''}>
+        <div className={this.props.activeTab === 'buttons' ? 'active' : ''}>
           <a href="#buttons" onClick={() => this.handleClick('buttons')}>
             Buttons
           </a>
         </div>
         <div
           onClick={this.handleFormsClick}
-          className={this.state.activeTab === 'forms' ? 'active' : ''}>
+          className={this.props.activeTab === 'forms' ? 'active' : ''}>
           <a href="#forms" onClick={() => this.handleClick('forms')}>
             Forms
           </a>
@@ -62,7 +61,7 @@ class Sidebar extends React.Component {
           <div className="indentSidebar">
             <div
               className={
-                this.state.activeTab === 'standardInput' ? 'active' : ''
+                this.props.activeTab === 'standardInput' ? 'active' : ''
               }>
               <a
                 href="#standardInput"
@@ -72,7 +71,7 @@ class Sidebar extends React.Component {
             </div>
             <div
               className={
-                this.state.activeTab === 'dropdownMenu' ? 'active' : ''
+                this.props.activeTab === 'dropdownMenu' ? 'active' : ''
               }>
               <a
                 href="#dropdownMenu"
@@ -82,21 +81,21 @@ class Sidebar extends React.Component {
             </div>
             <div
               className={
-                this.state.activeTab === 'radiButtons' ? 'active' : ''
+                this.props.activeTab === 'radioButtons' ? 'active' : ''
               }>
               <a
                 href="#radioButtons"
-                onClick={() => this.handleClick('radiButtons')}>
+                onClick={() => this.handleClick('radioButtons')}>
                 Radio Buttons
               </a>
             </div>
             <div
-              className={this.state.activeTab === 'checkBox' ? 'active' : ''}>
+              className={this.props.activeTab === 'checkBox' ? 'active' : ''}>
               <a href="#checkbox" onClick={() => this.handleClick('checkBox')}>
                 Checkboxes
               </a>
             </div>
-            <div className={this.state.activeTab === 'switch' ? 'active' : ''}>
+            <div className={this.props.activeTab === 'switch' ? 'active' : ''}>
               <a href="#switch" onClick={() => this.handleClick('switch')}>
                 Switch
               </a>
@@ -107,27 +106,27 @@ class Sidebar extends React.Component {
         )}
         <div
           onClick={this.handleContainerClick}
-          className={this.state.activeTab === 'containers' ? 'active' : ''}>
+          className={this.props.activeTab === 'containers' ? 'active' : ''}>
           <a href="#containers" onClick={() => this.handleClick('containers')}>
             Containers
           </a>
         </div>
         {this.state.showContainers ? (
           <div className="indentSidebar">
-            <div className={this.state.activeTab === 'panel' ? 'active' : ''}>
+            <div className={this.props.activeTab === 'panel' ? 'active' : ''}>
               <a href="#panel" onClick={() => this.handleClick('panel')}>
                 Panel
               </a>
             </div>
             <div
-              className={this.state.activeTab === 'accordion' ? 'active' : ''}>
+              className={this.props.activeTab === 'accordion' ? 'active' : ''}>
               <a
                 href="#accordion"
                 onClick={() => this.handleClick('accordion')}>
                 Accordion
               </a>
             </div>
-            <div className={this.state.activeTab === 'modal' ? 'active' : ''}>
+            <div className={this.props.activeTab === 'modal' ? 'active' : ''}>
               <a href="#modal" onClick={() => this.handleClick('modal')}>
                 Modal
               </a>
@@ -138,7 +137,7 @@ class Sidebar extends React.Component {
         )}
         <div
           onClick={this.handleContentClick}
-          className={this.state.activeTab === 'content' ? 'active' : ''}>
+          className={this.props.activeTab === 'content' ? 'active' : ''}>
           <a href="#content" onClick={() => this.handleClick('content')}>
             Content
           </a>
@@ -146,14 +145,14 @@ class Sidebar extends React.Component {
         {this.state.showContent ? (
           <div className="indentSidebar">
             <div
-              className={this.state.activeTab === 'dividers' ? 'active' : ''}>
+              className={this.props.activeTab === 'dividers' ? 'active' : ''}>
               <a href="#dividers" onClick={() => this.handleClick('dividers')}>
                 Dividers
               </a>
             </div>
             <div
               className={
-                this.state.activeTab === 'loadingIndicator' ? 'active' : ''
+                this.props.activeTab === 'loadingIndicator' ? 'active' : ''
               }>
               <a
                 href="#loadingIndicator"
