@@ -13,15 +13,19 @@
 }
 .col1{
   display: flex;
-  flex-basis: 25%
+  flex-basis: 25%;
+  align-items: center;
+
 }
 .col2{
   display: flex;
-  flex-basis: 25%
+  flex-basis: 25%;
+  align-items: center;
+
 }
 .col3{
   display: flex;
-  flex-basis: 50%
+  flex-basis: 50%;
 }
 
 .noMargin{
