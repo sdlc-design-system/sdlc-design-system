@@ -1,11 +1,7 @@
 @import "../../_masterColors.scss";
 
 
-.flexColumnSwatch{
-  display: flex;
-  flex-direction: column;
-  flex-basis: auto;
-}
+
 @media (min-width: 767px){
   .flexColumnDescription{
     display: flex;
@@ -23,14 +19,19 @@
 
 @media (max-width: 767px){
   .flexRow{
-    // width: 100%;
     flex-direction:column;
   }
   .flexColumnDescription{
     display:flex;
     flex-wrap:wrap;
   }
-}
+
+  .centerSwatch{
+    display:flex;
+    justify-content:center;
+    padding: 1rem 0 1rem 0;
+  }
+ }
 
 .swatch {
   display:flex;
@@ -133,7 +134,5 @@
   color:black;
   background-color:$yellow-bg;
 }
-.bold{
-  font-weight:900;
-}
+
 
