@@ -10,8 +10,7 @@ class DropDownDemo extends React.Component {
   render () {
     return(
       <div>
-        <h4>DropDown Menus</h4>
-        <br />
+        <h4>Dropdown Menus</h4>
         <div className="flexRowButtonsDemo">
           <span className="buttonDemoPadding">
             <DropDownSDLC 

@@ -9,8 +9,6 @@ class DividersDemo extends React.Component {
     return(
       <div>
         <h4>Dividers</h4>
-        <br />
-        
         <div>Heavy divider</div>
         <hr className="heavyDivider"></hr>
         <div>Light divider</div>

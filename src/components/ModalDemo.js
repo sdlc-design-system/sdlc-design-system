@@ -25,7 +25,6 @@ class ModalDemo extends React.Component {
     return(
       <div>
         <h4>Modal Window</h4>
-        <br />
         <div className="basicBorder seventyPercentWidth">
           <div className="rightX">
             ×

@@ -10,7 +10,6 @@ class RadioButtonsDemo extends React.Component {
     return(
       <div>
         <h4>Radio Buttons</h4>
-        <br />
         <Radio content={[
                 {content:'radio toggle one'},
                 {content:'radio toggle two'},

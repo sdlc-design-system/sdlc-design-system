@@ -150,10 +150,8 @@ class App extends Component {
             />
             <div className="main borderLeft">
               <div>
-                <div id="colors" ref={this.colorsRef} className="anchor">
-                  <div style={{ paddingTop: '88px' }}>
-                    <Color />
-                  </div>
+                <div id="colors" ref={this.colorsRef} className="anchor" style={{padding:"88px 0 0"}}>
+                  <Color />
                 </div>
                 <div
                   id="typography"

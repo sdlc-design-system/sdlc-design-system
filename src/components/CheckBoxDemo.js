@@ -10,7 +10,6 @@ class RadioButtonsDemo extends React.Component {
     return(
       <div>
         <h4>Checkboxes</h4>
-        <br />
         <CheckBox content={[
           {name:'checkbox-demo',value:'thing-one',content:'First Checkbox'},
           {name:'checkbox-demo',value:'thing-two',content:'Second Checkbox'},

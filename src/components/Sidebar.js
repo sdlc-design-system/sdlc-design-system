@@ -11,14 +11,14 @@ class Sidebar extends React.Component {
     };
   }
 
-  handleContainerClick = () => {
-    this.setState({ showContainers: !this.state.showContainers });
+  openCloseContainer = () => {
+    this.setState({ showContainers: !this.state.showContainers, showForms:false, showContent:false });
   };
-  handleFormsClick = () => {
-    this.setState({ showForms: !this.state.showForms });
+  openCloseForms = () => {
+    this.setState({ showForms: !this.state.showForms, showContainers:false, showContent:false });
   };
-  handleContentClick = () => {
-    this.setState({ showContent: !this.state.showContent });
+  openCloseContent = () => {
+    this.setState({ showContent: !this.state.showContent, showForms:false,showContainers:false });
   };
 
   handleClick = item => {
@@ -35,21 +35,24 @@ class Sidebar extends React.Component {
         activeTab === 'switch') &&
       this.state.showForms === false
     )
-      this.setState({ ...this.state, showForms: true });
+      {this.setState({ ...this.state, showForms: true, showContainers: false, showContent: false });}
 
-    if (
+    else if (
       (activeTab === 'panel' ||
         activeTab === 'accordion' ||
         activeTab === 'modal') &&
       this.state.showContainers === false
     )
-      this.setState({ ...this.state, showContainers: true });
+      {this.setState({ ...this.state, showContainers: true, showForms: false, showContent: false });}
 
-    if (
+    else if (
       (activeTab === 'dividers' || activeTab === 'loadingIndicator') &&
       this.state.showContent === false
     )
-      this.setState({ ...this.state, showContent: true });
+      {this.setState({ ...this.state, showContent: true, showContainers: false, showForms: false  });}
+    else if ((this.state.showContainers || this.state.showForms || this.state.showContent) && (activeTab === 'colors' || activeTab === 'typography' || activeTab === 'icons' || activeTab === 'buttons'))  
+      {this.setState({ ...this.state, showContent: false, showContainers: false, showForms: false  });}
+
 
     return (
       <div className="sideVerticalLine disappearingSideBar">
@@ -76,7 +79,7 @@ class Sidebar extends React.Component {
           </a>
         </div>
         <div
-          onClick={this.handleFormsClick}
+          onClick={this.openCloseForms}
           className={this.props.activeTab === 'forms' ? 'active' : ''}>
           <a href="#forms" onClick={() => this.handleClick('forms')}>
             Forms
@@ -130,7 +133,7 @@ class Sidebar extends React.Component {
           ''
         )}
         <div
-          onClick={this.handleContainerClick}
+          onClick={this.openCloseContainer}
           className={this.props.activeTab === 'containers' ? 'active' : ''}>
           <a href="#containers" onClick={() => this.handleClick('containers')}>
             Containers
@@ -161,7 +164,7 @@ class Sidebar extends React.Component {
           ''
         )}
         <div
-          onClick={this.handleContentClick}
+          onClick={this.openCloseContent}
           className={this.props.activeTab === 'content' ? 'active' : ''}>
           <a href="#content" onClick={() => this.handleClick('content')}>
             Content

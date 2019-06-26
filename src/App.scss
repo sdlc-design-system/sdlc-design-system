@@ -233,28 +233,18 @@ hr {
 }
 
 .lightDivider{
-  height:2px;
   background-color: $greyscale-pale;
 }
 .spacer{
   padding:25px;
 }
-.codeSnippets{
-  background-color: $greyscale-pale;
-  font-family: "Roboto Mono";
-  padding: 20px 10px 20px 35px;
-}
-.codeIndent2{
-  padding-left: 1rem;
-}
+
 .basicBorder{
   padding: 1rem;
   border: 2px solid $greyscale-pale;
   border-radius: 5px;
 }
-// .anchor:target {
-//   padding-top: 82px;
-// }
+
 .anchor:target::before {
   content: "";
   display: block;

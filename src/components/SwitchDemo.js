@@ -16,8 +16,6 @@ class SwitchDemo extends React.Component {
     return(
       <div>
         <h4>Switch</h4>
-        <br />
-        
         <Switch 
           isChecked={ this.state.switchState }
           handleSwitchChange={this.handleSwitchChange} 
