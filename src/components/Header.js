@@ -28,7 +28,7 @@ class Header extends React.Component {
                   <span className="headerTitle d-inline-block">design system</span>
                 </Navbar.Brand>
               </div>
-                <Searchbox />
+                <Searchbox content="search library" />
             </Navbar>
           </Container>
 

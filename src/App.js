@@ -16,6 +16,7 @@ import DropDownDemo from './components/DropDownDemo';
 import RadioButtonsDemo from './components/RadioButtonsDemo';
 import CheckBoxDemo from './components/CheckBoxDemo';
 import SwitchDemo from './components/SwitchDemo';
+import SearchboxDemo from './components/SearchboxDemo';
 import DividersDemo from './components/DividersDemo';
 import LoadingDemo from './components/LoadingDemo';
 import IconsDemo from './components/IconsDemo';
@@ -38,6 +39,7 @@ class App extends Component {
     this.radioRef = createRef();
     this.checkboxRef = createRef();
     this.switchRef = createRef();
+    this.searchRef = createRef();
     this.containersRef = createRef();
     this.panelRef = createRef();
     this.accordionRef = createRef();
@@ -65,6 +67,7 @@ class App extends Component {
     let radioTop = this.radioRef.current.getBoundingClientRect().top;
     let checkboxTop = this.checkboxRef.current.getBoundingClientRect().top;
     let switchTop = this.switchRef.current.getBoundingClientRect().top;
+    let searchTop = this.searchRef.current.getBoundingClientRect().top;
     let containerTop = this.containersRef.current.getBoundingClientRect().top;
     let panelTop = this.panelRef.current.getBoundingClientRect().top;
     let accordionTop = this.accordionRef.current.getBoundingClientRect().top;
@@ -87,6 +90,7 @@ class App extends Component {
     let checkboxBottom = this.checkboxRef.current.getBoundingClientRect()
       .bottom;
     let switchBottom = this.switchRef.current.getBoundingClientRect().bottom;
+    let searchBottom = this.searchRef.current.getBoundingClientRect().bottom;
     let containerBottom = this.containersRef.current.getBoundingClientRect()
       .bottom;
     let panelBottom = this.panelRef.current.getBoundingClientRect().bottom;
@@ -118,6 +122,8 @@ class App extends Component {
       this.setState({ ...this.state, activeTab: 'checkBox' });
     if (switchTop < activePoint && switchBottom > activePoint)
       this.setState({ ...this.state, activeTab: 'switch' });
+      if (searchTop < activePoint && searchBottom > activePoint)
+      this.setState({ ...this.state, activeTab: 'search' });
     if (containerTop < activePoint && containerBottom > activePoint)
       this.setState({ ...this.state, activeTab: 'containers' });
     if (panelTop < activePoint && panelBottom > activePoint)
@@ -188,6 +194,9 @@ class App extends Component {
                 </div>
                 <div id="switch" ref={this.switchRef} className="anchor">
                   <SwitchDemo />
+                </div>
+                <div id="search" ref={this.searchRef} className="anchor">
+                  <SearchboxDemo />
                 </div>
                 <div
                   id="containers"

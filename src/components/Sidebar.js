@@ -128,6 +128,11 @@ class Sidebar extends React.Component {
                 Switch
               </a>
             </div>
+            <div className={this.props.activeTab === 'search' ? 'active' : ''}>
+              <a href="#search" onClick={() => this.handleClick('search')}>
+                Searchbox
+              </a>
+            </div>
           </div>
         ) : (
           ''
