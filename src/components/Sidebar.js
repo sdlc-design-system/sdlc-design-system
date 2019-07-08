@@ -119,7 +119,7 @@ class Sidebar extends React.Component {
             </div>
             <div
               className={this.props.activeTab === 'checkBox' ? 'active' : ''}>
-              <a href="#checkbox" onClick={() => this.handleClick('checkBox')}>
+              <a href="#checkBox" onClick={() => this.handleClick('checkBox')}>
                 Checkboxes
               </a>
             </div>

@@ -24,29 +24,12 @@ import IconsDemo from './components/IconsDemo';
 class App extends Component {
   constructor(props) {
     super(props);
-
+    
+    this.list=['colors','typography','icons','buttons','forms','standardInput','dropdownMenu','radioButtons','checkBox','switch','search','containers','panel','accordion','modal','content','dividers','loadingIndicator']
     this.state = {
-      activeTab: 'colors'
+      activeTab: this.list[0]
     };
-
-    this.colorsRef = createRef();
-    this.typographyRef = createRef();
-    this.iconsRef = createRef();
-    this.buttonsRef = createRef();
-    this.formsRef = createRef();
-    this.standardInputRef = createRef();
-    this.dropdownRef = createRef();
-    this.radioRef = createRef();
-    this.checkboxRef = createRef();
-    this.switchRef = createRef();
-    this.searchRef = createRef();
-    this.containersRef = createRef();
-    this.panelRef = createRef();
-    this.accordionRef = createRef();
-    this.modalRef = createRef();
-    this.contentRef = createRef();
-    this.dividersRef = createRef();
-    this.loadingRef = createRef();
+    this.list.forEach((item)=>this[item+'Ref']=createRef())
   }
 
   componentDidMount() {
@@ -55,89 +38,10 @@ class App extends Component {
 
   handleScroll = e => {
     const activePoint = window.innerHeight / 2;
-
-    let colorsTop = this.colorsRef.current.getBoundingClientRect().top;
-    let typographyTop = this.typographyRef.current.getBoundingClientRect().top;
-    let iconsTop = this.iconsRef.current.getBoundingClientRect().top;
-    let buttonsTop = this.buttonsRef.current.getBoundingClientRect().top;
-    let formsTop = this.formsRef.current.getBoundingClientRect().top;
-    let standardInputTop = this.standardInputRef.current.getBoundingClientRect()
-      .top;
-    let dropdownTop = this.dropdownRef.current.getBoundingClientRect().top;
-    let radioTop = this.radioRef.current.getBoundingClientRect().top;
-    let checkboxTop = this.checkboxRef.current.getBoundingClientRect().top;
-    let switchTop = this.switchRef.current.getBoundingClientRect().top;
-    let searchTop = this.searchRef.current.getBoundingClientRect().top;
-    let containerTop = this.containersRef.current.getBoundingClientRect().top;
-    let panelTop = this.panelRef.current.getBoundingClientRect().top;
-    let accordionTop = this.accordionRef.current.getBoundingClientRect().top;
-    let modalTop = this.modalRef.current.getBoundingClientRect().top;
-    let contentTop = this.contentRef.current.getBoundingClientRect().top;
-    let dividersTop = this.dividersRef.current.getBoundingClientRect().top;
-    let loadingTop = this.loadingRef.current.getBoundingClientRect().top;
-
-    let colorsBottom = this.colorsRef.current.getBoundingClientRect().bottom;
-    let typographyBottom = this.typographyRef.current.getBoundingClientRect()
-      .bottom;
-    let iconsBottom = this.iconsRef.current.getBoundingClientRect().bottom;
-    let buttonsBottom = this.buttonsRef.current.getBoundingClientRect().bottom;
-    let formsBottom = this.formsRef.current.getBoundingClientRect().bottom;
-    let standardInputBottom = this.standardInputRef.current.getBoundingClientRect()
-      .bottom;
-    let dropdownBottom = this.dropdownRef.current.getBoundingClientRect()
-      .bottom;
-    let radioBottom = this.radioRef.current.getBoundingClientRect().bottom;
-    let checkboxBottom = this.checkboxRef.current.getBoundingClientRect()
-      .bottom;
-    let switchBottom = this.switchRef.current.getBoundingClientRect().bottom;
-    let searchBottom = this.searchRef.current.getBoundingClientRect().bottom;
-    let containerBottom = this.containersRef.current.getBoundingClientRect()
-      .bottom;
-    let panelBottom = this.panelRef.current.getBoundingClientRect().bottom;
-    let accordionBottom = this.accordionRef.current.getBoundingClientRect()
-      .bottom;
-    let modalBottom = this.modalRef.current.getBoundingClientRect().bottom;
-    let contentBottom = this.contentRef.current.getBoundingClientRect().bottom;
-    let dividersBottom = this.dividersRef.current.getBoundingClientRect()
-      .bottom;
-    let loadingBottom = this.loadingRef.current.getBoundingClientRect().bottom;
-
-    if (colorsTop < activePoint && colorsBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'colors' });
-    if (typographyTop < activePoint && typographyBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'typography' });
-    if (iconsTop < activePoint && iconsBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'icons' });
-    if (buttonsTop < activePoint && buttonsBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'buttons' });
-    if (formsTop < activePoint && formsBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'forms' });
-    if (standardInputTop < activePoint && standardInputBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'standardInput' });
-    if (dropdownTop < activePoint && dropdownBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'dropdownMenu' });
-    if (radioTop < activePoint && radioBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'radioButtons' });
-    if (checkboxTop < activePoint && checkboxBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'checkBox' });
-    if (switchTop < activePoint && switchBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'switch' });
-      if (searchTop < activePoint && searchBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'search' });
-    if (containerTop < activePoint && containerBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'containers' });
-    if (panelTop < activePoint && panelBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'panel' });
-    if (accordionTop < activePoint && accordionBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'accordion' });
-    if (modalTop < activePoint && modalBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'modal' });
-    if (contentTop < activePoint && contentBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'content' });
-    if (dividersTop < activePoint && dividersBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'dividers' });
-    if (loadingTop < activePoint && loadingBottom > activePoint)
-      this.setState({ ...this.state, activeTab: 'loadingIndicator' });
+    this.list.forEach((item)=>{
+      if (this[item+'Ref'].current.getBoundingClientRect().top < activePoint && this[item+'Ref'].current.getBoundingClientRect().bottom > activePoint)
+        return this.setState({ ...this.state, activeTab: item })
+    })
   };
 
   handleTabClick = tab => {
@@ -182,14 +86,14 @@ class App extends Component {
                 </div>
                 <div
                   id="dropdownMenu"
-                  ref={this.dropdownRef}
+                  ref={this.dropdownMenuRef}
                   className="anchor">
                   <DropDownDemo />
                 </div>
-                <div id="radioButtons" ref={this.radioRef} className="anchor">
+                <div id="radioButtons" ref={this.radioButtonsRef} className="anchor">
                   <RadioButtonsDemo />
                 </div>
-                <div id="checkbox" ref={this.checkboxRef} className="anchor">
+                <div id="checkBox" ref={this.checkBoxRef} className="anchor">
                   <CheckBoxDemo />
                 </div>
                 <div id="switch" ref={this.switchRef} className="anchor">
@@ -221,7 +125,7 @@ class App extends Component {
                 </div>
                 <div
                   id="loadingIndicator"
-                  ref={this.loadingRef}
+                  ref={this.loadingIndicatorRef}
                   className="anchor">
                   <LoadingDemo />
                 </div>

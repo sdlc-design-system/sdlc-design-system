@@ -21,7 +21,7 @@ class SearchboxDemo extends React.Component {
             <Searchbox 
               onClick = "........"
               content = "search library"
-              width="300px"
+              width = "300px"
             />
           `} 
         </code></pre>
