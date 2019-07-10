@@ -4,200 +4,75 @@ import './componentStyles/Sidebar.scss';
 class Sidebar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      showForms: false,
-      showContainers: false,
-      showContent: false
-    };
+    this.list=[['colors','Colors'],
+              ['typography','Typography'],
+              ['icons','Icons'],
+              ['buttons','Buttons'],
+              [['forms','Forms'],['standardInput','Standard Text Input'],['dropdownMenu','Dropdown Menu'],['radioButtons','Radio Buttons'],['checkBox','Checkboxes'],['switch','Switch'],['search','Searchbox']],
+              [['containers','Containers'],['panel','Panel'],['accordion','Accordion'],['modal','Modal']],
+              [['content','Content'],['dividers','Dividers'],['loadingIndicator','Loading Indicatior']]
+            ]
+    //reset will take the "list", find the submenu headings, and build an object that sets each heading to false
+    this.reset=Object.assign(...this.list.filter(x=>x.length>2).map(x=>x[0][0]).map(x=>({[x]:false})))
+    this.accordionHeadings=Object.keys(this.reset)
+    this.headingsOnly=this.list.map(x=>x.length===2 ? x[1] : x[0][1])
+    this.state={...this.reset}
   }
 
-  openCloseContainer = () => {
-    this.setState({ showContainers: !this.state.showContainers, showForms:false, showContent:false });
+  openClose = (item) => { //opens and closes subheadings
+    this.setState({ ...this.reset, [item]:!this.state[item] });
   };
-  openCloseForms = () => {
-    this.setState({ showForms: !this.state.showForms, showContainers:false, showContent:false });
-  };
-  openCloseContent = () => {
-    this.setState({ showContent: !this.state.showContent, showForms:false,showContainers:false });
-  };
-
+ 
   handleClick = item => {
-    if (this.props.activeTab !== item) this.props.onTabClick(item);
+    if (this.props.activeTab !== item) this.props.onTabClick(item)
   };
 
   render() {
-    const { activeTab } = this.props;
-    if (
-      (activeTab === 'standardInput' ||
-        activeTab === 'dropdownMenu' ||
-        activeTab === 'radioButtons' ||
-        activeTab === 'checkBox' ||
-        activeTab === 'switch') &&
-      this.state.showForms === false
-    )
-      {this.setState({ ...this.state, showForms: true, showContainers: false, showContent: false });}
-
-    else if (
-      (activeTab === 'panel' ||
-        activeTab === 'accordion' ||
-        activeTab === 'modal') &&
-      this.state.showContainers === false
-    )
-      {this.setState({ ...this.state, showContainers: true, showForms: false, showContent: false });}
-
-    else if (
-      (activeTab === 'dividers' || activeTab === 'loadingIndicator') &&
-      this.state.showContent === false
-    )
-      {this.setState({ ...this.state, showContent: true, showContainers: false, showForms: false  });}
-    else if ((this.state.showContainers || this.state.showForms || this.state.showContent) && (activeTab === 'colors' || activeTab === 'typography' || activeTab === 'icons' || activeTab === 'buttons'))  
-      {this.setState({ ...this.state, showContent: false, showContainers: false, showForms: false  });}
-
+    for(let i=0;i<this.list.length;i++){//loop thru the list
+      if(this.list[i].length >2){//searching for only the headings that have subheadings
+        for(let j=1;j<this.list[i].length;j++){//loop through the subheadings
+          if(this.props.activeTab === this.list[i][j][0]){ //if we've arrived on a heading that contains subheadings,
+            if(this.state[this.list[i][0][0]]===false){//and the accordion is currently marked unopened (false),
+              this.setState({ ...this.reset, [this.list[i][0][0]]: true });//go ahead and mark it open (true)
+              break;//don't waste any more time in the loop...get out.
+            }
+          }
+        }
+      }
+    }
 
     return (
       <div className="sideVerticalLine disappearingSideBar">
-        {/* <div className="sideVerticalLine" /> */}
-        {/* <div className="sideVerticalLine disappearingSideBar"> */}
-        <div className={this.props.activeTab === 'colors' ? 'active' : ''}>
-          <a href="#colors" onClick={() => this.handleClick('colors')}>
-            Colors
-          </a>
-        </div>
-        <div className={this.props.activeTab === 'typography' ? 'active' : ''}>
-          <a href="#typography" onClick={() => this.handleClick('typography')}>
-            Typography
-          </a>
-        </div>
-        <div className={this.props.activeTab === 'icons' ? 'active' : ''}>
-          <a href="#icons" onClick={() => this.handleClick('icons')}>
-            Icons
-          </a>
-        </div>
-        <div className={this.props.activeTab === 'buttons' ? 'active' : ''}>
-          <a href="#buttons" onClick={() => this.handleClick('buttons')}>
-            Buttons
-          </a>
-        </div>
-        <div
-          onClick={this.openCloseForms}
-          className={this.props.activeTab === 'forms' ? 'active' : ''}>
-          <a href="#forms" onClick={() => this.handleClick('forms')}>
-            Forms
-          </a>
-        </div>
-        {this.state.showForms ? (
-          <div className="indentSidebar">
-            <div
-              className={
-                this.props.activeTab === 'standardInput' ? 'active' : ''
-              }>
-              <a
-                href="#standardInput"
-                onClick={() => this.handleClick('standardInput')}>
-                Standard Text Input
-              </a>
-            </div>
-            <div
-              className={
-                this.props.activeTab === 'dropdownMenu' ? 'active' : ''
-              }>
-              <a
-                href="#dropdownMenu"
-                onClick={() => this.handleClick('dropdownMenu')}>
-                Dropdown Menu
-              </a>
-            </div>
-            <div
-              className={
-                this.props.activeTab === 'radioButtons' ? 'active' : ''
-              }>
-              <a
-                href="#radioButtons"
-                onClick={() => this.handleClick('radioButtons')}>
-                Radio Buttons
-              </a>
-            </div>
-            <div
-              className={this.props.activeTab === 'checkBox' ? 'active' : ''}>
-              <a href="#checkBox" onClick={() => this.handleClick('checkBox')}>
-                Checkboxes
-              </a>
-            </div>
-            <div className={this.props.activeTab === 'switch' ? 'active' : ''}>
-              <a href="#switch" onClick={() => this.handleClick('switch')}>
-                Switch
-              </a>
-            </div>
-            <div className={this.props.activeTab === 'search' ? 'active' : ''}>
-              <a href="#search" onClick={() => this.handleClick('search')}>
-                Searchbox
-              </a>
-            </div>
+        {this.list.map(x=>x.length===2? //fix later...buggy if have a heading with only one sub in it.
+          <div className={this.props.activeTab === x[0] ? 'active' : ''}>
+            <a href={"#"+x[0]} onClick={() => this.handleClick(x[0])}>
+              {x[1]}
+            </a>
           </div>
-        ) : (
-          ''
-        )}
-        <div
-          onClick={this.openCloseContainer}
-          className={this.props.activeTab === 'containers' ? 'active' : ''}>
-          <a href="#containers" onClick={() => this.handleClick('containers')}>
-            Containers
-          </a>
-        </div>
-        {this.state.showContainers ? (
-          <div className="indentSidebar">
-            <div className={this.props.activeTab === 'panel' ? 'active' : ''}>
-              <a href="#panel" onClick={() => this.handleClick('panel')}>
-                Panel
-              </a>
-            </div>
+          :
+          <span>
             <div
-              className={this.props.activeTab === 'accordion' ? 'active' : ''}>
-              <a
-                href="#accordion"
-                onClick={() => this.handleClick('accordion')}>
-                Accordion
+              onClick={()=>this.openClose(x[0][0])}
+              className={this.props.activeTab === x[0][0] ? 'active' : ''}>
+              <a href={"#"+x[0][0]} onClick={() => this.handleClick(x[0][0])}>
+                {x[0][1]}
               </a>
             </div>
-            <div className={this.props.activeTab === 'modal' ? 'active' : ''}>
-              <a href="#modal" onClick={() => this.handleClick('modal')}>
-                Modal
-              </a>
-            </div>
-          </div>
-        ) : (
-          ''
+            {this.state[x[0][0]] ? x.map((y,index)=>index>0?
+              <div className="indentSidebar">
+                <div
+                  className={
+                    this.props.activeTab === y[0] ? 'active' : ''
+                  }>
+                  <a
+                    href={"#"+y[0]}
+                    onClick={() => this.handleClick(y[0])}>
+                    {y[1]}
+                  </a>
+                </div>
+              </div>:''):''}
+          </span>    
         )}
-        <div
-          onClick={this.openCloseContent}
-          className={this.props.activeTab === 'content' ? 'active' : ''}>
-          <a href="#content" onClick={() => this.handleClick('content')}>
-            Content
-          </a>
-        </div>
-        {this.state.showContent ? (
-          <div className="indentSidebar">
-            <div
-              className={this.props.activeTab === 'dividers' ? 'active' : ''}>
-              <a href="#dividers" onClick={() => this.handleClick('dividers')}>
-                Dividers
-              </a>
-            </div>
-            <div
-              className={
-                this.props.activeTab === 'loadingIndicator' ? 'active' : ''
-              }>
-              <a
-                href="#loadingIndicator"
-                onClick={() => this.handleClick('loadingIndicator')}>
-                Loading Indicator
-              </a>
-            </div>
-          </div>
-        ) : (
-          ''
-        )}
-        {/* </div> */}
       </div>
     );
   }

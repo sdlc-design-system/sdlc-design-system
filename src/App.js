@@ -1,5 +1,4 @@
 import React, { Component, createRef } from 'react';
-
 import Container from 'react-bootstrap/Container';
 import './App.scss';
 import Header from './components/Header';
@@ -27,9 +26,9 @@ class App extends Component {
     
     this.list=['colors','typography','icons','buttons','forms','standardInput','dropdownMenu','radioButtons','checkBox','switch','search','containers','panel','accordion','modal','content','dividers','loadingIndicator']
     this.state = {
-      activeTab: this.list[0]
+      activeTab: this.list[0] //initial active tab is the first item in the list
     };
-    this.list.forEach((item)=>this[item+'Ref']=createRef())
+    this.list.forEach((item)=>this[item+'Ref']=createRef()) //create Refs for every item in the list
   }
 
   componentDidMount() {
@@ -37,8 +36,8 @@ class App extends Component {
   }
 
   handleScroll = e => {
-    const activePoint = window.innerHeight / 2;
-    this.list.forEach((item)=>{
+    const activePoint = window.innerHeight / 2; 
+    this.list.forEach((item)=>{ //run through the list...if currently on the top half of the screen, highlight the sidebar
       if (this[item+'Ref'].current.getBoundingClientRect().top < activePoint && this[item+'Ref'].current.getBoundingClientRect().bottom > activePoint)
         return this.setState({ ...this.state, activeTab: item })
     })
@@ -63,10 +62,7 @@ class App extends Component {
                 <div id="colors" ref={this.colorsRef} className="anchor" style={{padding:"88px 0 0"}}>
                   <Color />
                 </div>
-                <div
-                  id="typography"
-                  className="anchor"
-                  ref={this.typographyRef}>
+                <div id="typography" className="anchor" ref={this.typographyRef}>
                   <Typography />
                 </div>
                 <div id="icons" ref={this.iconsRef} className="anchor">
@@ -78,16 +74,10 @@ class App extends Component {
                 <div id="forms" ref={this.formsRef} className="anchor">
                   <FormsDemo />
                 </div>
-                <div
-                  id="standardInput"
-                  ref={this.standardInputRef}
-                  className="anchor">
+                <div id="standardInput" ref={this.standardInputRef} className="anchor">
                   <StandardInputDemo />
                 </div>
-                <div
-                  id="dropdownMenu"
-                  ref={this.dropdownMenuRef}
-                  className="anchor">
+                <div id="dropdownMenu" ref={this.dropdownMenuRef} className="anchor">
                   <DropDownDemo />
                 </div>
                 <div id="radioButtons" ref={this.radioButtonsRef} className="anchor">
@@ -102,10 +92,7 @@ class App extends Component {
                 <div id="search" ref={this.searchRef} className="anchor">
                   <SearchboxDemo />
                 </div>
-                <div
-                  id="containers"
-                  ref={this.containersRef}
-                  className="anchor">
+                <div id="containers" ref={this.containersRef} className="anchor">
                   <h2>Containers</h2>
                 </div>
                 <div id="panel" ref={this.panelRef} className="anchor">
@@ -123,10 +110,7 @@ class App extends Component {
                 <div id="dividers" ref={this.dividersRef} className="anchor">
                   <DividersDemo />
                 </div>
-                <div
-                  id="loadingIndicator"
-                  ref={this.loadingIndicatorRef}
-                  className="anchor">
+                <div id="loadingIndicator" ref={this.loadingIndicatorRef} className="anchor">
                   <LoadingDemo />
                 </div>
               </div>
