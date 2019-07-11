@@ -23,12 +23,19 @@ import IconsDemo from './components/IconsDemo';
 class App extends Component {
   constructor(props) {
     super(props);
-    
-    this.list=['colors','typography','icons','buttons','forms','standardInput','dropdownMenu','radioButtons','checkBox','switch','search','containers','panel','accordion','modal','content','dividers','loadingIndicator']
+    this.list=[['colors','Colors'],
+              ['typography','Typography'],
+              ['icons','Icons'],
+              ['buttons','Buttons'],
+              [['forms','Forms'],['standardInput','Standard Text Input'],['dropdownMenu','Dropdown Menu'],['radioButtons','Radio Buttons'],['checkBox','Checkboxes'],['switch','Switch'],['search','Searchbox']],
+              [['containers','Containers'],['panel','Panel'],['accordion','Accordion'],['modal','Modal']],
+              [['content','Content'],['dividers','Dividers'],['loadingIndicator','Loading Indicatior']]
+            ]
+    this.categories=this.list.flat(2).filter((x,index)=>!(index%2))
     this.state = {
-      activeTab: this.list[0] //initial active tab is the first item in the list
+      activeTab: this.categories[0] //initial active tab is the first category
     };
-    this.list.forEach((item)=>this[item+'Ref']=createRef()) //create Refs for every item in the list
+    this.categories.forEach((item)=>this[item+'Ref']=createRef()) //create Refs for every category
   }
 
   componentDidMount() {
@@ -37,7 +44,7 @@ class App extends Component {
 
   handleScroll = e => {
     const activePoint = window.innerHeight / 2; 
-    this.list.forEach((item)=>{ //run through the list...if currently on the top half of the screen, highlight the sidebar
+    this.categories.forEach((item)=>{ //run through the categories...if currently on the top half of the screen, highlight the sidebar
       if (this[item+'Ref'].current.getBoundingClientRect().top < activePoint && this[item+'Ref'].current.getBoundingClientRect().bottom > activePoint)
         return this.setState({ ...this.state, activeTab: item })
     })
@@ -56,6 +63,7 @@ class App extends Component {
             <Sidebar
               activeTab={this.state.activeTab}
               onTabClick={this.handleTabClick}
+              list={this.list}
             />
             <div className="main borderLeft">
               <div>
