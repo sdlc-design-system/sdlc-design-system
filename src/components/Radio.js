@@ -24,7 +24,7 @@ class Radio extends React.Component {
     return (
       <Form>
         {this.props.content.map((item,index)=>
-          <div className="custom-control custom-radio">
+          <div key={index} className="custom-control custom-radio">
             <input  type="radio" 
                     id={`customRadio-${index}`} 
                     name="customRadio" 

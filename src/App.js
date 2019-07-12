@@ -31,7 +31,7 @@ class App extends Component {
               [['containers','Containers'],['panel','Panel'],['accordion','Accordion'],['modal','Modal']],
               [['content','Content'],['dividers','Dividers'],['loadingIndicator','Loading Indicatior']]
             ]
-    this.categories=this.list.flat(2).filter((x,index)=>!(index%2))
+    this.categories=this.list.flat(2).filter((x,index)=>!(index%2))//"categories" strips away the Capitalized headings in each array pair
     this.state = {
       activeTab: this.categories[0] //initial active tab is the first category
     };

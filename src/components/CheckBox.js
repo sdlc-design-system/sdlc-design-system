@@ -10,7 +10,7 @@ class CheckBox extends React.Component {
     return (
       <Form>
         {this.props.content.map((item,index)=>
-          <div className="wrapper">
+          <div key={index} className="wrapper">
             <input  type="radio" 
                     id={`checkbox-${item.name}-${index}`} 
                     name={item.name}

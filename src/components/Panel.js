@@ -30,7 +30,7 @@ class Panel extends React.Component {
       <div>
         <Row>
           {this.props.content.map((item,index)=>
-            <Col className="tabs" onClick={()=>this.handleTabChange(index)}>
+            <Col key={index} className="tabs" onClick={()=>this.handleTabChange(index)}>
               <span style={{cursor:"pointer"}}>
                 {item.title}
               </span>
@@ -47,7 +47,7 @@ class Panel extends React.Component {
         </Row>
         <hr className="lightDivider lineUnderLabels"></hr>
         {this.props.content.map((item,index)=>
-          <div>{this.state.openTab[index] ? item.content+' ' : ''}</div>
+          <div key={index}>{this.state.openTab[index] ? item.content+' ' : ''}</div>
         )}        
       </div>
     );
