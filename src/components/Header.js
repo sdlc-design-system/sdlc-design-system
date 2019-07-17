@@ -34,7 +34,7 @@ class Header extends React.Component {
 
           <Container fluid className="headerSmall">
             <div style={{display:'flex',justifyContent:"space-between", alignItems:"center"}}>
-              <div style={{paddingRight:"15px"}} onClick={this.props.menuClick}>
+              <div style={{paddingRight:"15px"}} onClick={this.props.showSmallMenu}>
                 <Hamburger width="28px" fill="#44687D" />
               </div>
               <SdlcLogo

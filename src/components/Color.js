@@ -47,20 +47,12 @@ class Color extends React.Component {
                 <div>$bisque</div>
               </div>
               <div className="swatch blue">
-                <div>5290C3</div>
+                <div>4A90E2</div>
                 <div>$blue</div>
               </div>
               <div className="swatch turquoise">
                 <div>A3D9D2</div>
                 <div>$turquoise</div>
-              </div>
-              <div className="swatch olive">
-                <div>999900</div>
-                <div>$olive</div>
-              </div>
-              <div className="swatch grey">
-                <div>A8A08D</div>
-                <div>$grey</div>
               </div>
             </div>
           </div>

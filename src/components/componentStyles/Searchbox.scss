@@ -3,6 +3,10 @@
 .searchbar{
   border: 1px solid $greyscale-light;
 }
+.searchbar-lite{
+  border-bottom: 1px solid $greyscale-light;
+}
+
 .searchbar-inside,
 .searchbar-inside:hover,
 .searchbar-inside:active,
@@ -14,7 +18,7 @@
   display:flex !important;
   flex-flow:row nowrap !important;
   align-items:center;
-  justify-content:space-between;
+  justify-content:flex-start;
   border:none !important;
   outline: none !important;
   box-shadow: none !important;

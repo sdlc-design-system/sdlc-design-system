@@ -13,57 +13,32 @@ class ModalDemo extends React.Component {
     }
   }
 
-  handleModalClose=()=> {
-    this.setState({ showModal: false });
-  }
-
-  handleModalShow=()=> {
-    this.setState({ showModal: true });
+  handleModalClick=()=> {
+    this.setState({ showModal: !this.state.showModal });
   }
 
   render () {
     return(
       <div>
         <h4>Modal Window</h4>
-        <div className="basicBorder seventyPercentWidth">
-          <div className="rightX">
-            ×
-          </div>
-          <h4 className="centerTitleModal">Title</h4>
-          <br />
-          <div className="modalContent">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-          </div>
-          <br />
-          <div className="buttonsModal">
-            <ButtonSDLC size="largeButton" 
-                        buttonStyle="secondaryButton" 
-                        text="Cancel" 
-            />
-            <ButtonSDLC size="largeButton" 
-                        buttonStyle="primaryButton" 
-                        text="Confirm" 
-            />
-          </div>
-        </div>
-        <br />
-        <h4>Example</h4>
+
         <ButtonSDLC 
-          onClick={this.handleModalShow} 
+          onClick={this.handleModalClick} 
           size="largeButton" 
           buttonStyle="primaryButton" 
           text="Modal">
         </ButtonSDLC>
-        {this.state.showModal ? 
+        {this.state.showModal &&
           <ModalSDLC
             showModal = {this.state.showModal}
-            handleModalClose = {this.handleModalClose}
-            handleModalShow = {this.handleModalShow}
+            handleModalClick = {this.handleModalClick}
             buttonOnRightTitle = "Confirm"//custom content here
-            buttonOnRightAction = {this.handleModalClose}//custom handle click here
+            buttonOnRightAction = {this.handleModalClick}//custom handle click here
             title = "Title"
             content= "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."
-          /> : null
+            textLink="Privacy"
+            handleTextLink={this.state.handleTextLink}
+          />
         }
         <br />
         <pre><code className="language-jsx">
@@ -76,26 +51,31 @@ class ModalDemo extends React.Component {
         this.state = {
           showModal: false,
         }
+        handleModalClick=()=> {
+          this.setState({ showModal: false });
+        }
+        handleTextLink=()=> {......}
 
         ...
 
         <ButtonSDLC 
-          onClick={this.handleModalShow} 
+          onClick={this.handleModalClick}
           size="largeButton" 
           buttonStyle="primaryButton" 
           text="Modal">
         </ButtonSDLC>
 
-        {this.state.showModal ? 
+        {this.state.showModal && 
           <ModalSDLC
             showModal = {this.state.showModal}
-            handleModalClose = {this.handleModalClose}
-            handleModalShow = {this.handleModalShow}
-            buttonOnRightTitle = "Confirm"
-            buttonOnRightAction = {this.handleModalClose}
+            handleModalClick = {this.handleModalClick}
+            buttonOnRightTitle = "Confirm" //custom content here
+            buttonOnRightAction = {this.handleModalClick} //custom handle click here
             title = "Title"
             content= "Anim pariatur cliche reprehenderit, enim..."
-          /> : null
+            textLink="Privacy"
+            handleTextLink={this.state.handleTextLink}
+          />
         }
         `} 
         </code></pre>

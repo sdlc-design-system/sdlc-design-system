@@ -35,7 +35,11 @@ class Sidebar extends React.Component {
       <div className="sideVerticalLine disappearingSideBar">
         {this.props.list.map(x=>typeof x[0]=== 'string' ? //if there are no subheadings, do this section
           <div key={x[0]} className={this.props.activeTab === x[0] ? 'active' : ''}>
-            <a href={"#"+x[0]} onClick={() => this.handleClick(x[0])}>
+            <a 
+              href={"#"+x[0]} 
+              onClick={() => this.handleClick(x[0])}
+              className={this.props.activeTab === x[0] ? 'highlight' : ''}
+            >
               {x[1]}
             </a>
           </div>
@@ -44,7 +48,11 @@ class Sidebar extends React.Component {
             <div
               onClick={()=>this.openClose(x[0][0])} //opens and closes the accordion subheadings
               className={this.props.activeTab === x[0][0] ? 'active' : ''}>
-              <a href={"#"+x[0][0]} onClick={() => this.handleClick(x[0][0])}>
+              <a 
+                href={"#"+x[0][0]} 
+                onClick={() => this.handleClick(x[0][0])}
+                className={this.props.activeTab === x[0][0] ? 'highlight' : ''}
+              >
                 {x[0][1]}
               </a>
             </div>
@@ -61,7 +69,9 @@ class Sidebar extends React.Component {
                   <a
                     key={y[0]+index}
                     href={"#"+y[0]}
-                    onClick={() => this.handleClick(y[0])}>
+                    onClick={() => this.handleClick(y[0])}
+                    className= {this.props.activeTab === y[0] ? 'highlight' : ''}
+                  >
                     {y[1]}
                   </a>
                 </div>

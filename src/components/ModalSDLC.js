@@ -14,25 +14,26 @@ class ModalSDLC extends React.Component {
   render() {
     return (
       <>
-        <Modal show={this.props.showModal} onHide={this.props.handleModalClose}>
+        <Modal show={this.props.showModal} onHide={this.props.handleModalClick}>
           <Modal.Header className="closeButtonStyling" closeButton></Modal.Header>
           <Modal.Header className="modalTitleStyling">
             <Modal.Title className="modalTitleStyling">{this.props.title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>{this.props.content}</Modal.Body>
           <Modal.Footer>
-            <Row>
-              <Col xs={6} className="centerButton">
-                <Button className="btn-secondary btn-lg" onClick={this.props.handleModalClose} >
-                  Cancel
-                </Button>
-              </Col>
-              <Col xs={6} className="centerButton">
+            <div className="modalFooter">
+              <div onClink={this.props.handleTextLink} className="modalTextLink">{this.props.textLink}</div>
+              <div style={{display:"flex"}}>
+                <div className="modalButton">
+                  <Button className="btn-secondary btn-lg" onClick={this.props.handleModalClick} >
+                    Cancel
+                  </Button>
+                </div>
                 <Button className="btn-primary btn-lg" onClick={this.props.buttonOnRightAction}>
                   {this.props.buttonOnRightTitle}
                 </Button>
-              </Col>
-            </Row>
+              </div>
+            </div>
           </Modal.Footer>
         </Modal>
       </>

@@ -9,7 +9,7 @@ class Typography extends React.Component {
     return(
       <div>
         <h2>Typography</h2>
-        <h4>Open Sans/Lato</h4>
+        <h4>Open Sans/Roboto</h4>
         <div className="flexColumnTypography">
           <div className="flexRowTypography">
             <span className="col1 bold">Element / Class</span>

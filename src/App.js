@@ -1,24 +1,25 @@
-import React, { Component, createRef } from 'react';
-import Container from 'react-bootstrap/Container';
-import './App.scss';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import Color from './components/Color';
-import Typography from './components/Typography';
-import ButtonsDemo from './components/ButtonsDemo';
-import PanelDemo from './components/PanelDemo';
-import AccordionsDemo from './components/AccordionsDemo';
-import ModalDemo from './components/ModalDemo';
-import FormsDemo from './components/FormsDemo';
-import StandardInputDemo from './components/StandardInputDemo';
-import DropDownDemo from './components/DropDownDemo';
-import RadioButtonsDemo from './components/RadioButtonsDemo';
-import CheckBoxDemo from './components/CheckBoxDemo';
-import SwitchDemo from './components/SwitchDemo';
-import SearchboxDemo from './components/SearchboxDemo';
-import DividersDemo from './components/DividersDemo';
-import LoadingDemo from './components/LoadingDemo';
-import IconsDemo from './components/IconsDemo';
+import React, { Component, createRef } from 'react'
+import Container from 'react-bootstrap/Container'
+import './App.scss'
+import Header from './components/Header'
+import Sidebar from './components/Sidebar'
+import Color from './components/Color'
+import Typography from './components/Typography'
+import ButtonsDemo from './components/ButtonsDemo'
+import PanelDemo from './components/PanelDemo'
+import AccordionsDemo from './components/AccordionsDemo'
+import ModalDemo from './components/ModalDemo'
+import FormsDemo from './components/FormsDemo'
+import StandardInputDemo from './components/StandardInputDemo'
+import DropDownDemo from './components/DropDownDemo'
+import RadioButtonsDemo from './components/RadioButtonsDemo'
+import CheckBoxDemo from './components/CheckBoxDemo'
+import SwitchDemo from './components/SwitchDemo'
+import SearchboxDemo from './components/SearchboxDemo'
+import DividersDemo from './components/DividersDemo'
+import LoadingDemo from './components/LoadingDemo'
+import IconsDemo from './components/IconsDemo'
+import SmallMenu from './components/SmallMenu'
 
 class App extends Component {
   constructor(props) {
@@ -33,13 +34,14 @@ class App extends Component {
             ]
     this.categories=this.list.flat(2).filter((x,index)=>!(index%2))//"categories" strips away the Capitalized headings in each array pair
     this.state = {
-      activeTab: this.categories[0] //initial active tab is the first category
-    };
+      activeTab: this.categories[0], //initial active tab is the first category
+      showSmallMenu:false,
+    }
     this.categories.forEach((item)=>this[item+'Ref']=createRef()) //create Refs for every category
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll)
   }
 
   handleScroll = e => {
@@ -48,16 +50,20 @@ class App extends Component {
       if (this[item+'Ref'].current.getBoundingClientRect().top < activePoint && this[item+'Ref'].current.getBoundingClientRect().bottom > activePoint)
         return this.setState({ ...this.state, activeTab: item })
     })
-  };
+  }
 
   handleTabClick = tab => {
-    this.setState({ ...this.state, activeTab: tab });
-  };
+    this.setState({ ...this.state, activeTab: tab })
+  }
+
+  showSmallMenu = e =>{
+    this.setState({...this.state, showSmallMenu:!this.state.showSmallMenu})
+  }
 
   render() {
     return (
       <div>
-        <Header />
+        <Header showSmallMenu={this.showSmallMenu} />
         <Container fluid style={{ marginLeft: '10px' }}>
           <div>
             <Sidebar
@@ -65,7 +71,10 @@ class App extends Component {
               onTabClick={this.handleTabClick}
               list={this.list}
             />
-            <div className="main borderLeft">
+            {this.state.showSmallMenu &&
+              <SmallMenu showSmallMenu={this.showSmallMenu} list={this.list}/>
+            }
+            <div className={this.state.showSmallMenu ? "showSmallMenu" : "main borderLeft"}>
               <div>
                 <div id="colors" ref={this.colorsRef} className="anchor" style={{padding:"88px 0 0"}}>
                   <Color />
@@ -126,7 +135,7 @@ class App extends Component {
           </div>
         </Container>
       </div>
-    );
+    )
   }
 }
 
