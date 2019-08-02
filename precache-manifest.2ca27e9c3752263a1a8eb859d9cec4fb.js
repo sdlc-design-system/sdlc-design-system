@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9025a731d06c326a91690fee136777e6",
+    "revision": "da6d49c4f7135ee0676869f8c489a94b",
     "url": "/sdlc-design-system/index.html"
   },
   {
