@@ -1,14 +1,13 @@
-@import "../../_masterColors.scss";
-.button{
-
+@import '../../_masterColors.scss';
+.button {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   border: none;
   text-decoration: none;
   cursor: pointer;
-  font-weight:600;
+  font-weight: 600;
 }
 .primaryButton:hover {
   background-color: $btn-brand-hover;
@@ -27,7 +26,8 @@
 
 .primaryButton, 
 .show>.primaryButton.dropdown-toggle, //removes royal blue from a clicked dropdown
-.dropdown-item:active:focus { //causes a clicked dropdown menu item to turn the final color
+.dropdown-item:active:focus {
+  //causes a clicked dropdown menu item to turn the final color
   background-color: $btn-brand;
   color: white;
   border-color: $btn-brand;
@@ -41,8 +41,8 @@
 }
 
 .secondaryButton:disabled {
-  background-color: $greyscale-pale;
-  border-color: $greyscale-pale;
+  background-color: $greyscale-pale !important;
+  border-color: $greyscale-pale !important;
   color: $btn-brand;
   cursor: not-allowed;
 }
@@ -51,10 +51,10 @@
   background-color: white;
   color: $btn-brand;
   border: 2px solid $btn-brand;
-
 }
 
-.secondaryButton:hover, .dropdown-item:hover {
+.secondaryButton:hover,
+.dropdown-item:hover {
   background-color: $blue-bg;
   color: $btn-brand;
   border-color: $blue-bg;
@@ -66,29 +66,23 @@
   color: $btn-brand;
 }
 
-
-
-
-
-.largeButton{
+.largeButton {
   border-radius: 4px;
   font-size: 18px;
   margin: 4px 2px;
-  padding: .5rem 1.75rem;
+  padding: 0.5rem 1.75rem;
 }
 
-.mediumButton{
+.mediumButton {
   border-radius: 3px;
   font-size: 14px;
   margin: 4px 2px;
-  padding: .5rem 1.75rem;
+  padding: 0.5rem 1.75rem;
 }
 
-.smallButton{
+.smallButton {
   border-radius: 2px;
   font-size: 14px;
   margin: 2px 1px;
-  padding: .25rem 1rem;
-
-
+  padding: 0.25rem 1rem;
 }
