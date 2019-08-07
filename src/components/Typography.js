@@ -2,13 +2,13 @@ import React from 'react';
 import './componentStyles/Typography.scss';
 
 class Typography extends React.Component {
-  constructor ( props ) {
-    super( props );
+  constructor(props) {
+    super(props);
   }
-  render () {
-    return(
+  render() {
+    return (
       <div>
-        <h2>Typography</h2>
+        <h3>Typography</h3>
         <h4>Open Sans/Roboto</h4>
         <div className="flexColumnTypography">
           <div className="flexRowTypography">
@@ -17,7 +17,7 @@ class Typography extends React.Component {
             <span className="col3 bold">Type Specimen</span>
           </div>
         </div>
-        <hr className="lightDivider noMargin"></hr>
+        <hr className="lightDivider noMargin" />
         <div className="flexColumnTypography">
           <div className="flexRowTypography">
             <span className="col1">&lt;h1&gt;</span>
@@ -28,7 +28,7 @@ class Typography extends React.Component {
             <span className="col1">&lt;h2&gt;</span>
             <span className="col2">48px/64px</span>
             <h2 className="col3">Page Title</h2>
-          </div>     
+          </div>
           <div className="flexRowTypography">
             <span className="col1">&lt;h3&gt;</span>
             <span className="col2">32px/40px</span>
@@ -48,7 +48,8 @@ class Typography extends React.Component {
             <span className="col1">.largeBodyCopy</span>
             <span className="col2">20px/32px</span>
             <span className="col3 largeBodyCopy">
-              Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor.
+              Maecenas faucibus mollis interdum. Duis mollis, est non commodo
+              luctus, nisi erat porttitor.
             </span>
           </div>
           <br />
@@ -56,7 +57,8 @@ class Typography extends React.Component {
             <span className="col1">.bodyCopy</span>
             <span className="col2">16px/24px</span>
             <span className="col3 bodyCopy">
-              Sed posuere consectetur est at lobortis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              Sed posuere consectetur est at lobortis. Cum sociis natoque
+              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
             </span>
           </div>
           <br />
@@ -64,7 +66,8 @@ class Typography extends React.Component {
             <span className="col1">.caption</span>
             <span className="col2">12px/16px</span>
             <span className="col3 caption">
-              Legal and Copyright information. Limit the use of this type style within interaction and product details
+              Legal and Copyright information. Limit the use of this type style
+              within interaction and product details
             </span>
           </div>
           <br />
@@ -72,7 +75,7 @@ class Typography extends React.Component {
             <span className="col1">.labels16</span>
             <span className="col2">16px/24px</span>
             <span className="col3 labels16">
-              Fermentum Pellentesque Adipiscing 
+              Fermentum Pellentesque Adipiscing
             </span>
           </div>
           <br />
@@ -80,7 +83,7 @@ class Typography extends React.Component {
             <span className="col1">.labels14</span>
             <span className="col2">14px/24px</span>
             <span className="col3 labels14">
-              Fermentum Pellentesque Adipiscing 
+              Fermentum Pellentesque Adipiscing
             </span>
           </div>
           <br />
@@ -101,4 +104,4 @@ class Typography extends React.Component {
     );
   }
 }
-export default Typography
+export default Typography;

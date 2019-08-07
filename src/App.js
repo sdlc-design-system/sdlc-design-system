@@ -1,64 +1,86 @@
-import React, { Component, createRef } from 'react'
-import Container from 'react-bootstrap/Container'
-import './App.scss'
-import Header from './components/Header'
-import Sidebar from './components/Sidebar'
-import Color from './components/Color'
-import Typography from './components/Typography'
-import ButtonsDemo from './components/ButtonsDemo'
-import PanelDemo from './components/PanelDemo'
-import AccordionsDemo from './components/AccordionsDemo'
-import ModalDemo from './components/ModalDemo'
-import FormsDemo from './components/FormsDemo'
-import StandardInputDemo from './components/StandardInputDemo'
-import DropDownDemo from './components/DropDownDemo'
-import RadioButtonsDemo from './components/RadioButtonsDemo'
-import CheckBoxDemo from './components/CheckBoxDemo'
-import SwitchDemo from './components/SwitchDemo'
-import SearchboxDemo from './components/SearchboxDemo'
-import DividersDemo from './components/DividersDemo'
-import LoadingDemo from './components/LoadingDemo'
-import IconsDemo from './components/IconsDemo'
-import SmallMenu from './components/SmallMenu'
+import React, { Component, createRef } from 'react';
+import Container from 'react-bootstrap/Container';
+import './App.scss';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import Color from './components/Color';
+import Typography from './components/Typography';
+import ButtonsDemo from './components/ButtonsDemo';
+import PanelDemo from './components/PanelDemo';
+import AccordionsDemo from './components/AccordionsDemo';
+import ModalDemo from './components/ModalDemo';
+import FormsDemo from './components/FormsDemo';
+import StandardInputDemo from './components/StandardInputDemo';
+import DropDownDemo from './components/DropDownDemo';
+import RadioButtonsDemo from './components/RadioButtonsDemo';
+import CheckBoxDemo from './components/CheckBoxDemo';
+import SwitchDemo from './components/SwitchDemo';
+import SearchboxDemo from './components/SearchboxDemo';
+import DividersDemo from './components/DividersDemo';
+import LoadingDemo from './components/LoadingDemo';
+import IconsDemo from './components/IconsDemo';
+import SmallMenu from './components/SmallMenu';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.list=[['colors','Colors'],
-              ['typography','Typography'],
-              ['icons','Icons'],
-              ['buttons','Buttons'],
-              [['forms','Forms'],['standardInput','Standard Text Input'],['dropdownMenu','Dropdown Menu'],['radioButtons','Radio Buttons'],['checkBox','Checkboxes'],['switch','Switch'],['search','Searchbox']],
-              [['containers','Containers'],['panel','Panel'],['accordion','Accordion'],['modal','Modal']],
-              [['content','Content'],['dividers','Dividers'],['loadingIndicator','Loading Indicatior']]
-            ]
-    this.categories=this.list.flat(2).filter((x,index)=>!(index%2))//"categories" strips away the Capitalized headings in each array pair
+    this.list = [
+      ['colors', 'Colors'],
+      ['typography', 'Typography'],
+      ['icons', 'Icons'],
+      ['buttons', 'Buttons'],
+      [
+        ['forms', 'Forms'],
+        ['standardInput', 'Standard Text Input'],
+        ['dropdownMenu', 'Dropdown Menu'],
+        ['radioButtons', 'Radio Buttons'],
+        ['checkBox', 'Checkboxes'],
+        ['switch', 'Switch'],
+        ['search', 'Searchbox']
+      ],
+      [
+        ['containers', 'Containers'],
+        ['panel', 'Panel'],
+        ['accordion', 'Accordion'],
+        ['modal', 'Modal']
+      ],
+      [
+        ['content', 'Content'],
+        ['dividers', 'Dividers'],
+        ['loadingIndicator', 'Loading Indicatior']
+      ]
+    ];
+    this.categories = this.list.flat(2).filter((x, index) => !(index % 2)); //"categories" strips away the Capitalized headings in each array pair
     this.state = {
       activeTab: this.categories[0], //initial active tab is the first category
-      showSmallMenu:false,
-    }
-    this.categories.forEach((item)=>this[item+'Ref']=createRef()) //create Refs for every category
+      showSmallMenu: false
+    };
+    this.categories.forEach(item => (this[item + 'Ref'] = createRef())); //create Refs for every category
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('scroll', this.handleScroll);
   }
 
   handleScroll = e => {
-    const activePoint = window.innerHeight / 2; 
-    this.categories.forEach((item)=>{ //run through the categories...if currently on the top half of the screen, highlight the sidebar
-      if (this[item+'Ref'].current.getBoundingClientRect().top < activePoint && this[item+'Ref'].current.getBoundingClientRect().bottom > activePoint)
-        return this.setState({ ...this.state, activeTab: item })
-    })
-  }
+    const activePoint = window.innerHeight / 2;
+    this.categories.forEach(item => {
+      //run through the categories...if currently on the top half of the screen, highlight the sidebar
+      if (
+        this[item + 'Ref'].current.getBoundingClientRect().top < activePoint &&
+        this[item + 'Ref'].current.getBoundingClientRect().bottom > activePoint
+      )
+        return this.setState({ ...this.state, activeTab: item });
+    });
+  };
 
   handleTabClick = tab => {
-    this.setState({ ...this.state, activeTab: tab })
-  }
+    this.setState({ ...this.state, activeTab: tab });
+  };
 
-  showSmallMenu = e =>{
-    this.setState({...this.state, showSmallMenu:!this.state.showSmallMenu})
-  }
+  showSmallMenu = e => {
+    this.setState({ ...this.state, showSmallMenu: !this.state.showSmallMenu });
+  };
 
   render() {
     return (
@@ -71,15 +93,25 @@ class App extends Component {
               onTabClick={this.handleTabClick}
               list={this.list}
             />
-            {this.state.showSmallMenu &&
-              <SmallMenu showSmallMenu={this.showSmallMenu} list={this.list}/>
-            }
-            <div className={this.state.showSmallMenu ? "showSmallMenu" : "main borderLeft"}>
+            {this.state.showSmallMenu && (
+              <SmallMenu showSmallMenu={this.showSmallMenu} list={this.list} />
+            )}
+            <div
+              className={
+                this.state.showSmallMenu ? 'showSmallMenu' : 'main borderLeft'
+              }>
               <div>
-                <div id="colors" ref={this.colorsRef} className="anchor" style={{padding:"88px 0 0"}}>
+                <div
+                  id="colors"
+                  ref={this.colorsRef}
+                  className="anchor"
+                  style={{ padding: '88px 0 0' }}>
                   <Color />
                 </div>
-                <div id="typography" className="anchor" ref={this.typographyRef}>
+                <div
+                  id="typography"
+                  className="anchor"
+                  ref={this.typographyRef}>
                   <Typography />
                 </div>
                 <div id="icons" ref={this.iconsRef} className="anchor">
@@ -91,13 +123,22 @@ class App extends Component {
                 <div id="forms" ref={this.formsRef} className="anchor">
                   <FormsDemo />
                 </div>
-                <div id="standardInput" ref={this.standardInputRef} className="anchor">
+                <div
+                  id="standardInput"
+                  ref={this.standardInputRef}
+                  className="anchor">
                   <StandardInputDemo />
                 </div>
-                <div id="dropdownMenu" ref={this.dropdownMenuRef} className="anchor">
+                <div
+                  id="dropdownMenu"
+                  ref={this.dropdownMenuRef}
+                  className="anchor">
                   <DropDownDemo />
                 </div>
-                <div id="radioButtons" ref={this.radioButtonsRef} className="anchor">
+                <div
+                  id="radioButtons"
+                  ref={this.radioButtonsRef}
+                  className="anchor">
                   <RadioButtonsDemo />
                 </div>
                 <div id="checkBox" ref={this.checkBoxRef} className="anchor">
@@ -109,8 +150,11 @@ class App extends Component {
                 <div id="search" ref={this.searchRef} className="anchor">
                   <SearchboxDemo />
                 </div>
-                <div id="containers" ref={this.containersRef} className="anchor">
-                  <h2>Containers</h2>
+                <div
+                  id="containers"
+                  ref={this.containersRef}
+                  className="anchor">
+                  <h3>Containers</h3>
                 </div>
                 <div id="panel" ref={this.panelRef} className="anchor">
                   <PanelDemo />
@@ -122,12 +166,15 @@ class App extends Component {
                   <ModalDemo />
                 </div>
                 <div id="content" ref={this.contentRef} className="anchor">
-                  <h2>Content</h2>
+                  <h3>Content</h3>
                 </div>
                 <div id="dividers" ref={this.dividersRef} className="anchor">
                   <DividersDemo />
                 </div>
-                <div id="loadingIndicator" ref={this.loadingIndicatorRef} className="anchor">
+                <div
+                  id="loadingIndicator"
+                  ref={this.loadingIndicatorRef}
+                  className="anchor">
                   <LoadingDemo />
                 </div>
               </div>
@@ -135,7 +182,7 @@ class App extends Component {
           </div>
         </Container>
       </div>
-    )
+    );
   }
 }
 

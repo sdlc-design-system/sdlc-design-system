@@ -1,57 +1,72 @@
 import React from 'react';
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Dropdown from 'react-bootstrap/Dropdown'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Dropdown from 'react-bootstrap/Dropdown';
 import './componentStyles/ButtonsDemo.scss';
-import Lock from '../svgs/Lock' 
-import ButtonSDLC from './ButtonSDLC'
+import Lock from '../svgs/Lock';
+import ButtonSDLC from './ButtonSDLC';
 import Prism from 'prismjs';
 
-
 class ButtonsDemo extends React.Component {
-  constructor ( props ) {
-    super( props );
+  constructor(props) {
+    super(props);
   }
-  render () {
-    return(
+  render() {
+    return (
       <div>
-        <h2>Buttons</h2>
+        <h3>Buttons</h3>
         <h4>Primary Action</h4>
-        <div>The primary action should be the most important action on the page, typically indicating next likely action the user will take (e.g. Continue, Checkout, Sign In). It is advised to have a single primary action button on each screen for emphasis. On interfaces where there are multiple next likely actions it is at the product owner’s discretion which styles to use.
-When combined within button sets, the primary button should appear at the top when vertically stacked and furthest right when horizontal.
+        <div>
+          The primary action should be the most important action on the page,
+          typically indicating next likely action the user will take (e.g.
+          Continue, Checkout, Sign In). It is advised to have a single primary
+          action button on each screen for emphasis. On interfaces where there
+          are multiple next likely actions it is at the product owner’s
+          discretion which styles to use. When combined within button sets, the
+          primary button should appear at the top when vertically stacked and
+          furthest right when horizontal.
         </div>
-        <br></br>
+        <br />
         <div className="flexColumnButtonsDemo">
           <div className="flexRowButtonsDemo">
             <div className="caption buttonDemoPadding">Large</div>
             <span className="buttonDemoPadding">
-              <ButtonSDLC size="largeButton" 
-                      buttonStyle="primaryButton" 
-                      text="Primary" 
+              <ButtonSDLC
+                size="largeButton"
+                buttonStyle="primaryButton"
+                text="Primary"
               />
             </span>
             <span className="buttonDemoPadding">
-              <ButtonSDLC disabled={true} size="largeButton" buttonStyle="primaryButton" text="Disabled"></ButtonSDLC>
-            </span>
-            <span className="buttonDemoPadding">
-              <ButtonSDLC size="largeButton" 
-                    icon={<Lock width="15px" fill="white" />} 
-                    buttonStyle="primaryButton" 
-                    text="Primary"
+              <ButtonSDLC
+                disabled={true}
+                size="largeButton"
+                buttonStyle="primaryButton"
+                text="Disabled"
               />
             </span>
-            <ButtonSDLC disabled={true}
-                  size="largeButton" 
-                  icon={<Lock width="15px" fill="white" />} 
-                  buttonStyle="primaryButton" 
-                  text="Disabled"
+            <span className="buttonDemoPadding">
+              <ButtonSDLC
+                size="largeButton"
+                icon={<Lock width="15px" fill="white" />}
+                buttonStyle="primaryButton"
+                text="Primary"
+              />
+            </span>
+            <ButtonSDLC
+              disabled={true}
+              size="largeButton"
+              icon={<Lock width="15px" fill="white" />}
+              buttonStyle="primaryButton"
+              text="Disabled"
             />
           </div>
         </div>
-        <br></br>
+        <br />
         Large, Primary (First Button):
-        <pre><code className="language-jsx">
-          {`
+        <pre>
+          <code className="language-jsx">
+            {`
             import ButtonSDLC from './ButtonSDLC'
             
             ...
@@ -63,12 +78,15 @@ When combined within button sets, the primary button should appear at the top wh
               OnClick={...}
             />
           `}
-        </code></pre>
-        <br></br>
-        Large, Primary, Disabled, with Icon (Fourth Button):<br />
+          </code>
+        </pre>
+        <br />
+        Large, Primary, Disabled, with Icon (Fourth Button):
+        <br />
         *Note: Any icon component can be added - just don't forget to import it.
-        <pre><code className="language-jsx">
-          {`
+        <pre>
+          <code className="language-jsx">
+            {`
           import ButtonSDLC from './ButtonSDLC'
           import Lock from '../svgs/Lock' 
           ...
@@ -81,26 +99,33 @@ When combined within button sets, the primary button should appear at the top wh
             text="Disabled"
             OnClick={...}
           />
-          `} 
-        </code></pre>
-        <br></br>
+          `}
+          </code>
+        </pre>
+        <br />
         <div className="flexColumnButtonsDemo">
           <div className="flexRowButtonsDemo">
             <div className="caption buttonDemoPadding">Medium</div>
             <span className="buttonDemoPadding">
-              <ButtonSDLC size="mediumButton" 
-                    buttonStyle="primaryButton" 
-                    text="Primary"
+              <ButtonSDLC
+                size="mediumButton"
+                buttonStyle="primaryButton"
+                text="Primary"
               />
             </span>
-            <ButtonSDLC disabled={true} size="mediumButton" buttonStyle="primaryButton" text="Disabled"></ButtonSDLC>
-            
+            <ButtonSDLC
+              disabled={true}
+              size="mediumButton"
+              buttonStyle="primaryButton"
+              text="Disabled"
+            />
           </div>
         </div>
-        <br/>
+        <br />
         Medium, Primary (First Button):
-        <pre><code className="language-jsx">
-          {`
+        <pre>
+          <code className="language-jsx">
+            {`
             import ButtonSDLC from './ButtonSDLC'
             
             ...
@@ -112,26 +137,32 @@ When combined within button sets, the primary button should appear at the top wh
               OnClick={...}
             />
           `}
-        </code></pre>
+          </code>
+        </pre>
         <br />
-
         <div className="flexColumnButtonsDemo">
           <div className="flexRowButtonsDemo">
             <div className="caption buttonDemoPadding">Small</div>
             <span className="buttonDemoPadding">
-              <ButtonSDLC size="smallButton" 
-                      buttonStyle="primaryButton" 
-                      text="Primary" 
+              <ButtonSDLC
+                size="smallButton"
+                buttonStyle="primaryButton"
+                text="Primary"
               />
             </span>
-            <ButtonSDLC disabled={true} size="smallButton" buttonStyle="primaryButton" text="Disabled"></ButtonSDLC>
-            
+            <ButtonSDLC
+              disabled={true}
+              size="smallButton"
+              buttonStyle="primaryButton"
+              text="Disabled"
+            />
           </div>
         </div>
-        <br/>
+        <br />
         Small, Primary (First Button):
-        <pre><code className="language-jsx">
-          {`
+        <pre>
+          <code className="language-jsx">
+            {`
             import ButtonSDLC from './ButtonSDLC'
             
             ...
@@ -143,63 +174,78 @@ When combined within button sets, the primary button should appear at the top wh
               OnClick={...}
             />
           `}
-        </code></pre>
-        <br></br>
-
+          </code>
+        </pre>
+        <br />
         <h4>Secondary Action</h4>
         <div>
-          Use a secondary action for non-primary actions. The secondary action treatment allows for multiple actions within a set and on a page without creating a large cognitive load. This treatment is ideal for actions that occur multiple times within a page (e.g. Product Panes). 
+          Use a secondary action for non-primary actions. The secondary action
+          treatment allows for multiple actions within a set and on a page
+          without creating a large cognitive load. This treatment is ideal for
+          actions that occur multiple times within a page (e.g. Product Panes).
         </div>
-        <br></br>
+        <br />
         <div className="flexColumnButtonsDemo">
           <div className="flexRowButtonsDemo">
             <div className="caption buttonDemoDescWidth">Large</div>
             <div className="buttonDemoSecondaryWidth">
-              <ButtonSDLC size="largeButton" 
-                      buttonStyle="secondaryButton" 
-                      text="Secondary" 
+              <ButtonSDLC
+                size="largeButton"
+                buttonStyle="secondaryButton"
+                text="Secondary"
               />
             </div>
-            <ButtonSDLC disabled={true} 
-              size="largeButton" 
-              buttonStyle="secondaryButton" 
+            <ButtonSDLC
+              disabled={true}
+              size="largeButton"
+              buttonStyle="secondaryButton"
               text="Disabled"
             />
-            
           </div>
         </div>
-        <br></br>
+        <br />
         <div className="flexColumnButtonsDemo">
           <div className="flexRowButtonsDemo">
             <div className="caption buttonDemoDescWidth">Medium</div>
             <div className="buttonDemoSecondaryWidth">
-              <ButtonSDLC size="mediumButton" 
-                      buttonStyle="secondaryButton" 
-                      text="Secondary" 
+              <ButtonSDLC
+                size="mediumButton"
+                buttonStyle="secondaryButton"
+                text="Secondary"
               />
             </div>
-            <ButtonSDLC disabled={true} size="mediumButton" buttonStyle="secondaryButton" text="Disabled"></ButtonSDLC>
-            
+            <ButtonSDLC
+              disabled={true}
+              size="mediumButton"
+              buttonStyle="secondaryButton"
+              text="Disabled"
+            />
           </div>
         </div>
-        <br></br>
+        <br />
         <div className="flexColumnButtonsDemo">
           <div className="flexRowButtonsDemo">
             <div className="caption  buttonDemoDescWidth">Small</div>
             <div className="buttonDemoSecondaryWidth">
-              <ButtonSDLC size="smallButton" 
-                      buttonStyle="secondaryButton" 
-                      text="Secondary" 
+              <ButtonSDLC
+                size="smallButton"
+                buttonStyle="secondaryButton"
+                text="Secondary"
               />
             </div>
-            <ButtonSDLC disabled={true} size="smallButton" buttonStyle="secondaryButton" text="Disabled"></ButtonSDLC>
-            
+            <ButtonSDLC
+              disabled={true}
+              size="smallButton"
+              buttonStyle="secondaryButton"
+              text="Disabled"
+            />
           </div>
         </div>
-        <br></br>
+        <br />
         Large, Secondary (First Button):
-        <pre><code className="language-jsx">
-          {`
+        <pre>
+          <code className="language-jsx">
+            {`
             import ButtonSDLC from './ButtonSDLC'
             
             ...
@@ -211,7 +257,8 @@ When combined within button sets, the primary button should appear at the top wh
               OnClick={...}
             />
           `}
-        </code></pre>
+          </code>
+        </pre>
         {/* <Row>
           <Col>
             <Dropdown>
@@ -381,4 +428,4 @@ When combined within button sets, the primary button should appear at the top wh
     );
   }
 }
-export default ButtonsDemo
+export default ButtonsDemo;

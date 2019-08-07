@@ -8,7 +8,7 @@ class Color extends React.Component {
   render () {
     return(
       <div>
-        <h2>Colors</h2>
+        <h3>Colors</h3>
         <div className="flexRow">
           <div className="flexColumnDescription">
             <div>
