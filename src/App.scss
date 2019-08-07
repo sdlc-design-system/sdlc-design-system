@@ -1,134 +1,131 @@
-@import "./_masterColors.scss";
+@import './_masterColors.scss';
 
-body{
-  font-family:"Open Sans";
+body {
+  font-family: 'Open Sans';
 }
-h1{
-  font-size:72px;
-  line-height:80px;
+h1 {
+  font-size: 72px;
+  line-height: 80px;
   font-weight: 400;
 }
-h2{
-  font-size:48px;
-  line-height:64px;
+h2 {
+  font-size: 48px;
+  line-height: 64px;
   font-weight: 400;
   padding: 32px 0 32px 0;
-
 }
-h3{
-  font-size:32px;
-  line-height:40px;
+h3 {
+  font-size: 32px;
+  line-height: 40px;
   font-weight: 600;
-
 }
-h4{
-  font-size:24px;
-  line-height:32px;
+h4 {
+  font-size: 24px;
+  line-height: 32px;
   font-weight: 600;
   padding: 16px 0 16px 0;
 }
 
-h5{
-  font-size:20px;
-  line-height:32px;
+h5 {
+  font-size: 20px;
+  line-height: 32px;
   font-weight: 800;
 }
 
-.largeBodyCopy{
-  font-size: 20px;	
+.largeBodyCopy {
+  font-size: 20px;
   line-height: 32px;
   font-weight: 400;
-
 }
 
-.bodyCopy{
-  font-size: 16px;	
+.bodyCopy {
+  font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 }
 
-.smallBodyCopy{
-  font-size: 14px;	
-  line-height: 24px; 
-  font-weight: 400; 
+.smallBodyCopy {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
 }
 
-.caption{
-  font-size: 12px;	
+.caption {
+  font-size: 12px;
   line-height: 16px;
   font-weight: 400;
 }
 
-.labels16{
-  font-size: 16px;	
+.labels16 {
+  font-size: 16px;
   line-height: 24px;
   font-weight: 600;
 }
 
-.labels14{
-  font-size: 14px;	
+.labels14 {
+  font-size: 14px;
   line-height: 24px;
   font-weight: 600;
 }
 
-.textLink16{
-  font-size: 16px;	
+.textLink16 {
+  font-size: 16px;
   line-height: 24px;
-  color: $btn-brand;  
+  color: $btn-brand;
   font-weight: 600;
-
 }
 
-.textLink14{
-  font-size: 14px;	
-  line-height: 24px; 
-  color: $btn-brand; 
+.textLink14 {
+  font-size: 14px;
+  line-height: 24px;
+  color: $btn-brand;
   font-weight: 600;
-
 }
-.bold{
-  font-weight:800;
+.bold {
+  font-weight: 800;
 }
-.semi-bold{
-  font-weight:600;
+.semi-bold {
+  font-weight: 600;
 }
 .btn {
- font-family: "Open Sans";
- font-weight: 600;
-
+  font-family: 'Open Sans';
+  font-weight: 600;
 }
-.btn:disabled{
+.btn:disabled {
   opacity: 1;
 }
-.btn-lg, .dropdown-lg {
+.btn-lg,
+.dropdown-lg {
   border-width: 2px;
   border-radius: 4px;
   font-size: 18px;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
 }
 .btn-sm {
   border-width: 2px;
   border-radius: 3px;
   font-size: 15px;
-  padding: .5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
 }
-.btn-xs{
+.btn-xs {
   border-width: 2px;
   border-radius: 2px;
   font-size: 14px;
-  padding: .25rem 1rem;
+  padding: 0.25rem 1rem;
 }
 
 .btn-primary, 
 .show>.btn-primary.dropdown-toggle, //removes bootstrap royal blue from a clicked dropdown
-.dropdown-item:active:focus { //causes a clicked dropdown menu item to turn the final color
+.dropdown-item:active:focus {
+  //causes a clicked dropdown menu item to turn the final color
   background-color: $btn-brand;
   color: white;
   border-color: $btn-brand !important;
 }
-.dropdown-menu{
-  background-color: #FFF;
-  box-shadow: 3px 3px 5px -1px rgba(0,0,0,0.15), -3px -1px 5px -1px rgba(0,0,0,0.15);
+.dropdown-menu {
+  background-color: #fff;
+  box-shadow: 3px 3px 5px -1px rgba(0, 0, 0, 0.15),
+    -3px -1px 5px -1px rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary:hover {
@@ -150,7 +147,6 @@ h5{
   border-color: $greyscale-pale !important;
   color: $btn-brand;
   cursor: not-allowed;
-
 }
 
 .btn:focus,.btn:active:focus,.btn.active:focus, //removes the bootstrap 'glow' from a clicked button
@@ -164,7 +160,8 @@ h5{
   border-color: $btn-brand !important;
 }
 
-.btn-secondary:hover, .dropdown-item:hover {
+.btn-secondary:hover,
+.dropdown-item:hover {
   background-color: $blue-bg;
   color: $btn-brand;
   border-color: $blue-bg !important;
@@ -176,54 +173,56 @@ h5{
   color: $btn-brand !important;
 }
 
-input.SDLC-form{
-	border: 1px solid #979797;
+input.SDLC-form {
+  border: 1px solid #979797;
   border-radius: 2px !important;
   height: 40px !important;
   width: 296px !important;
-  padding: 0 0 0 5px; 
-  font-family: "Open Sans";
+  padding: 0 0 0 5px;
+  font-family: 'Open Sans';
   font-size: 16px;
 }
-input.SDLC-form::placeholder{
+input.SDLC-form::placeholder {
   font-style: italic;
-  color: #1C2024 !important;
-  ;
+  color: #1c2024 !important;
 }
 
-input.SDLC-form:hover{ 
-  border: 1px solid #231F20 !important;
+input.SDLC-form:hover {
+  border: 1px solid #231f20 !important;
   border-radius: 2px !important;
-	// box-shadow: 0 2px 4px 0 rgba(83,96,107,0.15) !important;
+  // box-shadow: 0 2px 4px 0 rgba(83,96,107,0.15) !important;
 }
 
-input.SDLC-form:disabled{
-  background-color: #BFC1C5 !important;
+input.SDLC-form:disabled {
+  background-color: #bfc1c5 !important;
   border: none !important;
   // box-shadow: 0 2px 4px 0 rgba(83,96,107,0.5) !important;
   opacity: 0.5;
   border-radius: 2px;
 }
 
-input.SDLC-form:focus,input.SDLC-form:active:focus,input.SDLC-form.active:focus,
-input.SDLC-form.focus,input.SDLC-form:active.focus,input.SDLC-form.active.focus {
-  outline : none !important;
-  border: 1px solid #177E89 !important;
+input.SDLC-form:focus,
+input.SDLC-form:active:focus,
+input.SDLC-form.active:focus,
+input.SDLC-form.focus,
+input.SDLC-form:active.focus,
+input.SDLC-form.active.focus {
+  outline: none !important;
+  border: 1px solid $blue !important;
   // box-shadow: 0 2px 4px 0 rgba(83,96,107,0.15) !important;
 }
 
- .inputError{
-  border: 1px solid #DC0000 !important;
-  background-color: rgba(225,85,84,0.05) !important;
+.inputError {
+  border: 1px solid #dc0000 !important;
+  background-color: rgba(225, 85, 84, 0.05) !important;
   // box-shadow: 0 2px 4px 0 rgba(83,96,107,0.5) !important;
-  
- }
+}
 
- .inputSuccess{
-  border: 1px solid #52AD62 !important;
-  background-color: rgba(59,178,115,0.05) !important;
+.inputSuccess {
+  border: 1px solid #52ad62 !important;
+  background-color: rgba(59, 178, 115, 0.05) !important;
   // box-shadow: 0 2px 4px 0 rgba(83,96,107,0.5) !important;
- }
+}
 
 html {
   box-sizing: border-box;
@@ -233,26 +232,26 @@ hr {
   margin-left: auto;
   margin-right: auto;
 }
-.heavyDivider{
-  height:2px;
-  background-color: $brand
+.heavyDivider {
+  height: 2px;
+  background-color: $brand;
 }
 
-.lightDivider{
+.lightDivider {
   background-color: $greyscale-pale;
 }
-.spacer{
-  padding:25px;
+.spacer {
+  padding: 25px;
 }
 
-.basicBorder{
+.basicBorder {
   padding: 1rem;
   border: 2px solid $greyscale-pale;
   border-radius: 5px;
 }
 
 .anchor:target::before {
-  content: "";
+  content: '';
   display: block;
   height: 88px; /* fixed header height*/
   margin: -88px 0 0; /* negative fixed header height */
