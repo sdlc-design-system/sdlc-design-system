@@ -27,7 +27,7 @@
   .headerSmall {
     display: none;
   }
-  .borderLeft{
+  .borderLeft {
     border-left: 2px solid $greyscale-pale;
     margin-left: 193px;
   }
@@ -54,10 +54,9 @@ html .disappearingSideBar {
   background: transparent; /* Optional: just make scrollbar invisible */
 }
 
-
-.indentSidebar{
-  padding-left:1rem !important;
-  padding-bottom:0 !important;
+.indentSidebar {
+  padding-left: 1rem !important;
+  padding-bottom: 0 !important;
 }
 .disappearingSideBar div {
   padding: 0.5rem 0;
@@ -73,7 +72,7 @@ html .disappearingSideBar {
   border-right-color: $brand;
 }
 
-.highlight{
-  color:$btn-brand !important;
-
+.highlight {
+  color: $btn-brand !important;
+  font-weight: bold;
 }
