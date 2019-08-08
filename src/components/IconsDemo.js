@@ -198,7 +198,8 @@ class DividersDemo extends React.Component {
           </div>
         </div>
 
-        <h4>Human</h4>
+        {/* Hiding for now because these icons still needs to be worked on */}
+        {/* <h4>Human</h4>
         <div className=" iconGrouping labels14">
           <div className="iconBlock">
             <div className="iconIcon">
@@ -293,7 +294,7 @@ class DividersDemo extends React.Component {
             </div>
             <div>&lt;Web&gt;</div>
           </div>
-        </div>
+        </div> */}
         <h4>Other</h4>
         <div className=" iconGrouping labels14">
           <div className="iconBlock">
