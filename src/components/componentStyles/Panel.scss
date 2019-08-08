@@ -1,18 +1,18 @@
-@import "../../_masterColors.scss";
+@import '../../_masterColors.scss';
 
 .tabs:hover {
-  color:$btn-brand-pressed;
+  color: $btn-brand-pressed;
 }
 
-.tabs{
-  font-size: 20px;
+.tabs {
+  font-size: large;
   font-weight: 600;
   text-align: center;
 }
 
-.lineUnderLabels{
+.lineUnderLabels {
   margin-top: -19px;
-  z-index:-99;
+  z-index: -99;
   box-sizing: border-box;
   height: 2px;
   border: 1px solid $greyscale-pale;
