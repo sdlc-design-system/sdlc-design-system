@@ -1,29 +1,28 @@
 import React from 'react';
-import Prism from 'prismjs';
-import Loading from './Loading'
+import Loading from './Loading';
 
 class LoadingDemo extends React.Component {
-  constructor ( props ) {
-    super( props );
-  }
-  render () {
-    return(
+  render() {
+    return (
       <div>
-        <h4>Loading Indicator</h4>
+        <h4 className="header-padding">Loading Indicator</h4>
         <br />
         <Loading width="24px" />
-        <div></div><br />
-        <pre><code className="language-jsx">
-          {`
+        <div />
+        <br />
+        <pre>
+          <code className="language-jsx">
+            {`
             import Loading from './Loading'
 
             ...
             
             <Loading width="24px" />
-          `} 
-        </code></pre>
+          `}
+          </code>
+        </pre>
       </div>
     );
   }
 }
-export default LoadingDemo
+export default LoadingDemo;

@@ -1,23 +1,22 @@
 import React from 'react';
-import Radio from './Radio'
-import Prism from 'prismjs';
+import Radio from './Radio';
 
 class RadioButtonsDemo extends React.Component {
-  constructor ( props ) {
-    super( props );
-  }
-  render () {
-    return(
+  render() {
+    return (
       <div>
-        <h4>Radio Buttons</h4>
-        <Radio content={[
-                {content:'radio toggle one'},
-                {content:'radio toggle two'},
-                {content:'radio toggle three'},
-              ]}/>
+        <h4 className="header-padding">Radio Buttons</h4>
+        <Radio
+          content={[
+            { content: 'radio toggle one' },
+            { content: 'radio toggle two' },
+            { content: 'radio toggle three' }
+          ]}
+        />
         <br />
-        <pre><code className="language-jsx">
-          {`
+        <pre>
+          <code className="language-jsx">
+            {`
           import Radio from './Radio'
  
           ...
@@ -27,11 +26,12 @@ class RadioButtonsDemo extends React.Component {
             {content:'radio toggle two'},
             {content:'radio toggle three'},
           ]}/>
-          `} 
-        </code></pre>
+          `}
+          </code>
+        </pre>
         <br />
       </div>
     );
   }
 }
-export default RadioButtonsDemo
+export default RadioButtonsDemo;

@@ -2,13 +2,10 @@ import React from 'react';
 import './componentStyles/Typography.scss';
 
 class Typography extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div>
-        <h3>Typography</h3>
+        <h3 className="header-padding">Typography</h3>
         <h4>Open Sans/Roboto</h4>
         <div className="flexColumnTypography">
           <div className="flexRowTypography">

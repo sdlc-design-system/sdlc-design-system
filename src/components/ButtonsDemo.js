@@ -1,20 +1,13 @@
 import React from 'react';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Dropdown from 'react-bootstrap/Dropdown';
 import './componentStyles/ButtonsDemo.scss';
 import Lock from '../svgs/Lock';
 import ButtonSDLC from './ButtonSDLC';
-import Prism from 'prismjs';
 
 class ButtonsDemo extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div>
-        <h3>Buttons</h3>
+        <h3 className="header-padding">Buttons</h3>
         <h4>Primary Action</h4>
         <div>
           The primary action should be the most important action on the page,

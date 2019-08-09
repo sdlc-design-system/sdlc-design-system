@@ -2,18 +2,16 @@ import React from 'react';
 import './componentStyles/Color.scss';
 
 class Color extends React.Component {
-  constructor ( props ) {
-    super( props );
-  }
-  render () {
-    return(
+  render() {
+    return (
       <div>
-        <h3>Colors</h3>
+        <h3 className="header-padding">Colors</h3>
         <div className="flexRow">
           <div className="flexColumnDescription">
             <div>
               <span className="labels16">Dominant Colors: </span>
-              These two colors are to be the primary and most used colors for all SDLC materials.
+              These two colors are to be the primary and most used colors for
+              all SDLC materials.
             </div>
           </div>
           <div className="centerSwatch">
@@ -29,11 +27,14 @@ class Color extends React.Component {
             </div>
           </div>
         </div>
-        <div className="flexRow"> 
+        <div className="flexRow">
           <div className="flexColumnDescription">
-            <div> 
+            <div>
               <span className="labels16">Accent Colors: </span>
-              Only these accompanying secondary colors are to be used in all SDLC materials. They should never hold a position in the visual hierarchy that is greater or occupies more space than the dominant colors.
+              Only these accompanying secondary colors are to be used in all
+              SDLC materials. They should never hold a position in the visual
+              hierarchy that is greater or occupies more space than the dominant
+              colors.
             </div>
           </div>
           <div className="centerSwatch">
@@ -57,11 +58,14 @@ class Color extends React.Component {
             </div>
           </div>
         </div>
-        <div className="flexRow"> 
+        <div className="flexRow">
           <div className="flexColumnDescription">
             <div>
               <span className="labels16">Greyscale Colors: </span>
-              Only these accompanying secondary colors are to be used in all SDLC materials. They should never hold a position in the visual hierarchy that is greater or occupies more space than the dominant colors.
+              Only these accompanying secondary colors are to be used in all
+              SDLC materials. They should never hold a position in the visual
+              hierarchy that is greater or occupies more space than the dominant
+              colors.
             </div>
           </div>
           <div className="centerSwatch">
@@ -85,11 +89,12 @@ class Color extends React.Component {
             </div>
           </div>
         </div>
-        <div className="flexRow"> 
+        <div className="flexRow">
           <div className="flexColumnDescription">
             <div>
               <span className="labels16">Color States: </span>
-              Interactive color states for links and buttons. The four states: default, hover, disabled, and pressed.
+              Interactive color states for links and buttons. The four states:
+              default, hover, disabled, and pressed.
             </div>
           </div>
           <div className="centerSwatch">
@@ -113,11 +118,15 @@ class Color extends React.Component {
             </div>
           </div>
         </div>
-        <div className="flexRow"><span className="labels16">Messaging:</span></div>
-        <div className="flexRow"> 
+        <div className="flexRow">
+          <span className="labels16">Messaging:</span>
+        </div>
+        <div className="flexRow">
           <div className="flexColumnDescription">
             <div>
-              <span className="labels16" style={{color:"#dc0000"}}>Red </span> 
+              <span className="labels16" style={{ color: '#dc0000' }}>
+                Red{' '}
+              </span>
               is used to send an error message.
             </div>
           </div>
@@ -134,10 +143,12 @@ class Color extends React.Component {
             </div>
           </div>
         </div>
-        <div className="flexRow"> 
+        <div className="flexRow">
           <div className="flexColumnDescription">
             <div>
-              <span className="labels16" style={{color:"#f0b400"}}>Yellow </span>
+              <span className="labels16" style={{ color: '#f0b400' }}>
+                Yellow{' '}
+              </span>
               is used to send a warning message.
             </div>
           </div>
@@ -154,10 +165,12 @@ class Color extends React.Component {
             </div>
           </div>
         </div>
-        <div className="flexRow"> 
+        <div className="flexRow">
           <div className="flexColumnDescription">
             <div>
-              <span className="labels16" style={{color:"#5290c3"}}>Blue </span>
+              <span className="labels16" style={{ color: '#5290c3' }}>
+                Blue{' '}
+              </span>
               is used to send a neutral message.
             </div>
           </div>
@@ -174,10 +187,12 @@ class Color extends React.Component {
             </div>
           </div>
         </div>
-        <div className="flexRow"> 
+        <div className="flexRow">
           <div className="flexColumnDescription">
             <div>
-              <span className="labels16" style={{color:"#52ad62"}}>Green </span>
+              <span className="labels16" style={{ color: '#52ad62' }}>
+                Green{' '}
+              </span>
               is used to send a success message.
             </div>
           </div>
@@ -198,4 +213,4 @@ class Color extends React.Component {
     );
   }
 }
-export default Color
+export default Color;

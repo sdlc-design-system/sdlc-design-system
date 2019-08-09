@@ -1,5 +1,4 @@
 import React, { Component, createRef } from 'react';
-import Container from 'react-bootstrap/Container';
 import './App.scss';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
@@ -102,7 +101,7 @@ class App extends Component {
             id="colors"
             ref={this.colorsRef}
             className="anchor"
-            style={{ padding: '88px 0 0' }}>
+            style={{ padding: '80px 0 0' }}>
             <Color />
           </div>
           <div id="typography" className="anchor" ref={this.typographyRef}>
@@ -139,7 +138,7 @@ class App extends Component {
             <SearchboxDemo />
           </div>
           <div id="containers" ref={this.containersRef} className="anchor">
-            <h3>Containers</h3>
+            <h3 className="header-padding">Containers</h3>
           </div>
           <div id="panel" ref={this.panelRef} className="anchor">
             <PanelDemo />
@@ -151,7 +150,7 @@ class App extends Component {
             <ModalDemo />
           </div>
           <div id="content" ref={this.contentRef} className="anchor">
-            <h3>Content</h3>
+            <h3 className="header-padding">Content</h3>
           </div>
           <div id="dividers" ref={this.dividersRef} className="anchor">
             <DividersDemo />
