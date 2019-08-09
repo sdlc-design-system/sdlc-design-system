@@ -86,101 +86,83 @@ class App extends Component {
     return (
       <div>
         <Header showSmallMenu={this.showSmallMenu} />
-        <Container fluid style={{ marginLeft: '10px' }}>
-          <div>
-            <Sidebar
-              activeTab={this.state.activeTab}
-              onTabClick={this.handleTabClick}
-              list={this.list}
-            />
-            {this.state.showSmallMenu && (
-              <SmallMenu showSmallMenu={this.showSmallMenu} list={this.list} />
-            )}
-            <div
-              className={
-                this.state.showSmallMenu ? 'showSmallMenu' : 'main borderLeft'
-              }>
-              <div>
-                <div
-                  id="colors"
-                  ref={this.colorsRef}
-                  className="anchor"
-                  style={{ padding: '88px 0 0' }}>
-                  <Color />
-                </div>
-                <div
-                  id="typography"
-                  className="anchor"
-                  ref={this.typographyRef}>
-                  <Typography />
-                </div>
-                <div id="icons" ref={this.iconsRef} className="anchor">
-                  <IconsDemo />
-                </div>
-                <div id="buttons" ref={this.buttonsRef} className="anchor">
-                  <ButtonsDemo />
-                </div>
-                <div id="forms" ref={this.formsRef} className="anchor">
-                  <FormsDemo />
-                </div>
-                <div
-                  id="standardInput"
-                  ref={this.standardInputRef}
-                  className="anchor">
-                  <StandardInputDemo />
-                </div>
-                <div
-                  id="dropdownMenu"
-                  ref={this.dropdownMenuRef}
-                  className="anchor">
-                  <DropDownDemo />
-                </div>
-                <div
-                  id="radioButtons"
-                  ref={this.radioButtonsRef}
-                  className="anchor">
-                  <RadioButtonsDemo />
-                </div>
-                <div id="checkBox" ref={this.checkBoxRef} className="anchor">
-                  <CheckBoxDemo />
-                </div>
-                <div id="switch" ref={this.switchRef} className="anchor">
-                  <SwitchDemo />
-                </div>
-                <div id="search" ref={this.searchRef} className="anchor">
-                  <SearchboxDemo />
-                </div>
-                <div
-                  id="containers"
-                  ref={this.containersRef}
-                  className="anchor">
-                  <h3>Containers</h3>
-                </div>
-                <div id="panel" ref={this.panelRef} className="anchor">
-                  <PanelDemo />
-                </div>
-                <div id="accordion" ref={this.accordionRef} className="anchor">
-                  <AccordionsDemo />
-                </div>
-                <div id="modal" ref={this.modalRef} className="anchor">
-                  <ModalDemo />
-                </div>
-                <div id="content" ref={this.contentRef} className="anchor">
-                  <h3>Content</h3>
-                </div>
-                <div id="dividers" ref={this.dividersRef} className="anchor">
-                  <DividersDemo />
-                </div>
-                <div
-                  id="loadingIndicator"
-                  ref={this.loadingIndicatorRef}
-                  className="anchor">
-                  <LoadingDemo />
-                </div>
-              </div>
-            </div>
+        <Sidebar
+          activeTab={this.state.activeTab}
+          onTabClick={this.handleTabClick}
+          list={this.list}
+        />
+        {this.state.showSmallMenu && (
+          <SmallMenu showSmallMenu={this.showSmallMenu} list={this.list} />
+        )}
+        <div
+          className={
+            this.state.showSmallMenu ? 'showSmallMenu' : 'main borderLeft'
+          }>
+          <div
+            id="colors"
+            ref={this.colorsRef}
+            className="anchor"
+            style={{ padding: '88px 0 0' }}>
+            <Color />
           </div>
-        </Container>
+          <div id="typography" className="anchor" ref={this.typographyRef}>
+            <Typography />
+          </div>
+          <div id="icons" ref={this.iconsRef} className="anchor">
+            <IconsDemo />
+          </div>
+          <div id="buttons" ref={this.buttonsRef} className="anchor">
+            <ButtonsDemo />
+          </div>
+          <div id="forms" ref={this.formsRef} className="anchor">
+            <FormsDemo />
+          </div>
+          <div
+            id="standardInput"
+            ref={this.standardInputRef}
+            className="anchor">
+            <StandardInputDemo />
+          </div>
+          <div id="dropdownMenu" ref={this.dropdownMenuRef} className="anchor">
+            <DropDownDemo />
+          </div>
+          <div id="radioButtons" ref={this.radioButtonsRef} className="anchor">
+            <RadioButtonsDemo />
+          </div>
+          <div id="checkBox" ref={this.checkBoxRef} className="anchor">
+            <CheckBoxDemo />
+          </div>
+          <div id="switch" ref={this.switchRef} className="anchor">
+            <SwitchDemo />
+          </div>
+          <div id="search" ref={this.searchRef} className="anchor">
+            <SearchboxDemo />
+          </div>
+          <div id="containers" ref={this.containersRef} className="anchor">
+            <h3>Containers</h3>
+          </div>
+          <div id="panel" ref={this.panelRef} className="anchor">
+            <PanelDemo />
+          </div>
+          <div id="accordion" ref={this.accordionRef} className="anchor">
+            <AccordionsDemo />
+          </div>
+          <div id="modal" ref={this.modalRef} className="anchor">
+            <ModalDemo />
+          </div>
+          <div id="content" ref={this.contentRef} className="anchor">
+            <h3>Content</h3>
+          </div>
+          <div id="dividers" ref={this.dividersRef} className="anchor">
+            <DividersDemo />
+          </div>
+          <div
+            id="loadingIndicator"
+            ref={this.loadingIndicatorRef}
+            className="anchor">
+            <LoadingDemo />
+          </div>
+        </div>
       </div>
     );
   }

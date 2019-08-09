@@ -13,23 +13,23 @@
   display: block;
   // overflow-x:hidden;
   overflow-y: auto;
-  width: 188px;
+  width: 250px;
   height: 100vh;
   padding-top: 50px;
-  left: 32px;
+  padding-left: 64px;
 }
 
 @media (min-width: 768px) {
   .main {
-    padding-right: 25px;
-    padding-left: 20px;
+    padding-right: 64px;
+    padding-left: 64px;
   }
   .headerSmall {
     display: none;
   }
   .borderLeft {
     border-left: 2px solid $greyscale-pale;
-    margin-left: 193px;
+    margin-left: 248px;
   }
 }
 @media (max-width: 767px) {
