@@ -1,20 +1,12 @@
 import React from 'react';
-import Prism from 'prismjs';
 import './componentStyles/IconsDemo.scss';
 
 import Alert from '../svgs/Alert';
 import StopSign from '../svgs/StopSign';
-import Analysis from '../svgs/Analysis';
-import ApproveInvoice from '../svgs/ApproveInvoice';
 import RoundCheck from '../svgs/RoundCheck';
 import Close from '../svgs/Close';
-import Contract from '../svgs/Contract';
-import Controls from '../svgs/Controls';
 import Delete from '../svgs/Delete';
 import Down from '../svgs/Down';
-import Folder from '../svgs/Folder';
-import GraphicTool from '../svgs/GraphicTool';
-import Group from '../svgs/Group';
 import Information from '../svgs/Information';
 import Left from '../svgs/Left';
 import Right from '../svgs/Right';
@@ -22,22 +14,13 @@ import LeftArrow from '../svgs/LeftArrow';
 import RightArrow from '../svgs/RightArrow';
 import Lock from '../svgs/Lock';
 import SearchIcon from '../svgs/SearchIcon';
-import Quality from '../svgs/Quality';
 import Question from '../svgs/Question';
-import Running from '../svgs/Running';
-import Sketch from '../svgs/Sketch';
 import SmallUp from '../svgs/SmallUp';
 import SmallDown from '../svgs/SmallDown';
 import SmallLeft from '../svgs/SmallLeft';
 import SmallRight from '../svgs/SmallRight';
-import Solution from '../svgs/Solution';
 import Spinner from '../svgs/Spinner';
-import Standing from '../svgs/Standing';
-import Tools from '../svgs/Tools';
 import Up from '../svgs/Up';
-import Web from '../svgs/Web';
-import Team from '../svgs/Team';
-import Blueprint from '../svgs/Blueprint';
 import Check from '../svgs/Check';
 import Tick from '../svgs/Tick';
 import SdlcLogo from '../svgs/SdlcLogo';
@@ -45,13 +28,10 @@ import Hamburger from '../svgs/Hamburger';
 import Copy from '../svgs/Copy';
 
 class DividersDemo extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="iconsSpacing">
-        <h3>Icons</h3>
+        <h3 className="header-padding">Icons</h3>
         <h4>Messaging</h4>
         <div className=" iconGrouping labels14">
           <div className="iconBlock">

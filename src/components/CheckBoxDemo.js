@@ -1,23 +1,34 @@
 import React from 'react';
-import CheckBox from './CheckBox'
-import Prism from 'prismjs';
+import CheckBox from './CheckBox';
 
 class RadioButtonsDemo extends React.Component {
-  constructor ( props ) {
-    super( props );
-  }
-  render () {
-    return(
+  render() {
+    return (
       <div>
-        <h4>Checkboxes</h4>
-        <CheckBox content={[
-          {name:'checkbox-demo',value:'thing-one',content:'First Checkbox'},
-          {name:'checkbox-demo',value:'thing-two',content:'Second Checkbox'},
-          {name:'checkbox-demo',value:'thing-three',content:'Third Checkbox'},
-        ]}/>
+        <h4 className="header-padding">Checkboxes</h4>
+        <CheckBox
+          content={[
+            {
+              name: 'checkbox-demo',
+              value: 'thing-one',
+              content: 'First Checkbox'
+            },
+            {
+              name: 'checkbox-demo',
+              value: 'thing-two',
+              content: 'Second Checkbox'
+            },
+            {
+              name: 'checkbox-demo',
+              value: 'thing-three',
+              content: 'Third Checkbox'
+            }
+          ]}
+        />
         <br />
-        <pre><code className="language-jsx">
-          {`
+        <pre>
+          <code className="language-jsx">
+            {`
           import CheckBox from './CheckBox'
  
           ...
@@ -27,10 +38,11 @@ class RadioButtonsDemo extends React.Component {
             {name:'checkbox-demo',value:'thing-two',content:'Second Checkbox'},
             {name:'checkbox-demo',value:'thing-three',content:'Third Checkbox'},
           ]}/>
-          `} 
-        </code></pre>
+          `}
+          </code>
+        </pre>
       </div>
     );
   }
 }
-export default RadioButtonsDemo
+export default RadioButtonsDemo;

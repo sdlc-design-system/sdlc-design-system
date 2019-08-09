@@ -1,13 +1,10 @@
 import React from 'react';
 
 class FormsDemo extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div>
-        <h3>Forms</h3>
+        <h3 className="header-padding">Forms</h3>
         <div>
           Forms can contain Text Inputs, Text Areas, Select Drop Downs, Radio
           Buttons, Checkboxes, Date Pickers, and other methods of input. Forms

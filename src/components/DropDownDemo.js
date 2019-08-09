@@ -1,47 +1,44 @@
 import React from 'react';
 import './componentStyles/DropDownDemo.scss';
-import DropDownSDLC from './DropDownSDLC'
-import Prism from 'prismjs';
+import DropDownSDLC from './DropDownSDLC';
 
 class DropDownDemo extends React.Component {
-  constructor ( props ) {
-    super( props );
-  }
-  render () {
-    return(
+  render() {
+    return (
       <div>
-        <h4>Dropdown Menus</h4>
+        <h4 className="header-padding">Dropdown Menus</h4>
         <div className="flexRowButtonsDemo">
           <span className="buttonDemoPadding">
-            <DropDownSDLC 
-              size={"large"}
+            <DropDownSDLC
+              size={'large'}
               secondary={false}
               content={[
-                {title:'Label 1',href:'#some1junk'},
-                {title:'Label 2',href:'#some2junk'},
-                {title:'Label 3',href:'#some3junk'}
+                { title: 'Label 1', href: '#some1junk' },
+                { title: 'Label 2', href: '#some2junk' },
+                { title: 'Label 3', href: '#some3junk' }
               ]}
-              title ={'Dropdown Menu'}
-              divider = {2}
+              title={'Dropdown Menu'}
+              divider={2}
             />
           </span>
           <span className="buttonDemoPadding">
-            <DropDownSDLC 
-              size={"large"}
+            <DropDownSDLC
+              size={'large'}
               secondary={true}
               content={[
-                {title:'Label 1',href:'#some1junk'},
-                {title:'Label 2',href:'#some2junk'},
-                {title:'Label 3',href:'#some3junk'}
+                { title: 'Label 1', href: '#some1junk' },
+                { title: 'Label 2', href: '#some2junk' },
+                { title: 'Label 3', href: '#some3junk' }
               ]}
-              title ={'Dropdown Menu'}
+              title={'Dropdown Menu'}
             />
           </span>
         </div>
         <br />
         <div>Large, Primary, with a Divider (Dropdown button on the left)</div>
-        <pre><code className="language-jsx">
-          {`
+        <pre>
+          <code className="language-jsx">
+            {`
           import DropDownSDLC from './DropDownSDLC'
  
           ...
@@ -57,11 +54,12 @@ class DropDownDemo extends React.Component {
             title ={'Dropdown Menu'}
             divider = {2} //*optional...the number is the row where the divider will be placed 
           />
-          `} 
-        </code></pre>
+          `}
+          </code>
+        </pre>
         <br />
       </div>
     );
   }
 }
-export default DropDownDemo
+export default DropDownDemo;

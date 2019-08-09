@@ -1,28 +1,32 @@
 import React from 'react';
 import Prism from 'prismjs';
-import Searchbox from './Searchbox'
+import Searchbox from './Searchbox';
 import './componentStyles/SearchboxDemo.scss';
 
-
 class SearchboxDemo extends React.Component {
-  constructor ( props ) {
-    super( props );
-  }
-  render () {
-    return(
+  render() {
+    return (
       <div>
-        <h4>Searchbox</h4>
+        <h4 className="header-padding">Searchbox</h4>
         <div>
-          Search bar 1 can be used in open spaces where the background is not noisy. To use search bar 1, add "lite  : {"{"}true{"}"}" to your code.<br />
-          Search bar 2 can be used on banners or anywhere with a colorful background.
-        </div><br />
+          Search bar 1 can be used in open spaces where the background is not
+          noisy. To use search bar 1, add "lite : {'{'}true{'}'}" to your code.
+          <br />
+          Search bar 2 can be used on banners or anywhere with a colorful
+          background.
+        </div>
+        <br />
         <div className="searchboxDemo">
-          <div className="searchboxDemoPadding"><Searchbox content="search library" width="300px" lite={true} /></div>
+          <div className="searchboxDemoPadding">
+            <Searchbox content="search library" width="300px" lite={true} />
+          </div>
           <Searchbox content="search library" width="300px" />
         </div>
-        <div></div><br />
-        <pre><code className="language-jsx">
-          {`
+        <div />
+        <br />
+        <pre>
+          <code className="language-jsx">
+            {`
             import Searchbox from './Searchbox'
 
             ...
@@ -33,10 +37,11 @@ class SearchboxDemo extends React.Component {
               width = "300px"
               lite = {true} //leave out completely to use search bar 2
             />
-          `} 
-        </code></pre>
+          `}
+          </code>
+        </pre>
       </div>
     );
   }
 }
-export default SearchboxDemo
+export default SearchboxDemo;
