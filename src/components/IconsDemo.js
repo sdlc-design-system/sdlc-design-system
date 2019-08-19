@@ -36,37 +36,37 @@ class DividersDemo extends React.Component {
         <div className=" iconGrouping labels14">
           <div className="iconBlock">
             <div className="iconIcon">
-              <Check width="35px" fill="black" />
+              <Check width="25px" fill="black" />
             </div>
             <div>&lt;Check&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <StopSign width="35px" fill="black" />
+              <StopSign width="25px" fill="black" />
             </div>
             <div>&lt;StopSign&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Question width="35px" fill="black" />
+              <Question width="25px" fill="black" />
             </div>
             <div>&lt;Question&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Information width="35px" fill="black" />
+              <Information width="25px" fill="black" />
             </div>
             <div>&lt;Information&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <RoundCheck width="35px" fill="black" />
+              <RoundCheck width="25px" fill="black" />
             </div>
             <div>&lt;RoundCheck&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Alert width="35px" fill="black" />
+              <Alert width="25px" fill="black" />
             </div>
             <div>&lt;Alert&gt;</div>
           </div>
@@ -75,44 +75,40 @@ class DividersDemo extends React.Component {
         <div className=" iconGrouping labels14">
           <div className="iconBlock">
             <div className="iconIcon">
-              <Left width="35px" fill="black" />
+              <Left width="25px" fill="black" />
             </div>
             <div>&lt;Left&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Right width="35px" fill="black" />
+              <Right width="25px" fill="black" />
             </div>
             <div>&lt;Right&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Up width="35px" fill="black" />
+              <Up width="25px" fill="black" />
             </div>
             <div>&lt;Up&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Down width="35px" fill="black" />
+              <Down width="25px" fill="black" />
             </div>
             <div>&lt;Down&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <LeftArrow width="35px" fill="Black" />
+              <LeftArrow width="25px" fill="Black" />
             </div>
             <div>&lt;LeftArrow&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <RightArrow width="35px" fill="black" />
+              <RightArrow width="25px" fill="black" />
             </div>
             <div>&lt;RightArrow&gt;</div>
           </div>
-          <div className="iconBlock">
-            <br />
-          </div>
-
           <div className="iconBlock">
             <div className="iconIcon">
               <SmallLeft width="20px" fill="black" />
@@ -142,37 +138,37 @@ class DividersDemo extends React.Component {
         <div className=" iconGrouping labels14">
           <div className="iconBlock">
             <div className="iconIcon">
-              <Tick width="35px" fill="black" />
+              <Tick width="25px" fill="black" />
             </div>
             <div>&lt;Tick&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Close width="35px" fill="black" />
+              <Close width="25px" fill="black" />
             </div>
             <div>&lt;Close&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Delete width="35px" fill="black" />
+              <Delete width="25px" fill="black" />
             </div>
             <div>&lt;Delete&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <SearchIcon width="35px" fill="black" />
+              <SearchIcon width="25px" fill="black" />
             </div>
             <div>&lt;SearchIcon&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Spinner width="35px" fill="black" />
+              <Spinner width="25px" fill="black" />
             </div>
             <div>&lt;Spinner&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Copy width="35px" fill="black" />
+              <Copy width="25px" fill="black" />
             </div>
             <div>&lt;Copy&gt;</div>
           </div>
@@ -183,25 +179,25 @@ class DividersDemo extends React.Component {
         <div className=" iconGrouping labels14">
           <div className="iconBlock">
             <div className="iconIcon">
-              <Standing width="35px" fill="black" />
+              <Standing width="25px" fill="black" />
             </div>
             <div>&lt;Standing&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Running width="35px" fill="black" />
+              <Running width="25px" fill="black" />
             </div>
             <div>&lt;Running&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Team width="35px" fill="black" />
+              <Team width="25px" fill="black" />
             </div>
             <div>&lt;Team&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Group width="35px" fill="black" />
+              <Group width="25px" fill="black" />
             </div>
             <div>&lt;Group&gt;</div>
           </div>
@@ -210,67 +206,67 @@ class DividersDemo extends React.Component {
         <div className=" iconGrouping labels14">
           <div className="iconBlock">
             <div className="iconIcon">
-              <ApproveInvoice width="35px" fill="black" />
+              <ApproveInvoice width="25px" fill="black" />
             </div>
             <div>&lt;ApproveInvoice&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Blueprint width="35px" fill="black" />
+              <Blueprint width="25px" fill="black" />
             </div>
             <div>&lt;Blueprint&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Contract width="35px" fill="black" />
+              <Contract width="25px" fill="black" />
             </div>
             <div>&lt;Contract&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Analysis width="35px" fill="black" />
+              <Analysis width="25px" fill="black" />
             </div>
             <div>&lt;Analysis&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Quality width="35px" fill="black" />
+              <Quality width="25px" fill="black" />
             </div>
             <div>&lt;Quality&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Folder width="35px" fill="black" />
+              <Folder width="25px" fill="black" />
             </div>
             <div>&lt;Folder&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <GraphicTool width="35px" fill="black" />
+              <GraphicTool width="25px" fill="black" />
             </div>
             <div>&lt;GraphicTool&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Sketch width="35px" fill="black" />
+              <Sketch width="25px" fill="black" />
             </div>
             <div>&lt;Sketch&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Solution width="35px" fill="black" />
+              <Solution width="25px" fill="black" />
             </div>
             <div>&lt;Solution&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Tools width="35px" fill="black" />
+              <Tools width="25px" fill="black" />
             </div>
             <div>&lt;Tools&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Web width="35px" fill="black" />
+              <Web width="25px" fill="black" />
             </div>
             <div>&lt;Web&gt;</div>
           </div>
@@ -279,13 +275,13 @@ class DividersDemo extends React.Component {
         <div className=" iconGrouping labels14">
           <div className="iconBlock">
             <div className="iconIcon">
-              <Lock width="35px" fill="black" />
+              <Lock width="25px" fill="black" />
             </div>
             <div>&lt;Lock&gt;</div>
           </div>
           <div className="iconBlock">
             <div className="iconIcon">
-              <Hamburger width="35px" fill="black" />
+              <Hamburger width="25px" fill="black" />
             </div>
             <div>&lt;Hamburger&gt;</div>
           </div>

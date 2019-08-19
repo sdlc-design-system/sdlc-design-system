@@ -8,13 +8,15 @@ const Copy = ({
   <svg
     width={width}
     height={width}
-    viewBox="0 0 13 14"
+    viewBox="0 0 12 12"
     xmlns="http://www.w3.org/2000/svg"
     className={`svg-icon ${className || ""}`}
     xmlnsXlink="http://www.w3.org/1999/xlink"
-  >    
-    <rect stroke={fill} fill="none" x="3.5" y="4" width="8.6" height="9.5"/>
-    <path stroke={fill} fill="none" d="M0.9 7.3L7.1 1 0.9 1 0.9 7.3Z"/>
+  >  
+    <g transform="translate(-552 -988)translate(553 989)">
+      <path stroke={fill} fill="none" d="M2.5 2.5L2.5 10.5 10.5 10.5 10.5 2.5 2.5 2.5Z"/>
+      <polyline stroke={fill} fill="none" points="6 0 0 0 0 5.8"/>
+    </g>  
   </svg>
 );
 
