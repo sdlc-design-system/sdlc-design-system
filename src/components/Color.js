@@ -48,11 +48,11 @@ class Color extends React.Component {
                 <div>$bisque</div>
               </div>
               <div className="swatch blue">
-                <div>4A90E2</div>
+                <div>1775D3</div>
                 <div>$blue</div>
               </div>
               <div className="swatch turquoise">
-                <div>A3D9D2</div>
+                <div>00D2BA</div>
                 <div>$turquoise</div>
               </div>
             </div>
@@ -100,15 +100,15 @@ class Color extends React.Component {
           <div className="centerSwatch">
             <div>
               <div className="swatch btn-brand">
-                <div>6289A1</div>
+                <div>44687D</div>
                 <div>$btn-brand</div>
               </div>
               <div className="swatch btn-brand-hover">
-                <div>719BB1</div>
+                <div>304A5C</div>
                 <div>$btn-brand-hover</div>
               </div>
               <div className="swatch btn-brand-disabled">
-                <div>ACC5D1</div>
+                <div>A7A9AC</div>
                 <div>$btn-brand-disabled</div>
               </div>
               <div className="swatch btn-brand-pressed">
@@ -146,28 +146,6 @@ class Color extends React.Component {
         <div className="flexRow">
           <div className="flexColumnDescription">
             <div>
-              <span className="labels16" style={{ color: '#f0b400' }}>
-                Yellow{' '}
-              </span>
-              is used to send a warning message.
-            </div>
-          </div>
-          <div className="centerSwatch">
-            <div>
-              <div className="swatch yellow">
-                <div>F0B400</div>
-                <div>$yellow</div>
-              </div>
-              <div className="swatch yellow-bg">
-                <div>FFF7CC</div>
-                <div>$yellow-bg</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flexRow">
-          <div className="flexColumnDescription">
-            <div>
               <span className="labels16" style={{ color: '#5290c3' }}>
                 Blue{' '}
               </span>
@@ -177,7 +155,7 @@ class Color extends React.Component {
           <div className="centerSwatch">
             <div>
               <div className="swatch blue">
-                <div>5290C3</div>
+                <div>1775D3</div>
                 <div>$blue</div>
               </div>
               <div className="swatch blue-bg">
@@ -199,7 +177,7 @@ class Color extends React.Component {
           <div className="centerSwatch">
             <div>
               <div className="swatch green">
-                <div>52AD62</div>
+                <div>008A19</div>
                 <div>$green</div>
               </div>
               <div className="swatch green-bg">
